@@ -44,13 +44,13 @@ Thumbs.db
 
 ### New stuff for the Quoke project
 ## Exclude plugins and purchased assets
-/[Aa]ssets/Plugins
-/[Aa]ssets/PolygonCity
-/[Aa]ssets/POLYGONCityCharacters
-/[Aa]ssets/SampleScenes
-/[Aa]ssets/SimpleInteriorsHouses
-/[Aa]ssets/SimpleItems
-/[Aa]ssets/SimpleOfficeInteriors
-/[Aa]ssets/SimplePort
-/[Aa]ssets/SimpleShopInteriors
-/[Aa]ssets/Standard\ Assets
+/[Aa]ssets/Plugins*
+/[Aa]ssets/PolygonCity*
+/[Aa]ssets/POLYGONCityCharacters*
+/[Aa]ssets/SampleScenes*
+/[Aa]ssets/SimpleInteriorsHouses*
+/[Aa]ssets/SimpleItems*
+/[Aa]ssets/SimpleOfficeInteriors*
+/[Aa]ssets/SimplePort*
+/[Aa]ssets/SimpleShopInteriors*
+/[Aa]ssets/Standard\ Assets*
