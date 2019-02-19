@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
@@ -27,8 +28,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             character = characterArray[Random.Range(0, characterCount)].gameObject;
             character.SetActive(true);
             //apply random texture from Resources folder
-            materialArray = Resources.LoadAll("CharacterMaterials", typeof(Material));
-            material = (Material)materialArray[Random.Range(0, materialArray.Length)];
+            materialArray = AssetDatabase.LoadAllAssetsAtPath("Assets/POLYGONCityCharacters/Materials/*");
+            material = (Material)materialArray[Random.Range(0, materialArray.Length-1)];
             character.GetComponent<Renderer>().material = material;
         }
     }
