@@ -10,9 +10,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private ThirdPersonCharacter m_Character;
         private GameObject[] characterArray;
         private GameObject character;
+        private Object[] materialArray;
         private Material material;
-        private Object[] textureArray;
-        private Texture texture;
 
         // Start is called before the first frame update
         void Start()
@@ -28,8 +27,9 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             character = characterArray[Random.Range(0, characterCount)].gameObject;
             character.SetActive(true);
             //apply random texture from Resources folder
-            //textureArray = Resources.LoadAll("CharacterTextures", typeof(Texture));
-            //character.GetComponent
+            materialArray = Resources.LoadAll("CharacterMaterials", typeof(Material));
+            material = (Material)materialArray[Random.Range(0, materialArray.Length)];
+            character.GetComponent<Renderer>().material = material;
         }
     }
 }
