@@ -29,6 +29,7 @@ sysinfo.txt
 *.userprefs
 *.pidb
 .DS_Store
+.vs
 
 ###
 # OS generated
@@ -44,8 +45,10 @@ Thumbs.db
 
 ### New stuff for the Quoke project
 ## Exclude plugins and purchased assets
+github-for-unity*
 /[Aa]ssets/Plugins*
 /[Aa]ssets/PolygonCity*
+/[Aa]ssets/PolygonTown*
 /[Aa]ssets/POLYGONCityCharacters*
 /[Aa]ssets/SampleScenes*
 /[Aa]ssets/SimpleInteriorsHouses*
