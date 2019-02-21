@@ -1,9 +1,10 @@
 ﻿<Properties StartupConfiguration="{4D4787A0-D0C1-FC24-0666-B9CF9DC3FA9E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="../Unity Projects/3d/Roll-a-ball/Assets/Scripts/PlayerControler.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/Inventory/TestGUI.cs">
     <Files>
-      <File FileName="Assets/Scripts/TestGUI.cs" Line="17" Column="9" />
-      <File FileName="Assets/Scripts/PopupScript.cs" Line="11" Column="12" />
-      <File FileName="../Unity Projects/3d/Roll-a-ball/Assets/Scripts/PlayerControler.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Scripts/Inventory/Item.cs" Line="8" Column="1" />
+      <File FileName="Assets/_Scripts/Inventory/Inventory.cs" Line="7" Column="40" />
+      <File FileName="Assets/_Scripts/Inventory/PopupScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Scripts/Inventory/TestGUI.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
@@ -13,5 +14,4 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp-Editor-firstpass PreferredExecutionTarget="Unity.Editor" />
 </Properties>
