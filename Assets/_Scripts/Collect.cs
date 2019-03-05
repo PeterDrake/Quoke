@@ -7,19 +7,38 @@ using UnityEngine;
 //script for all collectable items to add them to inventory
 public class Collect : MonoBehaviour
 {
-  /// <summary>
-  /// name of item this is set in the inspector when the scripts is added to an object
-  /// </summary>
-  [SerializeField] private string itemName;
     /// <summary>
-    /// Adds the trigger object to plays inventory then delets it form game world
+    /// name of item this is set in the inspector when the scripts is added to an object
     /// </summary>
-    /// <param name="other">Other.</param>
-    private void OnTriggerEnter(Collider other)
+    [SerializeField] private string itemName;
+    private Sprite sprite;
+    private void Start()
     {
-        Debug.Log("picked up");
-        Managers.Inventory.AddItem(itemName);
+        Behaviour halo = (Behaviour)this.gameObject.GetComponent("Halo");
+        halo.enabled = false;
+    }
 
-        Destroy(this.gameObject);
+    /// <summary>
+    /// when the mouse is over the object it is glowed and if the user presses action button 'E' the item is picked up
+    /// </summary>
+    private void OnMouseOver()
+    {
+        Behaviour halo = (Behaviour)this.gameObject.GetComponent("Halo");
+        halo.enabled = true;
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("picked up");
+            Managers.Inventory.AddItem(itemName);
+
+            Destroy(this.gameObject);
+        }
+    }
+    /// <summary>
+    /// On the mouse exit shuts off the back glow
+    /// </summary>
+    private void OnMouseExit()
+    {
+        Behaviour halo = (Behaviour)this.gameObject.GetComponent("Halo");
+        halo.enabled = false;
     }
 }
