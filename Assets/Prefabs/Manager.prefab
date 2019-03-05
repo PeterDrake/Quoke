@@ -83,4 +83,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winConditions: {fileID: 0}
-  popup: {fileID: 0}
+  popup: {fileID: 4778363129372932454, guid: 1894b9e546dbe4cbfa64af3f1442a2cd, type: 3}
