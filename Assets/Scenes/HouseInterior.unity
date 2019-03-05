@@ -5418,8 +5418,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 805dd09b17e648144842a597be743dae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enterText: {fileID: 1962170847}
-  StreetScene: 
+  message: {fileID: 1962170851}
+  StreetScene: StreetScene
 --- !u!1 &1067393971
 GameObject:
   m_ObjectHideFlags: 0
@@ -5825,7 +5825,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '[E] TO GO TO STREET'
+  m_Text: '[E] TO EXIT HOUSE'
 --- !u!222 &1098991911
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9042,7 +9042,7 @@ GameObject:
   - component: {fileID: 1962170850}
   - component: {fileID: 1962170849}
   m_Layer: 5
-  m_Name: ExitHouse
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
