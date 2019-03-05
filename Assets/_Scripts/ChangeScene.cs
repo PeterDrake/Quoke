@@ -6,31 +6,19 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
 
-    public GameObject enterText;
-    public string StreetScene;
+       public GameObject enterText;
+       public string StreetScene;
 
-    void Start()
-    {
-        enterText.SetActive(false);
-    }
+    // void Start()
+    // {
+    //     enterText.SetActive(false);
+    // }
 
-    // Update is called once per frame
-    void OnTriggerStay(Collider Door_02)
+    void OnMouseOver()
     {
-        if (Door_02.gameObject.tag == "DoorToStreet")
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            enterText.SetActive(true);
-            if (Input.GetButtonDown("Use"))
-            {
-                SceneManager.LoadScene(StreetScene);
-            }
-        }
-    }
-    void OnTriggerExit(Collider Door_02)
-    {
-        if (Door_02.gameObject.tag == "DoorToStreet")
-        {
-            enterText.SetActive(false);
+            SceneManager.LoadScene(StreetScene);
         }
     }
 }
