@@ -25,12 +25,12 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             {
                 characterArray[i] = m_Character.transform.GetChild(0).GetChild(i).gameObject;
             }
-            character = characterArray[Random.Range(0, characterCount)].gameObject;
+            character = characterArray[Random.Range(0, characterCount-1)].gameObject;
             character.SetActive(true);
             //apply random texture from Resources folder
-            materialArray = AssetDatabase.LoadAllAssetsAtPath("Assets/POLYGONCityCharacters/Materials/*");
-            material = (Material)materialArray[Random.Range(0, materialArray.Length-1)];
-            character.GetComponent<Renderer>().material = material;
+            //materialArray = AssetDatabase.LoadAllAssetsAtPath("Assets/POLYGONCityCharacters/Materials/*");
+            //material = (Material)materialArray[Random.Range(0, materialArray.Length-1)];
+            //character.GetComponent<Renderer>().material = material;
         }
     }
 }

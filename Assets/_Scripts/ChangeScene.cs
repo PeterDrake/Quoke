@@ -1,15 +1,36 @@
 ﻿using System.Collections;
-using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 public class ChangeScene : MonoBehaviour
 {
-    private void OnTriggerEnter (Collider sceneTrigger)
+
+    public GameObject enterText;
+    public string StreetScene;
+
+    void Start()
     {
-        //When your Character collides with the box collider
-        if(sceneTrigger.CompareTag("DoorToStreet"))
+        enterText.SetActive(false);
+    }
+
+    // Update is called once per frame
+    void OnTriggerStay(Collider Door_02)
+    {
+        if (Door_02.gameObject.tag == "DoorToStreet")
         {
-            SceneManager.LoadScene("StreetScene", LoadSceneMode.Additive);
+            enterText.SetActive(true);
+            if (Input.GetButtonDown("Use"))
+            {
+                SceneManager.LoadScene(StreetScene);
+            }
+        }
+    }
+    void OnTriggerExit(Collider Door_02)
+    {
+        if (Door_02.gameObject.tag == "DoorToStreet")
+        {
+            enterText.SetActive(false);
         }
     }
 }
