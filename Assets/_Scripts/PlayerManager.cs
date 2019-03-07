@@ -17,7 +17,7 @@ public class PlayerManager : MonoBehaviour,IGameManager
     //number of actions taken by player
     public int actionCount { get; private set; }
 
-
+    private string[] recs= new string[] { "bleach", "tent", "wrench", "tools", "bucket", "bags", "shovel", "pick", "sawdust" };
     /// <summary>
     /// Startup this instance 
     /// sets all atribut values 
@@ -29,6 +29,7 @@ public class PlayerManager : MonoBehaviour,IGameManager
         health = 100;
         water = false;
         shelter = false;
+        Randomize();
         actionCount = 0;
         status = ManagerStatus.Started;
     }
@@ -86,8 +87,15 @@ public class PlayerManager : MonoBehaviour,IGameManager
     /// </summary>
     private void Randomize()
     {
-        //TODO finsih
+        // recs = 
+        int num = Random.Range(0, recs.Length);
+        Debug.Log(num);
+        for(int i =0; i<num; i++)
+        {
+            int r = Random.Range(0,recs.Length);
+            Debug.Log(recs[r]);
+
+            Managers.Inventory.AddItem(recs[r]);
+        }
     }
-
-
 }

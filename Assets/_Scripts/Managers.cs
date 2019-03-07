@@ -24,11 +24,11 @@ public class Managers : MonoBehaviour
     {  
     	EditorSceneManager.preventCrossSceneReferences = false;
         SceneManager.LoadScene(scene, LoadSceneMode.Additive);
-        Player = GetComponent<PlayerManager>();
         Inventory = GetComponent<InventoryManager>();
+        Player = GetComponent<PlayerManager>();
         startSeq = new List<IGameManager>();
-        startSeq.Add(Player);
         startSeq.Add(Inventory);
+        startSeq.Add(Player);
         StartCoroutine(StartUpManagers());//inits all manager states
     }
 
