@@ -112,6 +112,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &312913655 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4778363129372932454, guid: 1894b9e546dbe4cbfa64af3f1442a2cd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1556806447}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4ad090fa68874cfea0c3779c89c3309, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &977817030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -179,6 +191,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 1064642606130940926, guid: e9a77ceb442aa4a4790aa8560ddfa486,
+        type: 3}
+      propertyPath: popup
+      value: 
+      objectReference: {fileID: 312913655}
+    - target: {fileID: 5493665565829917103, guid: e9a77ceb442aa4a4790aa8560ddfa486,
+        type: 3}
+      propertyPath: scene
+      value: HouseInterior
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9a77ceb442aa4a4790aa8560ddfa486, type: 3}
 --- !u!1001 &1556806447
@@ -192,6 +214,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Inventory
+      objectReference: {fileID: 0}
+    - target: {fileID: 4778363129372932443, guid: 1894b9e546dbe4cbfa64af3f1442a2cd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4778363129372932455, guid: 1894b9e546dbe4cbfa64af3f1442a2cd,
         type: 3}

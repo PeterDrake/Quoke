@@ -2,12 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(PlayerManager))] //makes sure that these class/files are present before 
                                          // starting to avoid errors
 [RequireComponent(typeof(InventoryManager))]
 
-public string scene;
+
 /*
  * Main manger for both payer and inventory systmes
  * all code taken from thw Unity In Action book 2nd Ed J.Hocking
@@ -15,14 +17,13 @@ public string scene;
 public class Managers : MonoBehaviour
 {    public static PlayerManager Player { get; private set; } //player systems manager
     public static InventoryManager Inventory { get; private set; } //player inventory manager
-
+    public string scene;
     private List<IGameManager> startSeq;//list of managers to spool up in start. A
 
     private void Awake()//earlist call function
     {  
     	EditorSceneManager.preventCrossSceneReferences = false;
         SceneManager.LoadScene(scene, LoadSceneMode.Additive);
-
         Player = GetComponent<PlayerManager>();
         Inventory = GetComponent<InventoryManager>();
         startSeq = new List<IGameManager>();
