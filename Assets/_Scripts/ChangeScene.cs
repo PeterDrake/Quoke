@@ -1,15 +1,32 @@
 ﻿using System.Collections;
-using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 public class ChangeScene : MonoBehaviour
 {
-    private void OnTriggerEnter (Collider sceneTrigger)
+
+    public Canvas message;
+    public string StreetScene;
+
+     void Start()
+     {
+        message.gameObject.SetActive(false);
+     }
+
+   // void OnMouseOver()
+   void OnTriggerStay()
     {
-        //When your Character collides with the box collider
-        if(sceneTrigger.CompareTag("DoorToStreet"))
+        message.gameObject.SetActive(true);
+
+     //   [E] TO ENTER HOUSE
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            SceneManager.LoadScene("StreetScene", LoadSceneMode.Additive);
+            SceneManager.LoadScene(StreetScene);
         }
     }
-}
+    private void OnTriggerExit()
+        {
+        message.gameObject.SetActive(false);
+        }
+    }

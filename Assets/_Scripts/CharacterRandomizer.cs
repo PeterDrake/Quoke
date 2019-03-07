@@ -38,7 +38,6 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
             //apply random texture from Resources folder
             //materialArray = AssetDatabase.LoadAllAssetsAtPath("Assets/POLYGONCityCharacters/Materials/*");
-
             //material = (Material)materialArray[Random.Range(0, materialArray.Length-1)];
             //character.GetComponent<Renderer>().material = material;
         }
