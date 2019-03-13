@@ -782,7 +782,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -870,7 +870,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -1030,7 +1030,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -1398,7 +1398,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -2154,7 +2154,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -2995,10 +2995,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1062825461}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e374cb1f18cd846dfb3f40c93aaa7277, type: 3}
+  m_Script: {fileID: 11500000, guid: 805dd09b17e648144842a597be743dae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StreetScene: StreetScene
+  message: {fileID: 1962170851}
+  scene: StreetScene
 --- !u!65 &1062825464
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3012,20 +3013,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.91277015, y: 3.7519445, z: 1.9965178}
   m_Center: {x: 0.22556406, y: 1.8759723, z: -0.9982588}
---- !u!114 &1062825466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1062825461}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 805dd09b17e648144842a597be743dae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  message: {fileID: 1962170851}
-  StreetScene: StreetScene
 --- !u!1001 &1067721829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3685,7 +3672,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -3779,7 +3766,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -5184,7 +5171,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 38779c9653e8f684cab84123989672e1, type: 3}
       propertyPath: m_TagString
-      value: DoorToStreet
+      value: Door
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 38779c9653e8f684cab84123989672e1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5671,6 +5658,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PickUp
       objectReference: {fileID: 0}
+    - target: {fileID: 5832404859697780689, guid: f9ea01a80df0140479db1ee5f96d11fe,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5832404859697780694, guid: f9ea01a80df0140479db1ee5f96d11fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5731,7 +5723,8 @@ PrefabInstance:
       propertyPath: itemName
       value: wrench
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5832404859697780690, guid: f9ea01a80df0140479db1ee5f96d11fe, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f9ea01a80df0140479db1ee5f96d11fe, type: 3}
 --- !u!1 &2101037705 stripped
 GameObject:

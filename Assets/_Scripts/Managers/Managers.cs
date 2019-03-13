@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
                                          // starting to avoid errors
 [RequireComponent(typeof(InventoryManager))]
 
-
+[RequireComponent(typeof(LevelManager))]
 /*
  * Main manger for both payer and inventory systmes
  * all code taken from thw Unity In Action book 2nd Ed J.Hocking
@@ -17,18 +17,22 @@ using UnityEngine.SceneManagement;
 public class Managers : MonoBehaviour
 {    public static PlayerManager Player { get; private set; } //player systems manager
     public static InventoryManager Inventory { get; private set; } //player inventory manager
-    public string scene;
+    public static LevelManager Level { get; private set; }
+  //  public string scene;
     private List<IGameManager> startSeq;//list of managers to spool up in start. A
 
     private void Awake()//earlist call function
-    {  
+    {
+        DontDestroyOnLoad(gameObject);
     	EditorSceneManager.preventCrossSceneReferences = false;
-        SceneManager.LoadScene(scene, LoadSceneMode.Additive);
+        //SceneManager.LoadScene(scene, LoadSceneMode.Additive);
         Inventory = GetComponent<InventoryManager>();
         Player = GetComponent<PlayerManager>();
+        Level = GetComponent<LevelManager>();
         startSeq = new List<IGameManager>();
         startSeq.Add(Inventory);
         startSeq.Add(Player);
+        startSeq.Add(Level);
         StartCoroutine(StartUpManagers());//inits all manager states
     }
 
@@ -68,6 +72,7 @@ public class Managers : MonoBehaviour
             Debug.Log("all managers loaded");
 
         }
+        Level.GoToNext();
 
     }
 
