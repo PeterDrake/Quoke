@@ -1,5 +1,4 @@
-<<<<<<< HEAD:Assets/_Scripts/Managers/UIController.cs
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,27 +19,6 @@ public class UIController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {  // Managers.Player.S
-=======
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-
-public class UIController : MonoBehaviour
-{   //conditional display of win conditions
-   [SerializeField] private Text winConditions;
-   [SerializeField] private InventoryPopup popup;
-    // Start is called before the first frame update
-   
-    void Start()
-    {
-        popup.gameObject.SetActive(false);     
-    }
-
-    // Update is called once per frame
-    void Update()
-    {  // Managers.Player.S
->>>>>>> master:Assets/_Scripts/UIController.cs
         if (Input.GetKeyDown(KeyCode.I))
         {
             bool isOpen = popup.gameObject.activeSelf;
@@ -51,7 +29,6 @@ public class UIController : MonoBehaviour
 
     private void OnConditionUpdate()
     {
-<<<<<<< HEAD:Assets/_Scripts/Managers/UIController.cs
         string message = "Health: " + Managers.Player.health;
         //winConditions.text = message;
     }
@@ -62,9 +39,3 @@ public class UIController : MonoBehaviour
                           "SHELTER:" + Managers.Player.shelter.ToString() +" \n";
     }
 }
-=======
-        string message = "Health: " + Managers.Player.health;
-        winConditions.text = message;
-    }
-}
->>>>>>> master:Assets/_Scripts/UIController.cs

@@ -9,12 +9,15 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/HouseInterior.unity
-    guid: f4f8f77fe9b93c341a1d410f6be4d9a1
-  - enabled: 1
     path: Assets/Scenes/SystemsScene.unity
     guid: 64cdac58574264666abde09f44a2a41e
   - enabled: 1
+    path: Assets/Scenes/HouseInterior.unity
+    guid: f4f8f77fe9b93c341a1d410f6be4d9a1
+  - enabled: 1
     path: Assets/Scenes/StreetScene.unity
     guid: ade420126f11a7a459167112d3705c65
+  - enabled: 1
+    path: Assets/Scenes/Store.unity
+    guid: 2080a023e6ec57442853202ea1ca0bd3
   m_configObjects: {}

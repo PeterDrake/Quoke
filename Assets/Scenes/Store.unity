@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13904,7 +13904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   message: {fileID: 0}
-  StreetScene: 
+  scene: 
 --- !u!64 &709051441
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18510,7 +18510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   message: {fileID: 1135507184}
-  StreetScene: HouseInterior
+  scene: 
 --- !u!65 &994885150
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33056,7 +33056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   message: {fileID: 1101483159}
-  StreetScene: StreetScene
+  scene: StreetScene
 --- !u!1001 &1797922515
 PrefabInstance:
   m_ObjectHideFlags: 0
