@@ -7,7 +7,7 @@ public class ChangeScene : MonoBehaviour
 {
 
     public Canvas message;
-    public string StreetScene;
+    public string scene;
 
      void Start()
      {
@@ -22,7 +22,7 @@ public class ChangeScene : MonoBehaviour
      //   [E] TO ENTER HOUSE
         if (Input.GetKeyDown(KeyCode.E))
         {
-            SceneManager.LoadScene(StreetScene);
+            Managers.Level.GoToScene(scene);
         }
     }
     private void OnTriggerExit()
