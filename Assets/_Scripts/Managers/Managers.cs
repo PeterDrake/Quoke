@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(PlayerManager))] //makes sure that these class/files are present before 
                                          // starting to avoid errors
@@ -21,6 +22,7 @@ public class Managers : MonoBehaviour
   //  public string scene;
     private List<IGameManager> startSeq;//list of managers to spool up in start. A
 
+   
     private void Awake()//earlist call function
     {
         DontDestroyOnLoad(gameObject);
@@ -76,4 +78,5 @@ public class Managers : MonoBehaviour
 
     }
 
+  
 }

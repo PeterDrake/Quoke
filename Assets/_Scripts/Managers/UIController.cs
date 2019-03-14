@@ -5,13 +5,15 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {   //conditional display of win conditions
-   [SerializeField] private Text winConditions;
+  // [SerializeField] private Text winConditions;
    [SerializeField] private InventoryPopup popup;
     // Start is called before the first frame update
-   
+    public Text statusText;
+    public Text statusUpdate;
     void Start()
     {
-        popup.gameObject.SetActive(false);     
+        popup.gameObject.SetActive(false);
+        SetText();  
     }
 
     // Update is called once per frame
@@ -28,6 +30,12 @@ public class UIController : MonoBehaviour
     private void OnConditionUpdate()
     {
         string message = "Health: " + Managers.Player.health;
-        winConditions.text = message;
+        //winConditions.text = message;
+    }
+    public void SetText()
+    {
+        statusText.text = "WATER:" + Managers.Player.water.ToString() + " \n"+
+                          "HEALTH:" + Managers.Player.health.ToString() + " \n"+
+                          "SHELTER:" + Managers.Player.shelter.ToString() +" \n";
     }
 }

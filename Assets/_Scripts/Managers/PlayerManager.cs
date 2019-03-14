@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class PlayerManager : MonoBehaviour,IGameManager
@@ -16,6 +17,8 @@ public class PlayerManager : MonoBehaviour,IGameManager
     public bool water { get; private set; }
     //number of actions taken by player
     public int actionCount { get; private set; }
+
+  
 
     private string[] recs= new string[] { "bleach", "tent", "wrench", "tools", "bucket", "bags", "shovel", "pick", "sawdust" };
     /// <summary>
@@ -34,10 +37,11 @@ public class PlayerManager : MonoBehaviour,IGameManager
         status = ManagerStatus.Started;
     }
 
+
     /// <summary>
     /// Sets health to 0 if Player takes a hit.
     /// </summary>
-     
+
     public void takeHit()
     {
         health = 0;
@@ -58,9 +62,14 @@ public class PlayerManager : MonoBehaviour,IGameManager
     public void ChangeWater()
     {
         water = !water;
+      //  SetText();
         Debug.Log("You have aquired water!!");
 
+
     }
+
+   
+
 
     //changes the shelter status
     /// <summary>
