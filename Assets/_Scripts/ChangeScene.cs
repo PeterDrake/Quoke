@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
 
-    public Canvas message;
+   public Canvas message;
     public string scene;
 
      void Start()
      {
-        message.gameObject.SetActive(false);
+       message.gameObject.SetActive(false);
      }
 
    // void OnMouseOver()
@@ -29,4 +29,6 @@ public class ChangeScene : MonoBehaviour
         {
         message.gameObject.SetActive(false);
         }
-    }
+
+  
+}
