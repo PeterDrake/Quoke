@@ -1,9 +1,8 @@
-
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.SceneManagement;
+//using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -27,7 +26,7 @@ public class Managers : MonoBehaviour
     private void Awake()//earlist call function
     {
         DontDestroyOnLoad(gameObject);
-    	EditorSceneManager.preventCrossSceneReferences = false;
+    //	EditorSceneManager.preventCrossSceneReferences = false;
         //SceneManager.LoadScene(scene, LoadSceneMode.Additive);
         Inventory = GetComponent<InventoryManager>();
         Player = GetComponent<PlayerManager>();
