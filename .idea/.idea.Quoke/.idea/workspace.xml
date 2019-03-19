@@ -2,27 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f96d1fad-b949-483c-a4f5-7dc3946871c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Quoke/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Quoke/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Quoke/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Quoke/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Quoke/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Quoke/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Quoke/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Quoke/riderModule.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/Store.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/Store/ShoppingPopup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/Store/ShoppingPopup.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/Store/StartShopping.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Scripts/Store/StartShopping.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/bags.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/bags.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/bleach.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/bleach.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/bucket.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/bucket.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/jug.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/jug.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/pick.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/pick.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/sawdust.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/sawdust.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/shovel.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/shovel.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Store.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Store.unity" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,14 +11,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Collect.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
+            <state relative-caret-position="16">
               <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
               <folding>
-                <marker date="1552424805285" expanded="true" signature="6:78" ph="..." />
+                <marker date="1552424805285" expanded="false" signature="6:78" ph="..." />
                 <marker date="1552424805285" expanded="true" signature="79:215" ph="/// Collect script to be given to all collectable objects adds them to player inventory via Manager System. ... " />
                 <marker date="1552424805285" expanded="true" signature="312:1379" ph="{...}" />
                 <marker date="1552424805285" expanded="true" signature="319:440" ph="/// name of item this is set in the inspector when the scripts is added to an object ... " />
@@ -57,10 +36,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Managers/InventoryPopup.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
+            <state relative-caret-position="240">
               <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
               <folding>
-                <marker date="1553028443560" expanded="true" signature="6:192" ph="..." />
+                <marker date="1553028443560" expanded="false" signature="6:192" ph="..." />
                 <marker date="1553028443560" expanded="true" signature="237:1450" ph="{...}" />
                 <marker date="1553028443560" expanded="true" signature="339:352" ph="{...}" />
                 <marker date="1553028443560" expanded="true" signature="357:441" ph="/// On the opening of athe inventory its set up ... " />
@@ -77,20 +56,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Store/StartShopping.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+            <state relative-caret-position="393">
+              <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
               <folding>
-                <marker date="1553031729313" expanded="true" signature="6:78" ph="..." />
-                <marker date="1553031729313" expanded="true" signature="79:215" ph="/// Collect script to be given to all collectable objects adds them to player inventory via Manager System. ... " />
-                <marker date="1553031729313" expanded="true" signature="318:1610" ph="{...}" />
-                <marker date="1553031729313" expanded="true" signature="325:446" ph="/// name of item this is set in the inspector when the scripts is added to an object ... " />
-                <marker date="1553031729313" expanded="true" signature="616:775" ph="{...}" />
-                <marker date="1553031729313" expanded="true" signature="781:932" ph="/// when the mouse is over the object it is glowed and if the user presses action button 'E' the item is picked u ... " />
-                <marker date="1553031729313" expanded="true" signature="963:1374" ph="{...}" />
-                <marker date="1553031729313" expanded="true" signature="1113:1368" ph="{...}" />
-                <marker date="1553031729313" expanded="true" signature="1278:1358" ph="/* Managers.Inventory.AddItem(itemName); ... */" />
-                <marker date="1553031729313" expanded="true" signature="1379:1461" ph="/// On the mouse exit shuts off the back glow ... " />
-                <marker date="1553031729313" expanded="true" signature="1492:1608" ph="{...}" />
+                <marker date="1553033069688" expanded="false" signature="6:78" ph="..." />
+                <marker date="1553033069688" expanded="true" signature="79:215" ph="/// Collect script to be given to all collectable objects adds them to player inventory via Manager System. ... " />
+                <marker date="1553033069688" expanded="true" signature="318:1610" ph="{...}" />
+                <marker date="1553033069688" expanded="true" signature="325:446" ph="/// name of item this is set in the inspector when the scripts is added to an object ... " />
+                <marker date="1553033069688" expanded="true" signature="616:775" ph="{...}" />
+                <marker date="1553033069688" expanded="true" signature="781:932" ph="/// when the mouse is over the object it is glowed and if the user presses action button 'E' the item is picked u ... " />
+                <marker date="1553033069688" expanded="true" signature="963:1374" ph="{...}" />
+                <marker date="1553033069688" expanded="true" signature="1113:1368" ph="{...}" />
+                <marker date="1553033069688" expanded="true" signature="1278:1358" ph="/* Managers.Inventory.AddItem(itemName); ... */" />
+                <marker date="1553033069688" expanded="true" signature="1379:1461" ph="/// On the mouse exit shuts off the back glow ... " />
+                <marker date="1553033069688" expanded="true" signature="1492:1608" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -102,15 +81,15 @@
             <state relative-caret-position="393">
               <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
               <folding>
-                <marker date="1553030578493" expanded="false" signature="6:192" ph="..." />
-                <marker date="1553030578493" expanded="true" signature="236:1449" ph="{...}" />
-                <marker date="1553030578493" expanded="true" signature="338:351" ph="{...}" />
-                <marker date="1553030578493" expanded="true" signature="356:440" ph="/// On the opening of athe inventory its set up ... " />
-                <marker date="1553030578493" expanded="true" signature="468:564" ph="{...}" />
-                <marker date="1553030578493" expanded="true" signature="594:806" ph="{...}" />
-                <marker date="1553030578493" expanded="true" signature="717:798" ph="{...}" />
-                <marker date="1553030578493" expanded="true" signature="834:1447" ph="{...}" />
-                <marker date="1553030578493" expanded="true" signature="1035:1441" ph="{...}" />
+                <marker date="1553033069625" expanded="false" signature="6:192" ph="..." />
+                <marker date="1553033069625" expanded="true" signature="236:1449" ph="{...}" />
+                <marker date="1553033069625" expanded="true" signature="338:351" ph="{...}" />
+                <marker date="1553033069625" expanded="true" signature="356:440" ph="/// On the opening of athe inventory its set up ... " />
+                <marker date="1553033069625" expanded="true" signature="468:564" ph="{...}" />
+                <marker date="1553033069625" expanded="true" signature="594:806" ph="{...}" />
+                <marker date="1553033069625" expanded="true" signature="717:798" ph="{...}" />
+                <marker date="1553033069625" expanded="true" signature="834:1447" ph="{...}" />
+                <marker date="1553033069625" expanded="true" signature="1035:1441" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -119,7 +98,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Managers/InventoryManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-167">
+            <state>
               <folding>
                 <marker date="1553028443555" expanded="false" signature="6:78" ph="..." />
                 <marker date="1553028443555" expanded="true" signature="139:1646" ph="{...}" />
@@ -141,17 +120,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Managers/UIController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
+            <state relative-caret-position="80">
               <caret line="9" column="49" lean-forward="true" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
               <folding>
-                <marker date="1553028443594" expanded="false" signature="7:101" ph="..." />
-                <marker date="1553028443594" expanded="true" signature="144:1214" ph="{...}" />
-                <marker date="1553028443594" expanded="true" signature="149:238" ph="/* conditional display of win conditions ... */" />
-                <marker date="1553028443594" expanded="true" signature="416:492" ph="{...}" />
-                <marker date="1553028443594" expanded="true" signature="550:780" ph="{...}" />
-                <marker date="1553028443594" expanded="true" signature="619:774" ph="{...}" />
-                <marker date="1553028443594" expanded="true" signature="818:932" ph="{...}" />
-                <marker date="1553028443594" expanded="true" signature="958:1212" ph="{...}" />
+                <marker date="1553032705502" expanded="false" signature="7:101" ph="..." />
+                <marker date="1553032705502" expanded="true" signature="144:1214" ph="{...}" />
+                <marker date="1553032705502" expanded="true" signature="149:238" ph="/* conditional display of win conditions ... */" />
+                <marker date="1553032705502" expanded="true" signature="416:492" ph="{...}" />
+                <marker date="1553032705502" expanded="true" signature="550:780" ph="{...}" />
+                <marker date="1553032705502" expanded="true" signature="619:774" ph="{...}" />
+                <marker date="1553032705502" expanded="true" signature="818:932" ph="{...}" />
+                <marker date="1553032705502" expanded="true" signature="958:1212" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -180,7 +159,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="198" />
+    <option name="x" value="197" />
     <option name="y" value="-25" />
     <option name="width" value="1750" />
     <option name="height" value="980" />
@@ -220,10 +199,10 @@
         <option name="show-hidden-items" value="false" />
         <option name="show-project-names" value="true" />
       </pane>
-      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
+      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -270,11 +249,12 @@
       <option name="presentableId" value="Default" />
       <updated>1553029832790</updated>
       <workItem from="1553029847548" duration="2436000" />
+      <workItem from="1553034004640" duration="460000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2436000" />
+    <option name="totallyTimeSpent" value="2896000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -287,13 +267,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.12080537" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.12214765" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Unity" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unit Tests" order="1" />
       <window_info anchor="bottom" id="Terminal" order="2" />
@@ -301,7 +281,7 @@
       <window_info anchor="bottom" id="Database Changes" order="4" />
       <window_info anchor="bottom" id="Version Control" order="5" />
       <window_info anchor="bottom" id="Performance Profiler" order="6" />
-      <window_info anchor="bottom" id="NuGet" order="7" />
+      <window_info anchor="bottom" id="NuGet" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="bottom" id="Find" order="9" />
       <window_info anchor="bottom" id="Run" order="10" />
@@ -309,6 +289,7 @@
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="14" />
+      <window_info anchor="bottom" id="Unity" order="15" />
       <window_info anchor="right" id="Errors In Solution" order="0" />
       <window_info anchor="right" id="Unit Tests Coverage" order="1" />
       <window_info anchor="right" id="Database" order="2" />
@@ -334,16 +315,47 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/StartShopping.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/StartShopping.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Collect.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-299">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        <state relative-caret-position="16">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding>
+            <marker date="1552424805285" expanded="false" signature="6:78" ph="..." />
+            <marker date="1552424805285" expanded="true" signature="79:215" ph="/// Collect script to be given to all collectable objects adds them to player inventory via Manager System. ... " />
+            <marker date="1552424805285" expanded="true" signature="312:1379" ph="{...}" />
+            <marker date="1552424805285" expanded="true" signature="319:440" ph="/// name of item this is set in the inspector when the scripts is added to an object ... " />
+            <marker date="1552424805285" expanded="true" signature="538:654" ph="{...}" />
+            <marker date="1552424805285" expanded="true" signature="660:811" ph="/// when the mouse is over the object it is glowed and if the user presses action button 'E' the item is picked u ... " />
+            <marker date="1552424805285" expanded="true" signature="842:1143" ph="{...}" />
+            <marker date="1552424805285" expanded="true" signature="992:1137" ph="{...}" />
+            <marker date="1552424805285" expanded="true" signature="1148:1230" ph="/// On the mouse exit shuts off the back glow ... " />
+            <marker date="1552424805285" expanded="true" signature="1261:1377" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Managers/InventoryPopup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+          <folding>
+            <marker date="1553028443560" expanded="false" signature="6:192" ph="..." />
+            <marker date="1553028443560" expanded="true" signature="237:1450" ph="{...}" />
+            <marker date="1553028443560" expanded="true" signature="339:352" ph="{...}" />
+            <marker date="1553028443560" expanded="true" signature="357:441" ph="/// On the opening of athe inventory its set up ... " />
+            <marker date="1553028443560" expanded="true" signature="469:565" ph="{...}" />
+            <marker date="1553028443560" expanded="true" signature="595:807" ph="{...}" />
+            <marker date="1553028443560" expanded="true" signature="718:799" ph="{...}" />
+            <marker date="1553028443560" expanded="true" signature="835:1448" ph="{...}" />
+            <marker date="1553028443560" expanded="true" signature="1036:1442" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Managers/InventoryManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-167">
+        <state>
           <folding>
             <marker date="1553028443555" expanded="false" signature="6:78" ph="..." />
             <marker date="1553028443555" expanded="true" signature="139:1646" ph="{...}" />
@@ -361,39 +373,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Managers/InventoryPopup.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Managers/UIController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+        <state relative-caret-position="80">
+          <caret line="9" column="49" lean-forward="true" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
           <folding>
-            <marker date="1553028443560" expanded="true" signature="6:192" ph="..." />
-            <marker date="1553028443560" expanded="true" signature="237:1450" ph="{...}" />
-            <marker date="1553028443560" expanded="true" signature="339:352" ph="{...}" />
-            <marker date="1553028443560" expanded="true" signature="357:441" ph="/// On the opening of athe inventory its set up ... " />
-            <marker date="1553028443560" expanded="true" signature="469:565" ph="{...}" />
-            <marker date="1553028443560" expanded="true" signature="595:807" ph="{...}" />
-            <marker date="1553028443560" expanded="true" signature="718:799" ph="{...}" />
-            <marker date="1553028443560" expanded="true" signature="835:1448" ph="{...}" />
-            <marker date="1553028443560" expanded="true" signature="1036:1442" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Collect.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding>
-            <marker date="1552424805285" expanded="true" signature="6:78" ph="..." />
-            <marker date="1552424805285" expanded="true" signature="79:215" ph="/// Collect script to be given to all collectable objects adds them to player inventory via Manager System. ... " />
-            <marker date="1552424805285" expanded="true" signature="312:1379" ph="{...}" />
-            <marker date="1552424805285" expanded="true" signature="319:440" ph="/// name of item this is set in the inspector when the scripts is added to an object ... " />
-            <marker date="1552424805285" expanded="true" signature="538:654" ph="{...}" />
-            <marker date="1552424805285" expanded="true" signature="660:811" ph="/// when the mouse is over the object it is glowed and if the user presses action button 'E' the item is picked u ... " />
-            <marker date="1552424805285" expanded="true" signature="842:1143" ph="{...}" />
-            <marker date="1552424805285" expanded="true" signature="992:1137" ph="{...}" />
-            <marker date="1552424805285" expanded="true" signature="1148:1230" ph="/// On the mouse exit shuts off the back glow ... " />
-            <marker date="1552424805285" expanded="true" signature="1261:1377" ph="{...}" />
+            <marker date="1553032705502" expanded="false" signature="7:101" ph="..." />
+            <marker date="1553032705502" expanded="true" signature="144:1214" ph="{...}" />
+            <marker date="1553032705502" expanded="true" signature="149:238" ph="/* conditional display of win conditions ... */" />
+            <marker date="1553032705502" expanded="true" signature="416:492" ph="{...}" />
+            <marker date="1553032705502" expanded="true" signature="550:780" ph="{...}" />
+            <marker date="1553032705502" expanded="true" signature="619:774" ph="{...}" />
+            <marker date="1553032705502" expanded="true" signature="818:932" ph="{...}" />
+            <marker date="1553032705502" expanded="true" signature="958:1212" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -403,52 +395,35 @@
         <state relative-caret-position="393">
           <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
           <folding>
-            <marker date="1553030578493" expanded="false" signature="6:192" ph="..." />
-            <marker date="1553030578493" expanded="true" signature="236:1449" ph="{...}" />
-            <marker date="1553030578493" expanded="true" signature="338:351" ph="{...}" />
-            <marker date="1553030578493" expanded="true" signature="356:440" ph="/// On the opening of athe inventory its set up ... " />
-            <marker date="1553030578493" expanded="true" signature="468:564" ph="{...}" />
-            <marker date="1553030578493" expanded="true" signature="594:806" ph="{...}" />
-            <marker date="1553030578493" expanded="true" signature="717:798" ph="{...}" />
-            <marker date="1553030578493" expanded="true" signature="834:1447" ph="{...}" />
-            <marker date="1553030578493" expanded="true" signature="1035:1441" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Managers/UIController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="9" column="49" lean-forward="true" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-          <folding>
-            <marker date="1553028443594" expanded="false" signature="7:101" ph="..." />
-            <marker date="1553028443594" expanded="true" signature="144:1214" ph="{...}" />
-            <marker date="1553028443594" expanded="true" signature="149:238" ph="/* conditional display of win conditions ... */" />
-            <marker date="1553028443594" expanded="true" signature="416:492" ph="{...}" />
-            <marker date="1553028443594" expanded="true" signature="550:780" ph="{...}" />
-            <marker date="1553028443594" expanded="true" signature="619:774" ph="{...}" />
-            <marker date="1553028443594" expanded="true" signature="818:932" ph="{...}" />
-            <marker date="1553028443594" expanded="true" signature="958:1212" ph="{...}" />
+            <marker date="1553033069625" expanded="false" signature="6:192" ph="..." />
+            <marker date="1553033069625" expanded="true" signature="236:1449" ph="{...}" />
+            <marker date="1553033069625" expanded="true" signature="338:351" ph="{...}" />
+            <marker date="1553033069625" expanded="true" signature="356:440" ph="/// On the opening of athe inventory its set up ... " />
+            <marker date="1553033069625" expanded="true" signature="468:564" ph="{...}" />
+            <marker date="1553033069625" expanded="true" signature="594:806" ph="{...}" />
+            <marker date="1553033069625" expanded="true" signature="717:798" ph="{...}" />
+            <marker date="1553033069625" expanded="true" signature="834:1447" ph="{...}" />
+            <marker date="1553033069625" expanded="true" signature="1035:1441" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Store/StartShopping.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        <state relative-caret-position="393">
+          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
           <folding>
-            <marker date="1553031729313" expanded="true" signature="6:78" ph="..." />
-            <marker date="1553031729313" expanded="true" signature="79:215" ph="/// Collect script to be given to all collectable objects adds them to player inventory via Manager System. ... " />
-            <marker date="1553031729313" expanded="true" signature="318:1610" ph="{...}" />
-            <marker date="1553031729313" expanded="true" signature="325:446" ph="/// name of item this is set in the inspector when the scripts is added to an object ... " />
-            <marker date="1553031729313" expanded="true" signature="616:775" ph="{...}" />
-            <marker date="1553031729313" expanded="true" signature="781:932" ph="/// when the mouse is over the object it is glowed and if the user presses action button 'E' the item is picked u ... " />
-            <marker date="1553031729313" expanded="true" signature="963:1374" ph="{...}" />
-            <marker date="1553031729313" expanded="true" signature="1113:1368" ph="{...}" />
-            <marker date="1553031729313" expanded="true" signature="1278:1358" ph="/* Managers.Inventory.AddItem(itemName); ... */" />
-            <marker date="1553031729313" expanded="true" signature="1379:1461" ph="/// On the mouse exit shuts off the back glow ... " />
-            <marker date="1553031729313" expanded="true" signature="1492:1608" ph="{...}" />
+            <marker date="1553033069688" expanded="false" signature="6:78" ph="..." />
+            <marker date="1553033069688" expanded="true" signature="79:215" ph="/// Collect script to be given to all collectable objects adds them to player inventory via Manager System. ... " />
+            <marker date="1553033069688" expanded="true" signature="318:1610" ph="{...}" />
+            <marker date="1553033069688" expanded="true" signature="325:446" ph="/// name of item this is set in the inspector when the scripts is added to an object ... " />
+            <marker date="1553033069688" expanded="true" signature="616:775" ph="{...}" />
+            <marker date="1553033069688" expanded="true" signature="781:932" ph="/// when the mouse is over the object it is glowed and if the user presses action button 'E' the item is picked u ... " />
+            <marker date="1553033069688" expanded="true" signature="963:1374" ph="{...}" />
+            <marker date="1553033069688" expanded="true" signature="1113:1368" ph="{...}" />
+            <marker date="1553033069688" expanded="true" signature="1278:1358" ph="/* Managers.Inventory.AddItem(itemName); ... */" />
+            <marker date="1553033069688" expanded="true" signature="1379:1461" ph="/// On the mouse exit shuts off the back glow ... " />
+            <marker date="1553033069688" expanded="true" signature="1492:1608" ph="{...}" />
           </folding>
         </state>
       </provider>
