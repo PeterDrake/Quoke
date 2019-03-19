@@ -15,6 +15,9 @@ sysinfo.txt
 # Unity3D generated meta files
 *.pidb.meta
 
+# Rider IDE folder
+/.idea/
+
 ###
 # VS/MD solution and project files
 ###

@@ -43,7 +43,7 @@ namespace UnityStandardAssets.Cameras
             // initially set the target distance
             float targetDist = m_OriginalDist;
 
-            m_Ray.origin = m_Pivot.position + m_Pivot.forward * sphereCastRadius;
+            m_Ray.origin = m_Pivot.position + m_Pivot.forward * sphereCastRadius + (new Vector3(0, height, 0));
             m_Ray.direction = -m_Pivot.forward;
 
             // initial check to see if start of spherecast intersects anything
