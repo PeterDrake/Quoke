@@ -16,7 +16,7 @@ sysinfo.txt
 *.pidb.meta
 
 # Rider IDE folder
-/.idea/
+/.idea*
 
 ###
 # VS/MD solution and project files

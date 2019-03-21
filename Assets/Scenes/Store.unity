@@ -31855,6 +31855,7 @@ GameObject:
   - component: {fileID: 1032755324}
   - component: {fileID: 1032755325}
   - component: {fileID: 1677946405}
+  - component: {fileID: 1677946406}
   m_Layer: 0
   m_Name: Character_BusinessMan_Suit_01
   m_TagString: Untagged
@@ -31876,6 +31877,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popup: {fileID: 4778363130773898410}
   itemName: 
+--- !u!122 &1677946406
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677946404}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278249208
+  m_Size: 2
 --- !u!1 &1677947534
 GameObject:
   m_ObjectHideFlags: 0
@@ -42906,7 +42919,7 @@ MonoBehaviour:
   m_StartAxis: 0
   m_CellSize: {x: 100, y: 100}
   m_Spacing: {x: 15, y: 10}
-  m_Constraint: 0
+  m_Constraint: 1
   m_ConstraintCount: 2
 --- !u!222 &4778363130808060373
 CanvasRenderer:
