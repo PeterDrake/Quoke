@@ -20,7 +20,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
 
 
 
-    private string[] recs = new string[] { "bleach", "tent", "wrench", "tools", "bucket", "bags", "shovel", "pick", "sawdust" };
+    private string[] recs = new string[] {"iodine tablets", "bleach", "tent", "wrench", "tools", "bucket", "bags", "shovel", "pick", "sawdust" };
     /// <summary>
     /// Startup this instance 
     /// sets all atribut values 

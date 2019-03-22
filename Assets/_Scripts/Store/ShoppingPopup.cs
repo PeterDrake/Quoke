@@ -8,9 +8,11 @@ using UnityEngine.EventSystems;
 
 public class ShoppingPopup : MonoBehaviour
 {
-   
+   // private string[] recs = new string[] { "bleach", "tent", "wrench", "tools", "bucket", "bags", "shovel", "pick", "sawdust" };
+
     public Image prefab;
     public Image Inven;
+    public Image linebreak;
     //private Image[] slots;
 
     void Start()
@@ -22,10 +24,24 @@ public class ShoppingPopup : MonoBehaviour
     /// </summary>
     private void OnEnable()
     {
-        Debug.Log(Managers.Inventory.GetItemList().Count);
-        this.GetList();
+        Debug.Log(StoreManager.SInventory.GetItemList().Count);
+
+
+        this.GetList(StoreManager.SInventory);
+
+        //add devider between plaer and store objs
+        //  OnGUI();
+        //GUILayout.Label("____________________________________________________________________");
+
+        this.GetList(Managers.Inventory);
 
     }
+     void OnGUI()
+    {
+        GUILayoutOption[]  s = new GUILayoutOption[4];
+
+        GUILayout.Label("____________________________________________________________________");
+    }//*/
 
     private void OnDisable()
     {
@@ -40,11 +56,11 @@ public class ShoppingPopup : MonoBehaviour
 
     }
 
-    private void GetList()
+    private void GetList(InventoryManager inventory)
     {
         //  int len = Managers.Inventory.GetItemList().Count;
 
-        List<string> items = Managers.Inventory.GetItemList();
+        List<string> items =inventory.GetItemList();
         int len = items.Count;
         for (int i = 0; i < len; i++)
         {
