@@ -8,9 +8,11 @@ using UnityEngine.EventSystems;
 
 public class ShoppingPopup : MonoBehaviour
 {
-   
+   // private string[] recs = new string[] { "bleach", "tent", "wrench", "tools", "bucket", "bags", "shovel", "pick", "sawdust" };
+
     public Image prefab;
     public Image Inven;
+    public Image linebreak;
     //private Image[] slots;
 
     void Start()
@@ -22,10 +24,14 @@ public class ShoppingPopup : MonoBehaviour
     /// </summary>
     private void OnEnable()
     {
-        Debug.Log(Managers.Inventory.GetItemList().Count);
-        this.GetList();
+        Debug.Log(StoreManager.SInventory.GetItemList().Count);
 
+
+        this.GetList(StoreManager.SInventory);
+
+ 
     }
+
 
     private void OnDisable()
     {
@@ -39,12 +45,13 @@ public class ShoppingPopup : MonoBehaviour
 
 
     }
+   
 
-    private void GetList()
+    private void GetList(InventoryManager inventory)
     {
         //  int len = Managers.Inventory.GetItemList().Count;
 
-        List<string> items = Managers.Inventory.GetItemList();
+        List<string> items =inventory.GetItemList();
         int len = items.Count;
         for (int i = 0; i < len; i++)
         {
@@ -53,6 +60,7 @@ public class ShoppingPopup : MonoBehaviour
             //  slots[i] = slot;
             slot.transform.SetParent(Inven.transform, false);
             slot.color = Color.cyan;
+            slot.name = items[i];
             slot.sprite = (Sprite)Resources.Load(items[i], typeof(Sprite));
             //slot.sprite = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Sprites/popup", typeof(Sprite));
         }

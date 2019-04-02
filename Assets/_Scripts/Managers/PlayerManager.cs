@@ -17,10 +17,15 @@ public class PlayerManager : MonoBehaviour, IGameManager
     public bool water { get; private set; }
     //number of actions taken by player
     public int actionCount { get; private set; }
+    //randomly gerneated resource;
+    public double cash { get;  set; }
+    //randomly assigend atribute false for renter and true for owner
+    public bool homeOwner { get; private set; }
 
 
+    public string[] recs = new string[] {"iodine tablets", "bleach", "tent", "wrench", "tools", "bucket", "bags", "shovel", "pick", "sawdust" };
+    public int[] recsp = new int[] { 7,4,30,10,35,5,15,10,20,15 };
 
-    private string[] recs = new string[] { "bleach", "tent", "wrench", "tools", "bucket", "bags", "shovel", "pick", "sawdust" };
     /// <summary>
     /// Startup this instance 
     /// sets all atribut values 
@@ -97,6 +102,9 @@ public class PlayerManager : MonoBehaviour, IGameManager
     private void Randomize()
     {
         // recs = 
+        cash = Random.Range(10, 200);
+        int c= Random.Range(0, 100);
+        homeOwner = c < 50;// 50/50 of owner less than 50 is an owner and vis virsa
         int num = Random.Range(0, recs.Length);
         Debug.Log(num);
         for (int i = 0; i < num; i++)
@@ -104,7 +112,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
             int r = Random.Range(0, recs.Length);
             Debug.Log(recs[r]);
 
-            Managers.Inventory.AddItem(recs[r]);
+            Managers.Inventory.AddItem(recs[r],recsp[r]);
         }
     }
 }
