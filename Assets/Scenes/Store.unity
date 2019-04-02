@@ -43086,7 +43086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d522f80d8f5c1a44c97eaf0d7f87aa28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 9046417405601060482, guid: d01049b490b174eb58174087a023234a, type: 3}
+  prefab: {fileID: 2848765387025699915, guid: 126b15ee62059486dab73825ea521763, type: 3}
   Inven: {fileID: 4778363130808060374}
   linebreak: {fileID: 2240065389908788806, guid: 9af67a38d68334009b18125f50639cdd,
     type: 3}

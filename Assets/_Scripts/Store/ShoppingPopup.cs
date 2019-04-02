@@ -29,19 +29,9 @@ public class ShoppingPopup : MonoBehaviour
 
         this.GetList(StoreManager.SInventory);
 
-        //add devider between plaer and store objs
-        //  OnGUI();
-        //GUILayout.Label("____________________________________________________________________");
-
-        this.GetList(Managers.Inventory);
-
+ 
     }
-     void OnGUI()
-    {
-        GUILayoutOption[]  s = new GUILayoutOption[4];
 
-        GUILayout.Label("____________________________________________________________________");
-    }//*/
 
     private void OnDisable()
     {
@@ -55,6 +45,7 @@ public class ShoppingPopup : MonoBehaviour
 
 
     }
+   
 
     private void GetList(InventoryManager inventory)
     {
@@ -69,6 +60,7 @@ public class ShoppingPopup : MonoBehaviour
             //  slots[i] = slot;
             slot.transform.SetParent(Inven.transform, false);
             slot.color = Color.cyan;
+            slot.name = items[i];
             slot.sprite = (Sprite)Resources.Load(items[i], typeof(Sprite));
             //slot.sprite = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Sprites/popup", typeof(Sprite));
         }

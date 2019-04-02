@@ -25,10 +25,19 @@ public class Collect : MonoBehaviour
     {
         Behaviour halo = (Behaviour)this.gameObject.GetComponent("Halo");
         halo.enabled = true;
+        int i;
+        for ( i = 0; i < Managers.Player.recs.Length; i++)
+        {
+            if (StoreManager.recs[i].Equals(this.name))
+            {
+                break;
+            }
+        }
         if (Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("picked up");
-            Managers.Inventory.AddItem(itemName);
+
+            Managers.Inventory.AddItem(itemName, Managers.Player.recsp[i]);
 
             Destroy(this.gameObject);
         }

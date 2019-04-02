@@ -18,7 +18,6 @@ public class StartShopping : MonoBehaviour
 
      void Awake()
     {
-        //Debug.Log("hjklgfffffffffffffffffffffffffffffffffffads\n start");
         prompt.gameObject.SetActive(false);
         popup.gameObject.SetActive(false);
         Behaviour halo = (Behaviour)this.gameObject.GetComponent("Halo");
