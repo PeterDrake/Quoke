@@ -6,7 +6,7 @@ public class InventoryManager : MonoBehaviour, IGameManager
 {
     //key is the name of object value is price of object
     public ManagerStatus status { get; private set; } //allows for global read but private write
-    private List<string> items;
+    public List<string> items;
     private List<int> itemprices;
 
     /// <summary>
@@ -42,7 +42,7 @@ public class InventoryManager : MonoBehaviour, IGameManager
     {
         items.Add(name);
         itemprices.Add(value);
-       
+        Managers.Player.takeAction();
         DisplayItems();
     }
 

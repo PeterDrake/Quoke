@@ -12,8 +12,6 @@ public class ShoppingPopup : MonoBehaviour
 
     public Image prefab;
     public Image Inven;
-    public Image linebreak;
-    //private Image[] slots;
 
     void Start()
     {
@@ -50,7 +48,7 @@ public class ShoppingPopup : MonoBehaviour
     private void GetList(InventoryManager inventory)
     {
         //  int len = Managers.Inventory.GetItemList().Count;
-
+        
         List<string> items =inventory.GetItemList();
         int len = items.Count;
         for (int i = 0; i < len; i++)
@@ -59,6 +57,9 @@ public class ShoppingPopup : MonoBehaviour
             Image slot = Instantiate(prefab);
             //  slots[i] = slot;
             slot.transform.SetParent(Inven.transform, false);
+           Text [] mess =slot.GetComponentsInChildren<Text>();
+            mess[0].text = items[i];
+            mess[1].text =  StoreManager.recsp[i].ToString();
             slot.color = Color.cyan;
             slot.name = items[i];
             slot.sprite = (Sprite)Resources.Load(items[i], typeof(Sprite));
