@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Store.unity
     guid: 2080a023e6ec57442853202ea1ca0bd3
+  - enabled: 1
+    path: Assets/Scenes/Transition.unity
+    guid: 39cd95e8a39ef6e44aeeae78435122d4
   m_configObjects: {}
