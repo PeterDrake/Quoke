@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 
 public class ShoppingPopup : MonoBehaviour
 {
-   // private string[] recs = new string[] { "bleach", "tent", "wrench", "tools", "bucket", "bags", "shovel", "pick", "sawdust" };
+   // private string[] recs = new string[] { "bleach", "tent", "wrench", "tools", "bucket", "bags", "shovel", "pick", "sawdust", "hand sanitizer" };
 
     public Image prefab;
     public Image Inven;
