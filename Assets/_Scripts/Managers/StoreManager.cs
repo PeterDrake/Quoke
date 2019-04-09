@@ -15,8 +15,8 @@ using UnityEngine;
 public class StoreManager: MonoBehaviour
 {
     public static InventoryManager SInventory { get; private set; } //player inventory manager
-    public static string[] recs = new string[] { "iodine tablets", "bleach", "tent", "wrench", "tools", "bucket", "bags", "shovel", "pick", "sawdust" };/// { get; private set; }
-public static int[] recsp = new int[] { 7, 4, 30, 10, 35, 5, 15, 10, 20, 15 }; //{ get; private set; }
+    public static string[] recs = new string[] { "iodine tablets", "bleach", "tent", "wrench", "tools", "bucket", "bags", "shovel", "pick", "sawdust", "hand sanitizer" };/// { get; private set; }
+public static int[] recsp = new int[] { 7, 4, 100, 10, 35, 5, 15, 10, 20, 15, 3 }; //{ get; private set; }
 
 
 
