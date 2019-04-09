@@ -22,11 +22,15 @@ public class Managers : MonoBehaviour
   //  public string scene;
     private List<IGameManager> startSeq;//list of managers to spool up in start. A
 
-   
+    public static string[] recs { get; private set; }
+    public static int[] recsp  { get; private set; }
+
     private void Awake()//earlist call function
     {
         DontDestroyOnLoad(gameObject);
-    //	EditorSceneManager.preventCrossSceneReferences = false;
+    recs = new string[] { "iodine tablets", "bleach", "tent", "wrench", "tools", "bucket", "bags", "shovel", "pick", "sawdust", "hand sanitizer" };
+        recsp = new int[] { 7, 4, 100, 10, 35, 5, 15, 10, 20, 15, 3 };
+        //	EditorSceneManager.preventCrossSceneReferences = false;
         //SceneManager.LoadScene(scene, LoadSceneMode.Additive);
         Inventory = GetComponent<InventoryManager>();
         Player = GetComponent<PlayerManager>();
@@ -38,9 +42,17 @@ public class Managers : MonoBehaviour
         StartCoroutine(StartUpManagers());//inits all manager states
     }
 
+   public static string[] getRec()
+    {
+        return recs;
+    }
+   public static int[] getRecp()
+    {
+        return recsp;
+    }
     /*
      * this calls the StatUp method on all managers then countinues to check status until all are started  
-     */   
+     */
     private IEnumerator StartUpManagers()
     {
         foreach (IGameManager manager in startSeq)

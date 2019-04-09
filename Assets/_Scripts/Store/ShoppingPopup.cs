@@ -33,7 +33,6 @@ public class ShoppingPopup : MonoBehaviour
 
     private void OnDisable()
     {
-
         Debug.Log("ondiable");
         int c = Inven.transform.childCount;
         for (int i = c - 1; i >= 0; i--)

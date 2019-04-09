@@ -23,8 +23,8 @@ public class PlayerManager : MonoBehaviour, IGameManager
     public bool homeOwner { get; private set; }
 
 
-    public string[] recs = new string[] {"iodine tablets", "bleach", "tent", "wrench", "tools", "bucket", "bags", "shovel", "pick", "sawdust" };
-    public int[] recsp = new int[] { 7,4,100,10,35,5,15,10,20,15 };
+    public string[] recs;// = new string[] {"iodine tablets", "bleach", "tent", "wrench", "tools", "bucket", "bags", "shovel", "pick", "sawdust" };
+    public int[] recsp;//= new int[] { 7,4,100,10,35,5,15,10,20,15 };
 
     /// <summary>
     /// Startup this instance 
@@ -33,6 +33,8 @@ public class PlayerManager : MonoBehaviour, IGameManager
     /// </summary>
     public void Startup()
     {
+        recs = Managers.getRec();
+        recsp = Managers.getRecp();
         Debug.Log("Inventory starting ");
         health = 100;
         water = false;
