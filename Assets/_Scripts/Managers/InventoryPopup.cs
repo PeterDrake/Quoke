@@ -26,18 +26,30 @@ public class InventoryPopup : MonoBehaviour
         this.GetList();
 
     }
-
-    private void OnDisable()
+    private void Update()
     {
-
-        Debug.Log("ondiable");
+        Refresh();
+    }
+    public void Refresh()
+    {
+        clear();
+        GetList();
+    }
+    void clear()
+    {
         int c = Inven.transform.childCount;
         for (int i = c - 1; i >= 0; i--)
         {
             Destroy(Inven.transform.GetChild(i).gameObject);
         }
+    }
+    private void OnDisable()
+    {
+
+        Debug.Log("ondiable");
 
 
+        clear();
     }
 
     private void GetList()
@@ -52,6 +64,8 @@ public class InventoryPopup : MonoBehaviour
             Image slot = Instantiate(prefab);
             //  slots[i] = slot;
             slot.transform.SetParent(Inven.transform, false);
+            Text[] mess = slot.GetComponentsInChildren<Text>();
+            mess[0].text = items[i];
             slot.color = Color.cyan;
             slot.sprite = (Sprite)Resources.Load(items[i], typeof(Sprite));
             //slot.sprite = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Sprites/popup", typeof(Sprite));
