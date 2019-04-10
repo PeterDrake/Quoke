@@ -23,13 +23,13 @@ public class PlayerManager : MonoBehaviour, IGameManager
     public bool homeOwner { get; private set; }
 
 
-    public string[] recs;// = new string[] {"iodine tablets", "bleach", "tent", "wrench", "tools", "bucket", "bags", "shovel", "pick", "sawdust" };
-    public int[] recsp;//= new int[] { 7,4,100,10,35,5,15,10,20,15 };
+    public string[] recs;
+    public int[] recsp;
 
     /// <summary>
     /// Startup this instance 
     /// sets all atribut values 
-    /// TODO add randomizer to shift additional values
+   
     /// </summary>
     public void Startup()
     {
@@ -98,8 +98,6 @@ public class PlayerManager : MonoBehaviour, IGameManager
     }
     /// <summary>
     /// used to set random values to various player attributes
-    /// not written
-    /// TODO complete
     /// </summary>
     private void Randomize()
     {
@@ -118,7 +116,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
             {
                 i--;continue;
             }
-            Managers.Inventory.AddItem(recs[r],recsp[r]);
+            Managers.Inventory.AddItem(recs[r]);
         }
     }
 }

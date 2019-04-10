@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour
 {   //conditional display of win conditions
   // [SerializeField] private Text winConditions;
-   [SerializeField] private InventoryPopup popup;
+   [SerializeField] private EventInventory popup;
     // Start is called before the first frame update
     public Text statusText;
 

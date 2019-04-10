@@ -19,20 +19,30 @@ public class InventoryManager : MonoBehaviour, IGameManager
     {
         Debug.Log("Inventory starting ");
         items = new List<string>();//<string>();
-        itemprices = new List<int>();
+       itemprices = new List<int>();
         status = ManagerStatus.Started;
     }
 
     private void DisplayItems()
     {
+
         string itemDisplay = "Items: ";
         foreach (string g in items)
         {
-            itemDisplay += g;
+            itemDisplay += g+" ";
         }
         Debug.Log(itemDisplay);
     }
 
+    public void drop(string item)
+    {
+        //TODO  add item to world on drop
+           int d = items.LastIndexOf(item);
+                items.RemoveAt(d);
+            Managers.Player.takeAction();
+        DisplayItems();
+
+    }
     /// <summary>
     /// Adds the item to inventory.
     /// </summary>
@@ -41,9 +51,20 @@ public class InventoryManager : MonoBehaviour, IGameManager
 
     {
         items.Add(name);
+        Debug.Log(name+ items.ToString());
+
         itemprices.Add(value);
         Managers.Player.takeAction();
         DisplayItems();
+    }
+
+    public void AddItem(string name)
+    {
+        items.Add(name);
+        Debug.Log(name + items.LastIndexOf(name)) ;
+
+        Managers.Player.takeAction();
+        //DisplayItems();
     }
 
     public List<string> GetItemList()
@@ -51,13 +72,5 @@ public class InventoryManager : MonoBehaviour, IGameManager
         return items ;//list of all our itemsitems
     }
 
-    //public int GetItemCount(string name)
-    //{
-    //    if (items.ContainsKey(name))
-    //    {
-    //        return items[name];
-    //    }
-    //    return 0;
-    //}
 
 }
