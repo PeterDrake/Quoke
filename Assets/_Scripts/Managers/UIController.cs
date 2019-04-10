@@ -7,12 +7,14 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour
 {   //conditional display of win conditions
   // [SerializeField] private Text winConditions;
-   [SerializeField] private EventInventory popup;
+   [SerializeField] public  EventInventory popup;
     // Start is called before the first frame update
+    public static EventInventory pop;
     public Text statusText;
 
     void Start()
     {
+        pop = popup;
         popup.gameObject.SetActive(false);
         SetText();  
     }

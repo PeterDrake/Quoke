@@ -33,15 +33,18 @@ public class StartShopping : MonoBehaviour
      void OnTriggerStay()
     {
         prompt.gameObject.SetActive(true);
-
+        UIController.pop.gameObject.SetActive((true));
+        
         Behaviour halo = (Behaviour)this.gameObject.GetComponent("Halo");
         halo.enabled = true;
         if (Input.GetKeyDown(KeyCode.E))
         {
+            
             bool isOpen = true;
             //Debug.Log("picked up");
             Debug.Log("opens inve");
             Debug.Log(isOpen);
+            
             isOpen = popup.gameObject.activeSelf;
             popup.gameObject.SetActive(!isOpen);
 
@@ -55,6 +58,7 @@ public class StartShopping : MonoBehaviour
         Behaviour halo = (Behaviour)this.gameObject.GetComponent("Halo");
         prompt.gameObject.SetActive(false);
         popup.gameObject.SetActive(false);
+        UIController.pop.gameObject.SetActive(false);
         halo.enabled = false;
     }
 }

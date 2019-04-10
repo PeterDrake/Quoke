@@ -37,7 +37,7 @@ public class Collect : MonoBehaviour
         {
             Debug.Log("picked up");
 
-            Managers.Inventory.AddItem(itemName, Managers.Player.recsp[i]);
+            Managers.Inventory.AddItem(itemName);
 
             Destroy(this.gameObject);
         }

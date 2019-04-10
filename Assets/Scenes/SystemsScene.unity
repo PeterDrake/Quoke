@@ -181,5 +181,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1435110934394875957, guid: b422cb8565e8f4b9cba88e5f941ad8b6,
+        type: 3}
+      propertyPath: popup
+      value: 
+      objectReference: {fileID: 1321367011}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b422cb8565e8f4b9cba88e5f941ad8b6, type: 3}
+--- !u!114 &1321367011 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 232465783148897555, guid: b422cb8565e8f4b9cba88e5f941ad8b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 977817030}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 408b758d43d6c4b25a0db9e2cf9090c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

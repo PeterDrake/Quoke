@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(PlayerManager))] //makes sure that these class/files are present before 
-                                         // starting to avoid errors
+// starting to avoid errors
 [RequireComponent(typeof(InventoryManager))]
 
 [RequireComponent(typeof(LevelManager))]
@@ -16,18 +16,26 @@ using UnityEngine.UI;
  * all code taken from thw Unity In Action book 2nd Ed J.Hocking
  */
 public class Managers : MonoBehaviour
-{    public static PlayerManager Player { get; private set; } //player systems manager
+{
+    public static PlayerManager Player { get; private set; } //player systems manager
     public static InventoryManager Inventory { get; private set; } //player inventory manager
+
     public static LevelManager Level { get; private set; }
-  //  public string scene;
-    private List<IGameManager> startSeq;//list of managers to spool up in start. A
+
+    //  public string scene;
+    private List<IGameManager> startSeq; //list of managers to spool up in start. A
 
     public static string[] recs { get; private set; }
-    public static int[] recsp  { get; private set; }
+    public static int[] recsp { get; private set; }
+    //public static Dictionary<string><int> rec;// { get; private set;}
+
+
 
     private void Awake()//earlist call function
     {
         DontDestroyOnLoad(gameObject);
+        
+        
     recs = new string[] { "iodine tablets", "bleach", "tent", "wrench", "tools", "bucket", "bags", "shovel", "pick", "sawdust", "hand sanitizer" };
         recsp = new int[] { 7, 4, 100, 10, 35, 5, 15, 10, 20, 15, 3 };
         //	EditorSceneManager.preventCrossSceneReferences = false;
@@ -44,6 +52,8 @@ public class Managers : MonoBehaviour
 
    public static string[] getRec()
     {
+        //rec.getKeys.toArray
+        
         return recs;
     }
    public static int[] getRecp()
