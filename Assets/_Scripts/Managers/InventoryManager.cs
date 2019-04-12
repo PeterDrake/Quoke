@@ -45,6 +45,7 @@ public class InventoryManager : MonoBehaviour, IGameManager
     }
     /// <summary>
     /// Adds the item to inventory.
+    /// Use for bottomless store inventory 
     /// </summary>
     /// <param name="name">Name of item to be added this comes form the Collect script .</param>
     public void AddItem(string name, int value)
@@ -57,13 +58,24 @@ public class InventoryManager : MonoBehaviour, IGameManager
         Managers.Player.takeAction();
         DisplayItems();
     }
-
+/// <summary>
+/// use for limited palyer inventory
+/// </summary>
+/// <param name="name"></param>
     public void AddItem(string name)
     {
-        items.Add(name);
-        Debug.Log(name + items.LastIndexOf(name)) ;
+        if (items.Count < 4)
+        {
+            items.Add(name);
+            Managers.Player.takeAction();
 
-        Managers.Player.takeAction();
+        }
+        else
+        {
+            //TODO add promt message about size of inventory
+        }
+        // Debug.Log(name + items.LastIndexOf(name)) ;
+
         //DisplayItems();
     }
 

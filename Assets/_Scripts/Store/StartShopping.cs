@@ -16,13 +16,25 @@ public class StartShopping : MonoBehaviour
     // private Sprite m_CharacterBusinessManSuit01;
     // private bool isOpen;
 
-     void Awake()
-    {
-        prompt.gameObject.SetActive(false);
-        popup.gameObject.SetActive(false);
-        Behaviour halo = (Behaviour)this.gameObject.GetComponent("Halo");
-        halo.enabled = false;
+    private Behaviour halo;
+    private bool flag = true;
 
+    //private Behaviour halo = gameObject.GetComponent<Halo>();
+
+    void Start()
+    {
+        popup.gameObject.SetActive(false);
+        halo = (Behaviour)this.gameObject.GetComponent("Halo");
+        
+
+    }
+    void Update()
+    {
+        if (flag) {
+            prompt.gameObject.SetActive(false);
+            halo.enabled = false;
+            flag = false;
+        }
     }
 
 
@@ -30,18 +42,12 @@ public class StartShopping : MonoBehaviour
     /// <summary>
     /// when the mouse is over the object it is glowed and if the user presses action button 'E' the item is picked up
     /// </summary>
-     void OnTriggerStay()
+    void OnTriggerStay(Collider other)
     {
-        prompt.gameObject.SetActive(true);
-        UIController.pop.gameObject.SetActive((true));
-        
-        Behaviour halo = (Behaviour)this.gameObject.GetComponent("Halo");
-        halo.enabled = true;
         if (Input.GetKeyDown(KeyCode.E))
         {
-            
+            UIController.pop.gameObject.SetActive(true);
             bool isOpen = true;
-            //Debug.Log("picked up");
             Debug.Log("opens inve");
             Debug.Log(isOpen);
             
@@ -50,12 +56,17 @@ public class StartShopping : MonoBehaviour
 
         }
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        prompt.gameObject.SetActive(true);
+        halo.enabled = true;
+    }
     /// <summary>
     /// On the mouse exit shuts off the back glow
     /// </summary>
-     void OnTriggerExit()
+    void OnTriggerExit(Collider other)
     {
-        Behaviour halo = (Behaviour)this.gameObject.GetComponent("Halo");
         prompt.gameObject.SetActive(false);
         popup.gameObject.SetActive(false);
         UIController.pop.gameObject.SetActive(false);
