@@ -33,7 +33,6 @@ public class LevelManager : MonoBehaviour, IGameManager
     /// 1 house scene
     /// 2 street scene
     /// 3 store scene
-    /// 4 transition (Later that day...)
     /// if this is not what the build order looks like then you will have issues
     /// change you build order to match if needed
     /// </summary>

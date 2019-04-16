@@ -1,20 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InitiateQuake : MonoBehaviour
 {
 
-    private int count;
-    private int check;
-    
+    public int count;
+    public int check;
+    public float time;
+
+
+    private void Awake()
+    {
+        check = Random.Range(8, 12);
+        time = 7;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        check = Random.Range(8, 12);
+        gameObject.transform.Find("Transition").gameObject.SetActive(false);
         count = Managers.Player.actionCount;
-        if (check >= count)
+        if (count >= check)
         {
+            gameObject.transform.Find("Transition").gameObject.SetActive(false);
             gameObject.GetComponent<InitiateQuake>().enabled = false;
         }
     }
@@ -23,10 +33,14 @@ public class InitiateQuake : MonoBehaviour
     void Update()
     {
         count = Managers.Player.actionCount;
-        if (count >= check)
+        if (count >= check && time > 0)
         {
-            //Managers.Level.GoToScene("Transition");
-            //gameObject.GetComponent<InitiateQuake>().enabled = false;
+            gameObject.transform.Find("Transition").gameObject.SetActive(true);
+            time -= Time.deltaTime;
+
+        } else if (time <= 0)
+        {
+            gameObject.transform.Find("Transition").gameObject.SetActive(false);
         }
     }
 }
