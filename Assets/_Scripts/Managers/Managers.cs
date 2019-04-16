@@ -96,7 +96,7 @@ public class Managers : MonoBehaviour
             Debug.Log("all managers loaded");
 
         }
-        //Level.GoToNext();
+        Level.GoToNext();
 
     }
 
