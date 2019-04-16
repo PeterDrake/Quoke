@@ -8,6 +8,8 @@ public class InventoryManager : MonoBehaviour, IGameManager
     public ManagerStatus status { get; private set; } //allows for global read but private write
     public List<string> items;
     private List<int> itemprices;
+    public GameObject pre;
+    public Transform dsite;
 
     /// <summary>
     /// Startup this instance.
@@ -36,7 +38,12 @@ public class InventoryManager : MonoBehaviour, IGameManager
 
     public void drop(string item)
     {
-        //TODO  add item to world on drop
+        
+        //pre.name = item;
+        Vector3 s = dsite.position;
+        s.y += (float).5;
+       GameObject drop = Instantiate(pre,s,dsite.rotation);// drop = I;
+       drop.name = item;
            int d = items.LastIndexOf(item);
                 items.RemoveAt(d);
             Managers.Player.takeAction();
@@ -55,7 +62,7 @@ public class InventoryManager : MonoBehaviour, IGameManager
         Debug.Log(name+ items.ToString());
 
         itemprices.Add(value);
-        Managers.Player.takeAction();
+        //Managers.Player.takeAction();
         DisplayItems();
     }
 /// <summary>
@@ -72,7 +79,7 @@ public class InventoryManager : MonoBehaviour, IGameManager
         }
         else
         {
-            //TODO add promt message about size of inventory
+           Debug.Log("I cant carry any more"); 
         }
         // Debug.Log(name + items.LastIndexOf(name)) ;
 

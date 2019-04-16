@@ -10,14 +10,22 @@ public class Collect : MonoBehaviour
     /// <summary>
     /// name of item this is set in the inspector when the scripts is added to an object
     /// </summary>
-    [SerializeField] private string itemName;
+    //[SerializeField] private string itemName;
     private Sprite sprite;
-    private void Start()
+
+    private string itemName;
+     private void Start()
     {
+        itemName = this.gameObject.name;
+       // itemName=itemName.Substring(0,itemName.IndexOf('('));
         Behaviour halo = (Behaviour)this.gameObject.GetComponent("Halo");
         halo.enabled = false;
     }
 
+    public void setName(string n)
+    {
+        this.itemName = n;
+    }
     /// <summary>
     /// when the mouse is over the object it is glowed and if the user presses action button 'E' the item is picked up
     /// </summary>
@@ -25,14 +33,6 @@ public class Collect : MonoBehaviour
     {
         Behaviour halo = (Behaviour)this.gameObject.GetComponent("Halo");
         halo.enabled = true;
-        int i;
-        for ( i = 0; i < Managers.Player.recs.Length; i++)
-        {
-            if (StoreManager.recs[i].Equals(this.name))
-            {
-                break;
-            }
-        }
         if (Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("picked up");

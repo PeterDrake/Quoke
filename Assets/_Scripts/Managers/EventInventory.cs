@@ -79,7 +79,7 @@ public class EventInventory : MonoBehaviour
     }
     public void onDrop()
     {
-        Debug.Log("dopr *");
+        Debug.Log(cur_item);
         Managers.Inventory.drop(cur_item);
         Refresh();
     }
@@ -93,6 +93,6 @@ public class EventInventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     // Refresh();   
+      Refresh();   
     }
 }
