@@ -29,7 +29,7 @@ public class Collect : MonoBehaviour
     /// <summary>
     /// when the mouse is over the object it is glowed and if the user presses action button 'E' the item is picked up
     /// </summary>
-    private void OnMouseOver()
+    private void OnTriggerStay()
     {
         Behaviour halo = (Behaviour)this.gameObject.GetComponent("Halo");
         halo.enabled = true;
@@ -45,7 +45,7 @@ public class Collect : MonoBehaviour
     /// <summary>
     /// On the mouse exit shuts off the back glow
     /// </summary>
-    private void OnMouseExit()
+    private void OnTriggerExit()
     {
         Behaviour halo = (Behaviour)this.gameObject.GetComponent("Halo");
         halo.enabled = false;
