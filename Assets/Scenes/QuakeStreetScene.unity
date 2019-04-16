@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.76340455, g: 0.44199604, b: 0.22251245, a: 1}
+  m_IndirectSpecularColor: {r: 0.7633824, g: 0.44193077, b: 0.2225228, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1310,8 +1310,10 @@ GameObject:
   - component: {fileID: 90205913}
   - component: {fileID: 90205912}
   - component: {fileID: 90205911}
+  - component: {fileID: 90205915}
+  - component: {fileID: 90205914}
   m_Layer: 0
-  m_Name: SM_Env_Grass_01 (61)
+  m_Name: _TentSite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1390,6 +1392,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 90205909}
   m_Mesh: {fileID: 4300000, guid: 8340e8586e8556c4b82f331a034bae19, type: 3}
+--- !u!65 &90205914
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90205909}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.000006, y: 2.3182373, z: 5.000008}
+  m_Center: {x: -2.4999945, y: 1.2226832, z: -2.499997}
+--- !u!114 &90205915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90205909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9fa59250393b4dbdb67f231e624250d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &91995765
 GameObject:
   m_ObjectHideFlags: 0
@@ -15941,7 +15968,7 @@ PrefabInstance:
     - target: {fileID: 2353994, guid: 0383b854a926f1643b20f9c7cdb2e4de, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b4325d12df7d8d843bad760db63bee2e, type: 2}
+      objectReference: {fileID: 2100000, guid: a8e32d2cd442e564aa46c99f0ae7c0c8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0383b854a926f1643b20f9c7cdb2e4de, type: 3}
 --- !u!4 &964566163 stripped
@@ -31401,7 +31428,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: b8a315c24cda0234d824d86df3359146, type: 2}
+      objectReference: {fileID: 2100000, guid: 87afcd97595cd02479bfcfd00d66fda9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c967b3d3b3d988144acf28f592fdb2fe, type: 3}
 --- !u!4 &1862092827 stripped
