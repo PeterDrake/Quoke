@@ -46,11 +46,14 @@ public class StartShopping : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
+            //UIController.pop.gameObject.SetActive(true);
             bool isOpen = true;
             Debug.Log("opens inve");
             Debug.Log(isOpen);
+            
             isOpen = popup.gameObject.activeSelf;
             popup.gameObject.SetActive(!isOpen);
+            //UIController.pop.gameObject.SetActive(true);
 
         }
     }
@@ -67,6 +70,7 @@ public class StartShopping : MonoBehaviour
     {
         prompt.gameObject.SetActive(false);
         popup.gameObject.SetActive(false);
+        UIController.pop.gameObject.SetActive(false);
         halo.enabled = false;
     }
 }

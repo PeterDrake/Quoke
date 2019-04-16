@@ -12,6 +12,8 @@ public class InventoryPopup : MonoBehaviour
     public Image prefab;
     public Image Inven;
     //private Image[] slots;
+    [SerializeField] private Button DropButton;
+    [SerializeField] private Button UseButton;
 
     void Start()
     {
@@ -28,13 +30,15 @@ public class InventoryPopup : MonoBehaviour
     }
     private void Update()
     {
-        Refresh();
+        RefresH();
     }
-    public void Refresh()
+    public void RefresH()
     {
         clear();
         GetList();
     }
+
+
     void clear()
     {
         int c = Inven.transform.childCount;
