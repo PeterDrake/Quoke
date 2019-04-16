@@ -6,12 +6,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
 
-public class InventoryPopup : MonoBehaviour
+public class ShoppingPopup : MonoBehaviour
 {
-   
+   // private string[] recs = new string[] { "bleach", "tent", "wrench", "tools", "bucket", "bags", "shovel", "pick", "sawdust", "hand sanitizer" };
+
     public Image prefab;
     public Image Inven;
-    //private Image[] slots;
 
     void Start()
     {
@@ -22,41 +22,34 @@ public class InventoryPopup : MonoBehaviour
     /// </summary>
     private void OnEnable()
     {
-        Debug.Log(Managers.Inventory.GetItemList().Count);
-        this.GetList();
+        Debug.Log(StoreManager.SInventory.GetItemList().Count);
 
+
+        this.GetList(StoreManager.SInventory);
+
+ 
     }
-    private void Update()
+
+
+    private void OnDisable()
     {
-        Refresh();
-    }
-    public void Refresh()
-    {
-        clear();
-        GetList();
-    }
-    void clear()
-    {
+
+        Debug.Log("ondiable");
         int c = Inven.transform.childCount;
         for (int i = c - 1; i >= 0; i--)
         {
             Destroy(Inven.transform.GetChild(i).gameObject);
         }
+
+
     }
-    private void OnDisable()
-    {
+   
 
-        Debug.Log("ondiable");
-
-
-        clear();
-    }
-
-    private void GetList()
+    private void GetList(InventoryManager inventory)
     {
         //  int len = Managers.Inventory.GetItemList().Count;
-
-        List<string> items = Managers.Inventory.GetItemList();
+        
+        List<string> items =inventory.GetItemList();
         int len = items.Count;
         for (int i = 0; i < len; i++)
         {
@@ -64,9 +57,11 @@ public class InventoryPopup : MonoBehaviour
             Image slot = Instantiate(prefab);
             //  slots[i] = slot;
             slot.transform.SetParent(Inven.transform, false);
-            Text[] mess = slot.GetComponentsInChildren<Text>();
+           Text [] mess =slot.GetComponentsInChildren<Text>();
             mess[0].text = items[i];
+            mess[1].text =  StoreManager.recsp[i].ToString();
             slot.color = Color.cyan;
+            slot.name = items[i];
             slot.sprite = (Sprite)Resources.Load(items[i], typeof(Sprite));
             //slot.sprite = (Sprite)AssetDatabase.LoadAssetAtPath("Assets/Sprites/popup", typeof(Sprite));
         }

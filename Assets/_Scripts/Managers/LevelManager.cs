@@ -42,6 +42,7 @@ public class LevelManager : MonoBehaviour, IGameManager
         curlevel = scene;
         Debug.Log(SceneManager.GetSceneByBuildIndex(curlevel).name);
         SceneManager.LoadScene(curlevel);
+        Managers.Player.takeAction();
     }
     /// <summary>
     /// goes to scene  based on passed string 

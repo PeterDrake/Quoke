@@ -17,10 +17,15 @@ public class PlayerManager : MonoBehaviour, IGameManager
     public bool water { get; private set; }
     //number of actions taken by player
     public int actionCount { get; private set; }
+    //randomly gerneated resource;
+    public double cash { get;  set; }
+    //randomly assigend atribute false for renter and true for owner
+    public bool homeOwner { get; private set; }
 
 
+    public string[] recs = new string[] {"iodine tablets", "bleach", "tent", "wrench", "tools", "bucket", "bags", "shovel", "pick", "sawdust" };
+    public int[] recsp = new int[] { 7,4,100,10,35,5,15,10,20,15 };
 
-    private string[] recs = new string[] { "bleach", "tent", "wrench", "tools", "bucket", "bags", "shovel", "pick", "sawdust" };
     /// <summary>
     /// Startup this instance 
     /// sets all atribut values 
@@ -51,7 +56,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
     /// <summary>
     ///inceases the action count by 1
     /// </summary>
-    public void action()
+    public void takeAction()
     {
         actionCount++;
     }
@@ -97,14 +102,21 @@ public class PlayerManager : MonoBehaviour, IGameManager
     private void Randomize()
     {
         // recs = 
-        int num = Random.Range(0, recs.Length);
+        cash = Random.Range(10, 200);
+        int c= Random.Range(0, 100);
+        homeOwner = c < 50;// 50/50 of owner less than 50 is an owner and vis virsa
+        int num = Random.Range(1, 4);
         Debug.Log(num);
         for (int i = 0; i < num; i++)
         {
             int r = Random.Range(0, recs.Length);
-            Debug.Log(recs[r]);
 
-            Managers.Inventory.AddItem(recs[r]);
+            Debug.Log(recs[r]);
+            if (Managers.Inventory.items.Contains(recs[r]))
+            {
+                i--;continue;
+            }
+            Managers.Inventory.AddItem(recs[r],recsp[r]);
         }
     }
 }

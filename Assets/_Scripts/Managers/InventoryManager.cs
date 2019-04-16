@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour, IGameManager
 {
+    //key is the name of object value is price of object
     public ManagerStatus status { get; private set; } //allows for global read but private write
-    private Dictionary<string, int> items;
+    public List<string> items;
+    private List<int> itemprices;
 
     /// <summary>
     /// Startup this instance.
@@ -16,16 +18,17 @@ public class InventoryManager : MonoBehaviour, IGameManager
     public void Startup()
     {
         Debug.Log("Inventory starting ");
-        items = new Dictionary<string, int>();//<string>();
+        items = new List<string>();//<string>();
+        itemprices = new List<int>();
         status = ManagerStatus.Started;
     }
 
     private void DisplayItems()
     {
         string itemDisplay = "Items: ";
-        foreach (KeyValuePair<string, int> g in items)
+        foreach (string g in items)
         {
-            itemDisplay += g.Key + "[" + g.Value + "]";
+            itemDisplay += g;
         }
         Debug.Log(itemDisplay);
     }
@@ -34,30 +37,27 @@ public class InventoryManager : MonoBehaviour, IGameManager
     /// Adds the item to inventory.
     /// </summary>
     /// <param name="name">Name of item to be added this comes form the Collect script .</param>
-    public void AddItem(string name)
+    public void AddItem(string name, int value)
 
     {
-        if (items.ContainsKey(name))
-        {
-            items[name] += 1;//stacks items
-        }
-        else
-            items[name] = 1;//if new item creat new stack
+        items.Add(name);
+        itemprices.Add(value);
+        Managers.Player.takeAction();
         DisplayItems();
     }
 
     public List<string> GetItemList()
     {
-        return new List<string>(items.Keys);//list of all our items
+        return items ;//list of all our itemsitems
     }
 
-    public int GetItemCount(string name)
-    {
-        if (items.ContainsKey(name))
-        {
-            return items[name];
-        }
-        return 0;
-    }
+    //public int GetItemCount(string name)
+    //{
+    //    if (items.ContainsKey(name))
+    //    {
+    //        return items[name];
+    //    }
+    //    return 0;
+    //}
 
 }

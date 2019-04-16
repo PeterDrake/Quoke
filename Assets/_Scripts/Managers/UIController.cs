@@ -10,7 +10,7 @@ public class UIController : MonoBehaviour
    [SerializeField] private InventoryPopup popup;
     // Start is called before the first frame update
     public Text statusText;
-    public Text statusUpdate;
+
     void Start()
     {
         popup.gameObject.SetActive(false);
@@ -26,6 +26,7 @@ public class UIController : MonoBehaviour
             popup.gameObject.SetActive(!isOpen);
             //popup.Refresh();
         }
+        SetText();
     }
 
     private void OnConditionUpdate()
@@ -33,10 +34,13 @@ public class UIController : MonoBehaviour
         string message = "Health: " + Managers.Player.health;
         //winConditions.text = message;
     }
+
     public void SetText()
     {
-        statusText.text = "WATER:" + Managers.Player.water.ToString() + " \n"+
-                          "HEALTH:" + Managers.Player.health.ToString() + " \n"+
-                          "SHELTER:" + Managers.Player.shelter.ToString() +" \n";
+        statusText.text = "WATER: " + Managers.Player.water.ToString() + " \n"+
+                          "HEALTH: " + Managers.Player.health.ToString() + " \n"+
+                          "SHELTER: " + Managers.Player.shelter.ToString() +" \n"+
+                          "CASH: " + Managers.Player.cash+ " \n";
+
     }
 }
