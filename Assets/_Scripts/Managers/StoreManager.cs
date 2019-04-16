@@ -15,13 +15,14 @@ using UnityEngine;
 public class StoreManager: MonoBehaviour
 {
     public static InventoryManager SInventory { get; private set; } //player inventory manager
-    public static string[] recs = new string[] { "iodine tablets", "bleach", "tent", "wrench", "tools", "bucket", "bags", "shovel", "pick", "sawdust", "hand sanitizer" };/// { get; private set; }
-public static int[] recsp = new int[] { 7, 4, 100, 10, 35, 5, 15, 10, 20, 15, 3 }; //{ get; private set; }
 
+    public static string[] recs;// { get;}
+    public static int[] recsp;//{ get; }
 
-
-private void Awake()//earlist call function
+    private void Awake()//earlist call function
     {
+         recs = Managers.getRec();
+        recsp = Managers.getRecp(); 
         SInventory = GetComponent<InventoryManager>();
         SInventory.Startup();
         while (SInventory.status.Equals("Started"))
@@ -42,7 +43,7 @@ private void Awake()//earlist call function
             SInventory.AddItem(recs[i],recsp[i]);
         }
     }
-    
+
 
 
 

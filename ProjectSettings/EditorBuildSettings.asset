@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Store.unity
     guid: 2080a023e6ec57442853202ea1ca0bd3
+  - enabled: 1
+    path: Assets/Scenes/QuakeStreetScene.unity
+    guid: bd9f7f22b0edaed4ea9fd7a11592875d
+  - enabled: 1
+    path: Assets/Scenes/QuakeStore.unity
+    guid: 9ab205d3c8b093e4a99e8be49d1570fb
   m_configObjects: {}

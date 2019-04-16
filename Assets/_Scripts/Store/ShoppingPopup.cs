@@ -20,7 +20,7 @@ public class ShoppingPopup : MonoBehaviour
     /// <summary>
     /// On the opening of athe inventory its set up
     /// </summary>
-    private void OnEnable()
+    private void Awake()
     {
         Debug.Log(StoreManager.SInventory.GetItemList().Count);
 
@@ -31,18 +31,6 @@ public class ShoppingPopup : MonoBehaviour
     }
 
 
-    private void OnDisable()
-    {
-
-        Debug.Log("ondiable");
-        int c = Inven.transform.childCount;
-        for (int i = c - 1; i >= 0; i--)
-        {
-            Destroy(Inven.transform.GetChild(i).gameObject);
-        }
-
-
-    }
    
 
     private void GetList(InventoryManager inventory)
