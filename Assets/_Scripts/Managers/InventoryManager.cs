@@ -50,6 +50,11 @@ public class InventoryManager : MonoBehaviour, IGameManager
         DisplayItems();
 
     }
+
+    public void RemoveItem(string item)
+    {
+        items.Remove(item);
+    }
     /// <summary>
     /// Adds the item to inventory.
     /// Use for bottomless store inventory 
