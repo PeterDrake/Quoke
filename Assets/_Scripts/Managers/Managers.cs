@@ -96,9 +96,9 @@ public class Managers : MonoBehaviour
             Debug.Log("all managers loaded");
 
         }
-        Inventory.AddItem(("tent"));
-        Level.GoToScene(4);
-
+       // Inventory.AddItem(("tent"));
+        //Level.GoToScene(4);
+        Level.GoToNext();
     }
 
   
