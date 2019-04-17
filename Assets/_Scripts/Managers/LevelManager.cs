@@ -23,7 +23,9 @@ public class LevelManager : MonoBehaviour, IGameManager
         curlevel++;
         SceneManager.LoadScene(curlevel);
         SceneManager.UnloadScene(curlevel-1);
-        Managers.Player.takeAction();
+        Messenger.Broadcast(GameEvent.ACTION_TAKEN);
+
+//        Managers.Player.takeAction();
 
         Debug.Log(curlevel);
     }
@@ -43,7 +45,9 @@ public class LevelManager : MonoBehaviour, IGameManager
         curlevel = scene;
         Debug.Log(SceneManager.GetSceneByBuildIndex(curlevel).name);
         SceneManager.LoadScene(curlevel);
-        Managers.Player.takeAction();
+        Messenger.Broadcast(GameEvent.ACTION_TAKEN);
+
+//        Managers.Player.takeAction();
     }
     /// <summary>
     /// goes to scene  based on passed string 
@@ -53,7 +57,9 @@ public class LevelManager : MonoBehaviour, IGameManager
     public void GoToScene(string scene)
     {   
          SceneManager.LoadScene(scene);
-         Managers.Player.takeAction();
+         Messenger.Broadcast(GameEvent.ACTION_TAKEN);
+
+//         Managers.Player.takeAction();
 
        // curlevel= SceneManager.GetActiveScene.
         ///curlevel = scene;

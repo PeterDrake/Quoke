@@ -21,6 +21,7 @@ public class Buy : MonoBehaviour
         if (Managers.Player.cash>= StoreManager.recsp[i])
         {
             Managers.Player.cash -= StoreManager.recsp[i];
+           
             Managers.Inventory.AddItem(StoreManager.recs[i]);
            // pop.Refresh();
 

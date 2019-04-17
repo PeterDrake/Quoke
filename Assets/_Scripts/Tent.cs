@@ -38,7 +38,8 @@ public class Tent : MonoBehaviour
 
                 pt.transform.Rotate(new Vector3(0, 0, 45));
                 //pt.transform.localScale(new Vector3(2.5, 2.5, 3));
-                Managers.Player.ChangeShelter();
+                Messenger.Broadcast(GameEvent.SHELTER);
+
                 Managers.Inventory.RemoveItem("tent");
                 
                     

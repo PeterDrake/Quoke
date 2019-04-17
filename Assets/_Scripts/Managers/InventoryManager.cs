@@ -52,7 +52,9 @@ public class InventoryManager : MonoBehaviour, IGameManager
        drop.name = item;
            int d = items.LastIndexOf(item);
                 items.RemoveAt(d);
-            Managers.Player.takeAction();
+                Messenger.Broadcast(GameEvent.ACTION_TAKEN);
+
+            //Managers.Player.takeAction();
         DisplayItems();
 
     }
@@ -86,7 +88,7 @@ public class InventoryManager : MonoBehaviour, IGameManager
         {
             items.Add(name);
            
-            //Messenger.Broadcast(GameEvent.ACTION_TAKEN);
+            Messenger.Broadcast(GameEvent.ACTION_TAKEN);
 
         }
         else
