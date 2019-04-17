@@ -11,6 +11,8 @@ using UnityEngine.UI;
 [RequireComponent(typeof(InventoryManager))]
 
 [RequireComponent(typeof(LevelManager))]
+
+[RequireComponent(typeof(EventRandomizer))]
 /*
  * Main manger for both payer and inventory systmes
  * all code taken from thw Unity In Action book 2nd Ed J.Hocking
@@ -19,12 +21,14 @@ public class Managers : MonoBehaviour
 {
     public static PlayerManager Player { get; private set; } //player systems manager
     public static InventoryManager Inventory { get; private set; } //player inventory manager
+    public static EventRandomizer eRan { get; private set; } //player inventory manager
 
     public static LevelManager Level { get; private set; }
 
     //  public string scene;
     private List<IGameManager> startSeq; //list of managers to spool up in start. A
 
+    public static bool quake { get; private set; }
     public static string[] recs { get; private set; }
     public static int[] recsp { get; private set; }
     //public static Dictionary<string><int> rec;// { get; private set;}
@@ -43,10 +47,13 @@ public class Managers : MonoBehaviour
         Inventory = GetComponent<InventoryManager>();
         Player = GetComponent<PlayerManager>();
         Level = GetComponent<LevelManager>();
+        eRan = GetComponent<EventRandomizer>();
         startSeq = new List<IGameManager>();
+        quake = false;
         startSeq.Add(Inventory);
         startSeq.Add(Player);
         startSeq.Add(Level);
+        //startSeq.Add(eRan);
         StartCoroutine(StartUpManagers());//inits all manager states
     }
 
@@ -60,6 +67,11 @@ public class Managers : MonoBehaviour
     {
         return recsp;
     }
+
+   public  static void Quake()
+   {
+       quake = true;
+   }
     /*
      * this calls the StatUp method on all managers then countinues to check status until all are started  
      */

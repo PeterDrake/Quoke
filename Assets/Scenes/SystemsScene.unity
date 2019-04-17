@@ -186,8 +186,19 @@ PrefabInstance:
       propertyPath: popup
       value: 
       objectReference: {fileID: 1321367011}
+    - target: {fileID: 8286098027752044383, guid: b422cb8565e8f4b9cba88e5f941ad8b6,
+        type: 3}
+      propertyPath: dsite
+      value: 
+      objectReference: {fileID: 977817031}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b422cb8565e8f4b9cba88e5f941ad8b6, type: 3}
+--- !u!4 &977817031 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8777236975320935048, guid: b422cb8565e8f4b9cba88e5f941ad8b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 977817030}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1321367011 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 232465783148897555, guid: b422cb8565e8f4b9cba88e5f941ad8b6,

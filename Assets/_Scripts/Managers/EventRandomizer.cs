@@ -6,7 +6,7 @@ public class EventRandomizer : MonoBehaviour, IGameManager
 {
     private float gasLeak;
 
-    private float gasExplosion;
+    private  float gasExplosion;
 
     private float RainBucket;
 
@@ -18,15 +18,27 @@ public class EventRandomizer : MonoBehaviour, IGameManager
         
     }
 
+    public  void rollExpo()
+    {
+        if (Managers.quake&& gasLeak <.5)
+        {
+            gasExplosion = Random.value;
+            
+        }
+
+       // return gasExplosion;
+    }
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
     public ManagerStatus status { get; }
     public void Startup()
     {
+        gasLeak = Random.value;
+        
         throw new System.NotImplementedException();
     }
 }

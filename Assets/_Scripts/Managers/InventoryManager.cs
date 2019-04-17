@@ -79,11 +79,13 @@ public class InventoryManager : MonoBehaviour, IGameManager
         if (items.Count < 4)
         {
             items.Add(name);
-            Managers.Player.takeAction();
+           
+            //Messenger.Broadcast(GameEvent.ACTION_TAKEN);
 
         }
         else
         {
+            //todo make this a popup canvas
            Debug.Log("I cant carry any more"); 
         }
         // Debug.Log(name + items.LastIndexOf(name)) ;

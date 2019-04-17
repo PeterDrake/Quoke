@@ -26,6 +26,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
     public string[] recs;
     public int[] recsp;
 
+    
     /// <summary>
     /// Startup this instance 
     /// sets all atribut values 
@@ -41,7 +42,9 @@ public class PlayerManager : MonoBehaviour, IGameManager
         shelter = false;
         Randomize();
         actionCount = 0;
+       // Messenger.AddListener(GameEvent.ACTION_TAKEN,takeAction);
         status = ManagerStatus.Started;
+        
     }
 
 
