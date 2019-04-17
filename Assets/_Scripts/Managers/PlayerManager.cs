@@ -19,6 +19,8 @@ public class PlayerManager : MonoBehaviour, IGameManager
     public int actionCount { get; private set; }
     //randomly gerneated resource;
     public double cash { get;  set; }
+    //randomly assigned true or false for water in outside gutter bucket
+    public bool bucketFill { get; private set; }
     //randomly assigend atribute false for renter and true for owner
     public bool homeOwner { get; private set; }
 
@@ -113,7 +115,8 @@ public class PlayerManager : MonoBehaviour, IGameManager
         for (int i = 0; i < num; i++)
         {
             int r = Random.Range(0, recs.Length);
-
+            int b = Random.Range(0, 10);
+            bucketFill = b < 5;
             Debug.Log(recs[r]);
             if (Managers.Inventory.items.Contains(recs[r]))
             {
