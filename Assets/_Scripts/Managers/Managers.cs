@@ -21,7 +21,8 @@ public class Managers : MonoBehaviour
 {
     public static PlayerManager Player { get; private set; } //player systems manager
     public static InventoryManager Inventory { get; private set; } //player inventory manager
-    public static EventRandomizer eRan { get; private set; } //player inventory manager
+    
+    public static EventRandomizer RandomEvents { get; private set; } //player inventory manager
 
     public static LevelManager Level { get; private set; }
 
@@ -47,13 +48,13 @@ public class Managers : MonoBehaviour
         Inventory = GetComponent<InventoryManager>();
         Player = GetComponent<PlayerManager>();
         Level = GetComponent<LevelManager>();
-        eRan = GetComponent<EventRandomizer>();
+        RandomEvents = GetComponent<EventRandomizer>();
         startSeq = new List<IGameManager>();
         quake = false;
         startSeq.Add(Inventory);
         startSeq.Add(Player);
         startSeq.Add(Level);
-        //startSeq.Add(eRan);
+        startSeq.Add(RandomEvents);
         StartCoroutine(StartUpManagers());//inits all manager states
     }
 

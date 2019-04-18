@@ -32,7 +32,7 @@ public class EventRandomizer : MonoBehaviour, IGameManager
 
     private void rollStore()
     {
-        if (Managers.quake && houseStable < .5)
+        if (Managers.quake && storeStable < .5)
         {
             Messenger.Broadcast(GameEvent.SAFE);
             gasExplosion = Random.value;
