@@ -1,27 +1,19 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 public class EventRandomizer : MonoBehaviour, IGameManager
 {
     private float gasLeak;
-    
-    private bool gasShut;
 
     private  float gasExplosion;
 
     private float RainBucket;
 
     private int waterLevel;
+    private double storeStable;
+    private double houseStable;
 
-    private float storeStable;
-
-    private float houseStable;
-
-    private float roll;
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -55,23 +47,18 @@ public class EventRandomizer : MonoBehaviour, IGameManager
             }
         }
      //   throw new NotImplementedException();
+
     }
 
     public  void rollExpo()
     {
-        if (Managers.quake&& gasLeak <.5 && !gasShut)
-        {    
-            Messenger.Broadcast(GameEvent.GASLEAK);
-            
+        if (Managers.quake&& gasLeak <.5)
+        {
             gasExplosion = Random.value;
-            if (gasExplosion < .1)
-            {
-                Messenger.Broadcast(GameEvent.GASEXPO);
-            }
             
         }
 
-        // return gasExplosion;
+       // return gasExplosion;
     }
     // Update is called once per frame
     void Update()
@@ -79,14 +66,15 @@ public class EventRandomizer : MonoBehaviour, IGameManager
        
     }
 
-    public ManagerStatus status { get; }
+    public ManagerStatus status { get; private set; }
+
     public void Startup()
     {
         gasLeak = Random.value;
-        houseStable = Random.value;
-        storeStable = Random.value;
-        
-        
+        houseStable= Random.value;
+        storeStable= Random.value;
+        status = ManagerStatus.Started;
+
        // throw new System.NotImplementedException();
     }
 }

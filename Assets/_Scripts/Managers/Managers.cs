@@ -21,8 +21,8 @@ public class Managers : MonoBehaviour
 {
     public static PlayerManager Player { get; private set; } //player systems manager
     public static InventoryManager Inventory { get; private set; } //player inventory manager
-    
-    public static EventRandomizer RandomEvents { get; private set; } //player inventory manager
+
+    private EventRandomizer RandomEvents;//{ get; private set; } //player inventory manager
 
     public static LevelManager Level { get; private set; }
 
