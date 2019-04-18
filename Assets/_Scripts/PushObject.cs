@@ -9,11 +9,13 @@ public class PushObject : MonoBehaviour
     public float pushAmount = 100f;
     public float pushDirection = 1f;
     public Boolean isReinforced = false;
+    private Rigidbody rigidbody;
     
     
     void Awake()
     {
         gameObject.GetComponent<PushObject>().enabled = false;
+        rigidbody = gameObject.GetComponent<Rigidbody>();
     }
     
     // Start is called before the first frame update
@@ -21,9 +23,12 @@ public class PushObject : MonoBehaviour
     {
         if (!isReinforced)
         {
+            rigidbody.constraints = RigidbodyConstraints.None;
             GetComponent<Rigidbody>().AddForce(pushDirection * transform.forward * pushAmount, ForceMode.Acceleration);
             //GetComponent<Rigidbody>().AddExplosionForce(1000f,transform.position,50f,30f); //for fun
             GetComponent<Rigidbody>().useGravity = true;
+            rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+            gameObject.GetComponent<PushObject>().enabled = false;
         }
     }
 

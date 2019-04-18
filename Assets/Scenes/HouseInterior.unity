@@ -3182,7 +3182,7 @@ GameObject:
   - component: {fileID: 1117883520}
   - component: {fileID: 1117883519}
   m_Layer: 0
-  m_Name: SM_Prop_Bookshelf_01
+  m_Name: Bookshelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3248,7 +3248,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!23 &1117883522
 MeshRenderer:
@@ -5466,21 +5466,19 @@ Transform:
   m_Father: {fileID: 1109851421}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!64 &1768421402
-MeshCollider:
+--- !u!65 &1768421402
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 646428246079937753, guid: b7ffdc85b45c93741a5a0673f7eabb81,
-    type: 3}
-  m_PrefabInstance: {fileID: 646428246965293045}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768421400}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 4276d91b08f8d404aa9965ea5e56c219, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 1.3604373, y: 0.5322788, z: 0.83122575}
+  m_Center: {x: 0.00000062584894, y: 0.26613933, z: 0.0000019073486}
 --- !u!23 &1768421403
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6904,10 +6902,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 646428247552448954, guid: b7ffdc85b45c93741a5a0673f7eabb81,
+        type: 3}
+      propertyPath: m_Name
+      value: Bookshelf
+      objectReference: {fileID: 0}
+    - target: {fileID: 646428247552448933, guid: b7ffdc85b45c93741a5a0673f7eabb81,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 646428247457554947, guid: b7ffdc85b45c93741a5a0673f7eabb81,
         type: 3}
       propertyPath: sceneb
       value: QuakeStreetScene
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents: [{fileID: 0}]
   m_SourcePrefab: {fileID: 100100000, guid: b7ffdc85b45c93741a5a0673f7eabb81, type: 3}
