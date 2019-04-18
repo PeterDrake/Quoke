@@ -10,8 +10,14 @@ public class PushObject : MonoBehaviour
     public float pushDirection = 1f;
     public Boolean isReinforced = false;
     
+    
+    void Awake()
+    {
+        gameObject.GetComponent<PushObject>().enabled = false;
+    }
+    
     // Start is called before the first frame update
-    void OnEnable()
+    void Start()
     {
         if (!isReinforced)
         {

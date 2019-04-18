@@ -7,6 +7,7 @@ public class Teleport : MonoBehaviour
 
     private Transform player;
     public GameObject teleport;
+    public GameObject quake;
 
     private void Awake()
     {
@@ -20,12 +21,6 @@ public class Teleport : MonoBehaviour
         player = gameObject.transform;
         player.position = teleport.transform.position;
         gameObject.GetComponent<Teleport>().enabled = false;
-        //teleport.GetComponentInParent<CameraShake>().enabled = true;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        quake.GetComponent<Quake>().enabled = true;
     }
 }
