@@ -3184,6 +3184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   message: {fileID: 1914546483}
   scene: Store
+  sceneb: QuakeStore
 --- !u!64 &218244865
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -26156,6 +26157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   message: {fileID: 1914546483}
   scene: HouseInterior
+  sceneb: QuakeHouseInterior
 --- !u!64 &1544281711
 MeshCollider:
   m_ObjectHideFlags: 0

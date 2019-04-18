@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.76340455, g: 0.44199604, b: 0.22251245, a: 1}
+  m_IndirectSpecularColor: {r: 0.7633824, g: 0.44193077, b: 0.2225228, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3409,6 +3409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   message: {fileID: 1962170851}
   scene: StreetScene
+  sceneb: QuakeStreetScene
 --- !u!65 &1062825464
 BoxCollider:
   m_ObjectHideFlags: 0
