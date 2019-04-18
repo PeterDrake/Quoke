@@ -13,6 +13,8 @@ public class CameraShake : MonoBehaviour
 	// Amplitude of the shake. A larger value shakes the camera harder.
 	public float shakeAmount = 0.1f;
 	public float decreaseFactor = 1.0f;
+
+	//public GameObject quake;
 	
 	Vector3 originalPos;
 	
@@ -25,7 +27,7 @@ public class CameraShake : MonoBehaviour
 		}
 	}
 	
-	void OnEnable()
+	void Start()
 	{
 		originalPos = camTransform.localPosition;
 	}
@@ -42,6 +44,8 @@ public class CameraShake : MonoBehaviour
 		{
 			shakeDuration = 0f;
 			camTransform.localPosition = originalPos;
+			gameObject.GetComponent<CameraShake>().enabled = false;
+			//quake.GetComponent<Quake>().enabled = false;
 		}
 	}
 }
