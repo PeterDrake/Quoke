@@ -36,6 +36,12 @@ public class InventoryManager : MonoBehaviour, IGameManager
         Debug.Log(itemDisplay);
     }
 
+    public void removeItem(string item)
+    {
+        int j = items.LastIndexOf(item);
+        items.RemoveAt(j);
+    }
+
     public void drop(string item)
     {
         
