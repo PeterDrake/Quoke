@@ -20,7 +20,7 @@ public class Teleport : MonoBehaviour
         player = gameObject.transform;
         player.position = teleport.transform.position;
         gameObject.GetComponent<Teleport>().enabled = false;
-        //teleport.GetComponentInParent<CameraShake>().enabled = true;
+        teleport.GetComponentInParent<CameraShake>().enabled = true;
     }
 
     // Update is called once per frame
