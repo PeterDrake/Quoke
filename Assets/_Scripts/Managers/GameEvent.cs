@@ -10,5 +10,11 @@ public class GameEvent
     public const string WATER = "WATER";
     public const string HEALTH_CHANGED = "HEALTH";
     public const string WINNER = "WINNER";
+    public const string GASEXPO = "EXPO";
+    public const string GASLEAK = "LEAK";
+    public const string SAFE = "SAFE";
+
+
+    public const string COLLAPSE ="COLLAPSE";
 
 }

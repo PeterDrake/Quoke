@@ -23,7 +23,7 @@ public class LevelManager : MonoBehaviour, IGameManager
         curlevel++;
         SceneManager.LoadScene(curlevel);
         SceneManager.UnloadScene(curlevel-1);
-        Messenger.Broadcast(GameEvent.ACTION_TAKEN);
+        //Messenger.Broadcast(GameEvent.ACTION_TAKEN);
 
 //        Managers.Player.takeAction();
 
@@ -59,10 +59,5 @@ public class LevelManager : MonoBehaviour, IGameManager
          SceneManager.LoadScene(scene);
          Messenger.Broadcast(GameEvent.ACTION_TAKEN);
 
-//         Managers.Player.takeAction();
-
-       // curlevel= SceneManager.GetActiveScene.
-        ///curlevel = scene;
-       // Debug.Log(SceneManager.GetSceneByBuildIndex(curlevel).name);
     }
 }

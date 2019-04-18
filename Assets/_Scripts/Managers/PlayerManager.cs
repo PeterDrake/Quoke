@@ -72,6 +72,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
     public void takeAction()
     {
         actionCount++;
+        Debug.Log("AC==" + actionCount);
     }
 
     /// <summary>

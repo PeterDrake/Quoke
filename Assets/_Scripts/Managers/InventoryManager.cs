@@ -21,7 +21,7 @@ public class InventoryManager : MonoBehaviour, IGameManager
     {
         Debug.Log("Inventory starting ");
         items = new List<string>();//<string>();
-       itemprices = new List<int>();
+        itemprices = new List<int>();
         status = ManagerStatus.Started;
     }
 
@@ -48,13 +48,13 @@ public class InventoryManager : MonoBehaviour, IGameManager
         //pre.name = item;
         Vector3 s = dsite.position;
         s.y += (float).5;
-       GameObject drop = Instantiate(pre,s,dsite.rotation);// drop = I;
-       drop.name = item;
-           int d = items.LastIndexOf(item);
-                items.RemoveAt(d);
-                Messenger.Broadcast(GameEvent.ACTION_TAKEN);
+        GameObject drop = Instantiate(pre,s,dsite.rotation);// drop = I;
+        drop.name = item;
+        int d = items.LastIndexOf(item);
+        items.RemoveAt(d);
+        Messenger.Broadcast(GameEvent.ACTION_TAKEN);
 
-            //Managers.Player.takeAction();
+        //Managers.Player.takeAction();
         DisplayItems();
 
     }
@@ -78,10 +78,10 @@ public class InventoryManager : MonoBehaviour, IGameManager
         //Managers.Player.takeAction();
         DisplayItems();
     }
-/// <summary>
-/// use for limited palyer inventory
-/// </summary>
-/// <param name="name"></param>
+    /// <summary>
+    /// use for limited palyer inventory
+    /// </summary>
+    /// <param name="name"></param>
     public void AddItem(string name)
     {
         if (items.Count < 4)
@@ -94,7 +94,7 @@ public class InventoryManager : MonoBehaviour, IGameManager
         else
         {
             //todo make this a popup canvas
-           Debug.Log("I cant carry any more"); 
+            Debug.Log("I cant carry any more"); 
         }
         // Debug.Log(name + items.LastIndexOf(name)) ;
 
