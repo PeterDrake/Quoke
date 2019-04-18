@@ -24,6 +24,7 @@ public class Quake : MonoBehaviour
         {
             environment = GameObject.Find("Environment");
             environment.GetComponent<CameraShake>().enabled = true;
+            gameObject.GetComponent<Quake>().enabled = false;
         }
     }
 }
