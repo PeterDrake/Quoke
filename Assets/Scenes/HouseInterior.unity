@@ -3181,7 +3181,7 @@ GameObject:
   - component: {fileID: 1117883520}
   - component: {fileID: 1117883519}
   m_Layer: 0
-  m_Name: SM_Prop_Bookshelf_01
+  m_Name: Bookshelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6902,6 +6902,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 646428247552448954, guid: b7ffdc85b45c93741a5a0673f7eabb81,
+        type: 3}
+      propertyPath: m_Name
+      value: Bookshelf
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7ffdc85b45c93741a5a0673f7eabb81, type: 3}

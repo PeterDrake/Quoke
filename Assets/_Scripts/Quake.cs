@@ -24,6 +24,10 @@ public class Quake : MonoBehaviour
         {
             environment = GameObject.Find("Environment");
             environment.GetComponent<CameraShake>().enabled = true;
+            if (SceneManager.GetActiveScene().name == "HouseInterior")
+            {
+                GameObject.Find("Bookshelf").GetComponent<PushObject>().enabled = true;
+            }
             gameObject.GetComponent<Quake>().enabled = false;
         }
     }
