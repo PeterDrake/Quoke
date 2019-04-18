@@ -28,6 +28,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
     public string[] recs;
     public int[] recsp;
 
+    
     /// <summary>
     /// Startup this instance 
     /// sets all atribut values 
@@ -43,7 +44,15 @@ public class PlayerManager : MonoBehaviour, IGameManager
         shelter = false;
         Randomize();
         actionCount = 0;
+        Messenger.AddListener(GameEvent.ACTION_TAKEN,takeAction);
+        Messenger.AddListener(GameEvent.SHELTER,ChangeShelter);
+        Messenger.AddListener(GameEvent.HEALTH_CHANGED, takeHit);
+        Messenger.AddListener(GameEvent.WATER,ChangeWater);
+       // Messenger.AddListener(GameEvent.WINNER,takeAction);
+
+
         status = ManagerStatus.Started;
+        
     }
 
 
@@ -63,6 +72,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
     public void takeAction()
     {
         actionCount++;
+        Debug.Log("AC==="+ actionCount);
     }
 
     /// <summary>

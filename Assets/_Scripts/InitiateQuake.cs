@@ -38,6 +38,7 @@ public class InitiateQuake : MonoBehaviour
         {
             gameObject.transform.Find("Transition").gameObject.SetActive(true);
             time -= Time.deltaTime;
+            Managers.Quake();
 
         } else if (time <= 0)
         {

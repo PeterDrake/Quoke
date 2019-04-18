@@ -196,11 +196,22 @@ PrefabInstance:
       propertyPath: quake
       value: 
       objectReference: {fileID: 1071736259}
+    - target: {fileID: 8286098027752044383, guid: b422cb8565e8f4b9cba88e5f941ad8b6,
+        type: 3}
+      propertyPath: dsite
+      value: 
+      objectReference: {fileID: 977817031}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b422cb8565e8f4b9cba88e5f941ad8b6, type: 3}
 --- !u!1 &1071736259 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 410329048661596751, guid: b422cb8565e8f4b9cba88e5f941ad8b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 977817030}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &977817031 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8777236975320935048, guid: b422cb8565e8f4b9cba88e5f941ad8b6,
     type: 3}
   m_PrefabInstance: {fileID: 977817030}
   m_PrefabAsset: {fileID: 0}
