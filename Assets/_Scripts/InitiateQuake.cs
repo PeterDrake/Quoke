@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class InitiateQuake : MonoBehaviour
 {
 
-    public int count;
-    public int check;
+    private int count;
+    private int check;
     public float time;
     public GameObject player;
 
