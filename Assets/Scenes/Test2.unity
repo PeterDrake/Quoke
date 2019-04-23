@@ -256,6 +256,11 @@ PrefabInstance:
       propertyPath: dsite
       value: 
       objectReference: {fileID: 201953447}
+    - target: {fileID: 1742044372323279669, guid: b422cb8565e8f4b9cba88e5f941ad8b6,
+        type: 3}
+      propertyPath: testing
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b422cb8565e8f4b9cba88e5f941ad8b6, type: 3}
 --- !u!1001 &1085526480222044202

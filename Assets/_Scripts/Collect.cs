@@ -17,6 +17,7 @@ public class Collect : MonoBehaviour
      private void Start()
     {
         itemName = this.gameObject.name;
+        DontDestroyOnLoad(this.gameObject);
        // itemName=itemName.Substring(0,itemName.IndexOf('('));
         Behaviour halo = (Behaviour)this.gameObject.GetComponent("Halo");
         halo.enabled = false;

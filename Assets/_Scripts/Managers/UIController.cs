@@ -42,7 +42,8 @@ public class UIController : MonoBehaviour
         statusText.text = "WATER: " + Managers.Player.water.ToString() + " \n"+
                           "HEALTH: " + Managers.Player.health.ToString() + " \n"+
                           "SHELTER: " + Managers.Player.shelter.ToString() +" \n"+
-                          "CASH: " + Managers.Player.cash+ " \n";
+                          "CASH: " + Managers.Player.cash+ " \n" +
+                          "OWNER: "+ Managers.Player.homeOwner + "\n";
 
     }
 }

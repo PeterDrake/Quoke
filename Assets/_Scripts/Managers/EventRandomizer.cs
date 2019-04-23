@@ -17,23 +17,11 @@ public class EventRandomizer : MonoBehaviour, IGameManager
     // Start is called before the first frame update
     void Start()
     {
-        Messenger.AddListener(GameEvent.ACTION_TAKEN,rollStore);
       Messenger.AddListener(GameEvent.ACTION_TAKEN,rollExpo);  
         Messenger.AddListener(GameEvent.ACTION_TAKEN,rollHouse);
     }
 
-    private void rollStore()
-    {
-        if (Managers.quake && storeStable < .5)
-        {
-            Messenger.Broadcast(GameEvent.SAFE);
-            gasExplosion = Random.value;
-            if (gasExplosion < .1)
-            {
-                Messenger.Broadcast(GameEvent.COLLAPSE);
-            }
-        }    
-    }
+   
 
     private void rollHouse()
     {
@@ -68,11 +56,13 @@ public class EventRandomizer : MonoBehaviour, IGameManager
 
     public ManagerStatus status { get; private set; }
 
+    /// <summary>
+    /// assigns the random values  for the stability of the house and likley hood of gas main
+    /// </summary>
     public void Startup()
     {
         gasLeak = Random.value;
         houseStable= Random.value;
-        storeStable= Random.value;
         status = ManagerStatus.Started;
 
        // throw new System.NotImplementedException();

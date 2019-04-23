@@ -19,6 +19,7 @@ using UnityEngine.UI;
  */
 public class Managers : MonoBehaviour
 {
+    public bool testing;
     public static PlayerManager Player { get; private set; } //player systems manager
     public static InventoryManager Inventory { get; private set; } //player inventory manager
 
@@ -111,7 +112,10 @@ public class Managers : MonoBehaviour
         }
        // Inventory.AddItem(("tent"));
         //Level.GoToScene(4);
-        Level.GoToNext();
+        if (!testing)
+        {
+            Level.GoToNext();
+        }
     }
 
   
