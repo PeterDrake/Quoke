@@ -27,7 +27,7 @@ public class PushObject : MonoBehaviour
             GetComponent<Rigidbody>().AddForce(pushDirection * transform.forward * pushAmount, ForceMode.Acceleration);
             //GetComponent<Rigidbody>().AddExplosionForce(1000f,transform.position,50f,30f); //for fun
             GetComponent<Rigidbody>().useGravity = true;
-            rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+            //rigidbody.constraints = RigidbodyConstraints.FreezeAll;
             gameObject.GetComponent<PushObject>().enabled = false;
         }
     }
