@@ -3170,21 +3170,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 218244861}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &218244864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 218244863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 805dd09b17e648144842a597be743dae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  message: {fileID: 1914546483}
-  scene: Store
-  sceneb: QuakeStore
 --- !u!64 &218244865
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -13866,23 +13851,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 53b66eceff42d1e48bf9bf5280533a41, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.1538503
+      value: -4.31
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 53b66eceff42d1e48bf9bf5280533a41, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.19065528
+      value: -0.5516717
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 53b66eceff42d1e48bf9bf5280533a41, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.14373256
+      value: 0.47821283
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 53b66eceff42d1e48bf9bf5280533a41, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.71719736
+      value: -0.49636662
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 53b66eceff42d1e48bf9bf5280533a41, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.65469044
+      value: 0.46967128
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 53b66eceff42d1e48bf9bf5280533a41, type: 3}
       propertyPath: m_RootOrder
@@ -13894,7 +13879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 53b66eceff42d1e48bf9bf5280533a41, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 27.524002
+      value: 93.79101
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 53b66eceff42d1e48bf9bf5280533a41, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z

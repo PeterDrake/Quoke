@@ -13,15 +13,22 @@ public class EventRandomizer : MonoBehaviour, IGameManager
     private int waterLevel;
     private double storeStable;
     private double houseStable;
+    //if ture then explosion will happen
+    private bool Gexpo=true;
 
     // Start is called before the first frame update
     void Start()
     {
       Messenger.AddListener(GameEvent.ACTION_TAKEN,rollExpo);  
-        Messenger.AddListener(GameEvent.ACTION_TAKEN,rollHouse);
+      Messenger.AddListener(GameEvent.ACTION_TAKEN,rollHouse);
+      Messenger.AddListener(GameEvent.G_MAIN_SHUT,stopExpo);
     }
 
-   
+    private void stopExpo()
+    {
+        Gexpo = false;
+    }
+
 
     private void rollHouse()
     {
@@ -40,13 +47,11 @@ public class EventRandomizer : MonoBehaviour, IGameManager
 
     public  void rollExpo()
     {
-        if (Managers.quake&& gasLeak <.5)
+        if (Managers.quake&& gasLeak <.5&&Gexpo)
         {
             gasExplosion = Random.value;
             
         }
-
-       // return gasExplosion;
     }
     // Update is called once per frame
     void Update()

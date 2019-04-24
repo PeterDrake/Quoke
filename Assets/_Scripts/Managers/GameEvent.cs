@@ -6,6 +6,8 @@ public class GameEvent
 {
     public const string COLLAPSE="FALL";
     public const string SAFE ="SAFE";
+    public const string G_MAIN_SHUT ="G_MAIN_SHUT";
+
     public const string ACTION_TAKEN = "ACTION";
     public const string QUAKE = "QUAKE";
     public const string SHELTER = "SHLETER";
