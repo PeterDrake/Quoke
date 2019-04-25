@@ -7,6 +7,7 @@ public class Teleport : MonoBehaviour
 
     private Transform player;
     private string location;
+    private int n;
     private GameObject tel;
     public GameObject teleport;
     public GameObject quake;
@@ -17,7 +18,7 @@ public class Teleport : MonoBehaviour
     private void Awake()
     {
         gameObject.GetComponent<Teleport>().enabled = false;
-        var n = Random.Range(4, 6);
+        n = Random.Range(1, 6);
         location = "Teleport" + n;
         tel = teleport.transform.Find(location).gameObject;
     }
@@ -27,7 +28,14 @@ public class Teleport : MonoBehaviour
      */
     void Start()
     {
-        Managers.Level.GoToScene("StreetScene");
+        if (n >= 1 && n <= 3)
+        {
+            Managers.Level.GoToScene("HouseInterior");
+        } else if (n >= 4 && n <= 6)
+        {
+            Managers.Level.GoToScene("StreetScene");
+        }
+
         player = gameObject.transform;
         player.position = tel.transform.position;
         gameObject.GetComponent<Teleport>().enabled = false;
