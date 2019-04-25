@@ -17,23 +17,33 @@ public class StartShopping : MonoBehaviour
     // private bool isOpen;
 
     private Behaviour halo;
-    private bool flag = true;
+    private bool isTriggered = false;
 
     //private Behaviour halo = gameObject.GetComponent<Halo>();
 
     void Start()
     {
-        popup.gameObject.SetActive(false);
         halo = (Behaviour)this.gameObject.GetComponent("Halo");
-        
-
+        halo.enabled = false;
+        isTriggered = false;
+        prompt.gameObject.SetActive(false);
+        popup.gameObject.SetActive(false);
+        UIController.pop.gameObject.SetActive(false);
     }
     void Update()
     {
-        if (flag) {
-            prompt.gameObject.SetActive(false);
+        if (!isTriggered)
+        {
             halo.enabled = false;
-            flag = false;
+            prompt.gameObject.SetActive(false);
+            popup.gameObject.SetActive(false);
+            UIController.pop.gameObject.SetActive(false);
+        }
+        bool isOpen = popup.gameObject.activeSelf;
+        if (Input.GetKeyDown(KeyCode.E) && isTriggered)
+        {
+            Debug.Log("IT'S HAPPENNING");
+            popup.gameObject.SetActive(!isOpen);
         }
     }
 
@@ -44,22 +54,22 @@ public class StartShopping : MonoBehaviour
     /// </summary>
     void OnTriggerStay(Collider other)
     {
+        /*
         if (Input.GetKeyDown(KeyCode.E))
         {
             //UIController.pop.gameObject.SetActive(true);
             bool isOpen = true;
-            Debug.Log("opens inve");
-            Debug.Log(isOpen);
             
             isOpen = popup.gameObject.activeSelf;
             popup.gameObject.SetActive(!isOpen);
             //UIController.pop.gameObject.SetActive(true);
 
-        }
+        }*/
     }
 
     void OnTriggerEnter(Collider other)
     {
+        isTriggered = true;
         prompt.gameObject.SetActive(true);
         halo.enabled = true;
     }
@@ -68,6 +78,7 @@ public class StartShopping : MonoBehaviour
     /// </summary>
     void OnTriggerExit(Collider other)
     {
+        isTriggered = false;
         prompt.gameObject.SetActive(false);
         popup.gameObject.SetActive(false);
         UIController.pop.gameObject.SetActive(false);

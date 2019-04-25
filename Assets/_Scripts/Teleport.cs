@@ -6,20 +6,38 @@ public class Teleport : MonoBehaviour
 {
 
     private Transform player;
+    private string location;
+    private int n;
+    private GameObject tel;
     public GameObject teleport;
     public GameObject quake;
 
+    /**
+     * On awake, sets disables script and picks a random location to teleport to
+     */
     private void Awake()
     {
         gameObject.GetComponent<Teleport>().enabled = false;
+        n = Random.Range(1, 6);
+        location = "Teleport" + n;
+        tel = teleport.transform.Find(location).gameObject;
     }
 
-    // Start is called before the first frame update
+    /**
+     * On start, teleports player to location set in Awake, and enables Quake script
+     */
     void Start()
     {
-        Managers.Level.GoToScene("HouseInterior");
+        if (n >= 1 && n <= 3)
+        {
+            Managers.Level.GoToScene("HouseInterior");
+        } else if (n >= 4 && n <= 6)
+        {
+            Managers.Level.GoToScene("StreetScene");
+        }
+
         player = gameObject.transform;
-        player.position = teleport.transform.position;
+        player.position = tel.transform.position;
         gameObject.GetComponent<Teleport>().enabled = false;
         quake.GetComponent<Quake>().enabled = true;
     }
