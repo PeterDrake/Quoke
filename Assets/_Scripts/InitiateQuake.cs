@@ -14,7 +14,7 @@ public class InitiateQuake : MonoBehaviour
 
     private void Awake()
     {
-        check = Random.Range(8, 12);
+        check = Random.Range(10, 16);
         time = 5;
     }
 
