@@ -9,7 +9,9 @@ public class PlayerManager : MonoBehaviour, IGameManager
     public ManagerStatus status { get; private set; }
     //////// all player attributes 
     /// more can be added later 
+    private float timeLeft;
     //health of the player 
+    
     public int health { get; private set; }
     //boolean of shelter status
     public bool shelter { get; private set; }
@@ -42,6 +44,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
         health = 100;
         water = false;
         shelter = false;
+        timeLeft = (float) 60.0;
         Randomize();
         actionCount = 0;
         Messenger.AddListener(GameEvent.ACTION_TAKEN,takeAction);
@@ -73,6 +76,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
     /// </summary>
     public void takeAction()
     {
+        timeLeft = 60.0f;
         actionCount++;
         Debug.Log("AC==="+ actionCount);
     }
@@ -89,7 +93,15 @@ public class PlayerManager : MonoBehaviour, IGameManager
 
     }
 
-
+    private void Update()
+    {
+        timeLeft -= Time.deltaTime;
+        //Debug.Log(timeLeft);
+        if (timeLeft < 0)
+        {
+            takeAction();
+        }
+    }
 
 
     //changes the shelter status

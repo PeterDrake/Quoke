@@ -9,6 +9,7 @@ using UnityEngine.EventSystems;
 public class Tent : MonoBehaviour
 {
     public GameObject tent;
+    private bool trigg;
 
     public Text promt;   
     // Start is called before the first frame update
@@ -20,7 +21,20 @@ public class Tent : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (Managers.Inventory.GetItemList().Contains("tent"))
+        trigg = true;
+       
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        trigg = false;
+        promt.gameObject.SetActive(false);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Managers.Inventory.GetItemList().Contains("tent")&&trigg)
         {
             promt.gameObject.SetActive(true);
             if(Input.GetKeyDown(KeyCode.E))
@@ -31,9 +45,9 @@ public class Tent : MonoBehaviour
                 ts.y = 0;
                 Quaternion rs = new Quaternion();
                 
-               /* rs.y = 0;
-                rs.z = 45;
-                rs.x = 0;*/
+                /* rs.y = 0;
+                 rs.z = 45;
+                 rs.x = 0;*/
                 GameObject pt = Instantiate(tent,ts,rs);
 
                 pt.transform.Rotate(new Vector3(0, 0, 45));
@@ -45,16 +59,5 @@ public class Tent : MonoBehaviour
                     
             }
         }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        promt.gameObject.SetActive(false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
