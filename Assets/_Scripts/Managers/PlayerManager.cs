@@ -124,8 +124,8 @@ public class PlayerManager : MonoBehaviour, IGameManager
         for (int i = 0; i < num; i++)
         {
             int r = Random.Range(0, recs.Length);
-            //int b = Random.Range(0, 10);
-            bucketFill = true;
+            int b = Random.Range(0, 10);
+            bucketFill = b < 5;
             Debug.Log(recs[r]);
             if (Managers.Inventory.items.Contains(recs[r]))
             {
