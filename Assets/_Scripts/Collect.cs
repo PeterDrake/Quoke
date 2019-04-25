@@ -13,6 +13,7 @@ public class Collect : MonoBehaviour
     //[SerializeField] private string itemName;
     private Sprite sprite;
 
+    private bool triggered;
     private string itemName;
      private void Start()
     {
@@ -27,14 +28,10 @@ public class Collect : MonoBehaviour
     {
         this.itemName = n;
     }
-    /// <summary>
-    /// when the mouse is over the object it is glowed and if the user presses action button 'E' the item is picked up
-    /// </summary>
-    private void OnTriggerStay()
+
+    private void Update()
     {
-        Behaviour halo = (Behaviour)this.gameObject.GetComponent("Halo");
-        halo.enabled = true;
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E)&& triggered)
         {
             Debug.Log("picked up");
 
@@ -43,11 +40,23 @@ public class Collect : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    /// <summary>
+    /// when the mouse is over the object it is glowed and if the user presses action button 'E' the item is picked up
+    /// </summary>
+    private void OnTriggerEnter()
+    {
+        Behaviour halo = (Behaviour)this.gameObject.GetComponent("Halo");
+        halo.enabled = true;
+        triggered = true;
+
+    }
     /// <summary>
     /// On the mouse exit shuts off the back glow
     /// </summary>
     private void OnTriggerExit()
     {
+        triggered = false;
         Behaviour halo = (Behaviour)this.gameObject.GetComponent("Halo");
         halo.enabled = false;
     }
