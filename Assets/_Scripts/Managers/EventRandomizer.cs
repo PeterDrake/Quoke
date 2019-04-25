@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EventRandomizer : MonoBehaviour, IGameManager
 {
@@ -9,7 +10,7 @@ public class EventRandomizer : MonoBehaviour, IGameManager
     private  float gasExplosion;
 
     private float RainBucket;
-
+    private float fall;
     private int waterLevel;
     private double storeStable;
     private double houseStable;
@@ -29,28 +30,27 @@ public class EventRandomizer : MonoBehaviour, IGameManager
         Gexpo = false;
     }
 
-
+/// <summary>
+/// called every action after the quake if the houese is unstable there is a 10% of its collapse if palyer is in it 
+/// </summary>
     private void rollHouse()
     {
-        if (Managers.quake && houseStable < .5)
+        if ((!Managers.quake || !(houseStable < .5))&& !SceneManager.GetActiveScene().name.Equals("Quakehouse"))return;
+        fall = Random.value;
+        if (fall < .1)
         {
-            Messenger.Broadcast(GameEvent.SAFE);
-            gasExplosion = Random.value;
-            if (gasExplosion < .1)
-            {
-                Messenger.Broadcast(GameEvent.COLLAPSE);
-            }
+            Messenger.Broadcast(GameEvent.COLLAPSE);
         }
-     //   throw new NotImplementedException();
-
     }
 
     public  void rollExpo()
     {
-        if (Managers.quake&& gasLeak <.5&&Gexpo)
+        if (!Managers.quake || !(gasLeak < .5) || !Gexpo) return;
+        
+        gasExplosion = Random.value;
+        if (gasExplosion < .1)
         {
-            gasExplosion = Random.value;
-            
+            Messenger.Broadcast(GameEvent.G_MAIN_EXPO);
         }
     }
     // Update is called once per frame
@@ -59,6 +59,18 @@ public class EventRandomizer : MonoBehaviour, IGameManager
        
     }
 
+    void inspect()
+    {
+        if (gasLeak < .5)
+        {
+            Messenger.Broadcast(GameEvent.SMELL);
+        }
+
+        if (houseStable < .5)
+        {
+            Messenger.Broadcast(GameEvent.SAFE);
+        }
+    }
     public ManagerStatus status { get; private set; }
 
     /// <summary>
