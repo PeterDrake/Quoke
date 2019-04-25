@@ -7,7 +7,7 @@ public class Teleport : MonoBehaviour
 
     private Transform player;
     private string location;
-    private int n;
+    public int n;
     private GameObject tel;
     public GameObject teleport;
     public GameObject quake;
@@ -28,10 +28,10 @@ public class Teleport : MonoBehaviour
      */
     void Start()
     {
-        if (n >= 1 && n <= 3)
+        if (n <= 3)
         {
             Managers.Level.GoToScene("HouseInterior");
-        } else if (n >= 4 && n <= 6)
+        } else if (n >= 4)
         {
             Managers.Level.GoToScene("StreetScene");
         }
