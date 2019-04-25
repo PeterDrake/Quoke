@@ -17,32 +17,32 @@ public class StartShopping : MonoBehaviour
     // private bool isOpen;
 
     private Behaviour halo;
-    private bool flag = true;
     private bool isTriggered = false;
 
     //private Behaviour halo = gameObject.GetComponent<Halo>();
 
     void Start()
     {
-        popup.gameObject.SetActive(false);
         halo = (Behaviour)this.gameObject.GetComponent("Halo");
-        
-
+        halo.enabled = false;
+        isTriggered = false;
+        prompt.gameObject.SetActive(false);
+        popup.gameObject.SetActive(false);
+        UIController.pop.gameObject.SetActive(false);
     }
     void Update()
     {
-        if (flag) {
-            prompt.gameObject.SetActive(false);
-            halo.enabled = false;
-            flag = false;
-        }
-        if (isTriggered)
+        if (!isTriggered)
         {
-
+            halo.enabled = false;
+            prompt.gameObject.SetActive(false);
+            popup.gameObject.SetActive(false);
+            UIController.pop.gameObject.SetActive(false);
         }
         bool isOpen = popup.gameObject.activeSelf;
         if (Input.GetKeyDown(KeyCode.E) && isTriggered)
         {
+            Debug.Log("IT'S HAPPENNING");
             popup.gameObject.SetActive(!isOpen);
         }
     }
