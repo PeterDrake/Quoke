@@ -69,14 +69,14 @@ public class EventInventory : MonoBehaviour
         {
             curILabel.gameObject.SetActive(true);
             dropBotton.gameObject.SetActive(true);     
-            if (cur_item=="Jug(DIRTY)" && (Managers.Inventory.GetItemList().Contains("iodine") ||
+            if (cur_item=="jug(DIRTY)" && (Managers.Inventory.GetItemList().Contains("iodine") ||
                                                   Managers.Inventory.GetItemList().Contains("bleach")))
             {
                 useBotton.gameObject.SetActive(true);
             }
             else
             {
-                useBotton.gameObject.SetActive(true);
+                useBotton.gameObject.SetActive(false);
             }
             curILabel.text = cur_item + ":";
 
@@ -98,7 +98,7 @@ public class EventInventory : MonoBehaviour
 
     public void onUse()
     {
-        Managers.Inventory.removeItem("Jug(DIRTY)");
+        Managers.Inventory.removeItem("jug(DIRTY)");
         if (Managers.Inventory.GetItemList().Contains("iodine"))
         {
             Managers.Inventory.removeItem("iodine");
@@ -111,7 +111,7 @@ public class EventInventory : MonoBehaviour
         {
             Debug.Log("AHHHHH");
         }
-        Managers.Inventory.AddItem("Jug(CLEAN)");
+        Managers.Inventory.AddItem("jug(CLEAN)");
         Refresh();
     }
     // Start is called before the first frame update
@@ -123,6 +123,6 @@ public class EventInventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      Refresh();   
+      //Refresh();   
     }
 }
