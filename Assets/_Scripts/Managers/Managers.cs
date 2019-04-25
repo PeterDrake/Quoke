@@ -42,8 +42,8 @@ public class Managers : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         
         
-    recs = new string[] { "iodine tablets", "bleach", "jug", "tent", "wrench", "tools", "bucket", "bags", "shovel", "pick", "sawdust", "hand sanitizer" };
-        recsp = new int[] { 7, 4, 13, 100, 10, 35, 5, 15, 10, 20, 15, 3 };
+    recs = new string[] { "iodine tablets", "bleach", "jug", "tent", "wrench", "tools", "bucket", "bags", "shovel", "pick", "sawdust", "hand sanitizer", "hose" };
+        recsp = new int[] { 7, 4, 13, 100, 10, 35, 5, 15, 10, 20, 15, 3, 7 };
         //	EditorSceneManager.preventCrossSceneReferences = false;
         //SceneManager.LoadScene(scene, LoadSceneMode.Additive);
         Inventory = GetComponent<InventoryManager>();
