@@ -9,7 +9,7 @@ public class EventInventory : MonoBehaviour
 {
     [SerializeField] private Image[] icons;
     [SerializeField] private Text[] labels;
-    //[SerializeField] private Button useBotton;
+    [SerializeField] private Button useBotton;
     [SerializeField] private Button dropBotton;
     [SerializeField] private Text curILabel;
 
@@ -62,12 +62,24 @@ public class EventInventory : MonoBehaviour
         {
             curILabel.gameObject.SetActive(false);
             dropBotton.gameObject.SetActive(false);
+            useBotton.gameObject.SetActive(false);
         }
+       
         else
         {
             curILabel.gameObject.SetActive(true);
-            dropBotton.gameObject.SetActive(true);
+            dropBotton.gameObject.SetActive(true);     
+            if (cur_item=="jug(DIRTY)" && (Managers.Inventory.GetItemList().Contains("iodine") ||
+                                                  Managers.Inventory.GetItemList().Contains("bleach")))
+            {
+                useBotton.gameObject.SetActive(true);
+            }
+            else
+            {
+                useBotton.gameObject.SetActive(false);
+            }
             curILabel.text = cur_item + ":";
+
         }
 
 
@@ -84,6 +96,24 @@ public class EventInventory : MonoBehaviour
         Refresh();
     }
 
+    public void onUse()
+    {
+        Managers.Inventory.removeItem("jug(DIRTY)");
+        if (Managers.Inventory.GetItemList().Contains("iodine"))
+        {
+            Managers.Inventory.removeItem("iodine");
+        }
+        else if (Managers.Inventory.GetItemList().Contains("bleach"))
+        {
+            Managers.Inventory.removeItem("bleach");
+        }
+        else
+        {
+            Debug.Log("AHHHHH");
+        }
+        Managers.Inventory.AddItem("jug(CLEAN)");
+        Refresh();
+    }
     // Start is called before the first frame update
     void Start()
     {

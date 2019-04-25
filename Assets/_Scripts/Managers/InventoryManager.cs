@@ -24,7 +24,9 @@ public class InventoryManager : MonoBehaviour, IGameManager
         itemprices = new List<int>();
         status = ManagerStatus.Started;
     }
-
+/// <summary>
+/// prints items to console
+/// </summary>
     private void DisplayItems()
     {
 
@@ -35,13 +37,20 @@ public class InventoryManager : MonoBehaviour, IGameManager
         }
         Debug.Log(itemDisplay);
     }
-
+/// <summary>
+/// removes last index of passed item from inventory
+/// </summary>
+/// <param name="item">item to be removed</param>
     public void removeItem(string item)
     {
         int j = items.LastIndexOf(item);
         items.RemoveAt(j);
     }
-
+/// <summary>
+/// removes item from invenory and spawns in the world at your feet
+/// counts as actions
+/// </summary>
+/// <param name="item"></param>
     public void drop(string item)
     {
         
@@ -59,13 +68,11 @@ public class InventoryManager : MonoBehaviour, IGameManager
 
     }
 
-    public void RemoveItem(string item)
-    {
-        items.Remove(item);
-    }
+   
     /// <summary>
     /// Adds the item to inventory.
-    /// Use for bottomless store inventory 
+    /// Use for bottomless store inventory
+    /// does not count as actions
     /// </summary>
     /// <param name="name">Name of item to be added this comes form the Collect script .</param>
     public void AddItem(string name, int value)
@@ -80,6 +87,7 @@ public class InventoryManager : MonoBehaviour, IGameManager
     }
     /// <summary>
     /// use for limited palyer inventory
+    /// counts as actions
     /// </summary>
     /// <param name="name"></param>
     public void AddItem(string name)
@@ -101,6 +109,10 @@ public class InventoryManager : MonoBehaviour, IGameManager
         //DisplayItems();
     }
 
+    /// <summary>
+    /// returns the list of items that player has on them
+    /// </summary>
+    /// <returns></returns>
     public List<string> GetItemList()
     {
         return items ;//list of all our itemsitems

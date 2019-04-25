@@ -40,7 +40,7 @@ public class Tent : MonoBehaviour
                 //pt.transform.localScale(new Vector3(2.5, 2.5, 3));
                 Messenger.Broadcast(GameEvent.SHELTER);
 
-                Managers.Inventory.RemoveItem("tent");
+                Managers.Inventory.removeItem("tent");
                 
                     
             }
