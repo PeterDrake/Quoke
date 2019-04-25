@@ -50,6 +50,7 @@ public class EventRandomizer : MonoBehaviour, IGameManager
         gasExplosion = Random.value;
         if (gasExplosion < .1)
         {
+            Debug.Log("bloe:");
             Messenger.Broadcast(GameEvent.G_MAIN_EXPO);
         }
     }
@@ -79,6 +80,7 @@ public class EventRandomizer : MonoBehaviour, IGameManager
     public void Startup()
     {
         gasLeak = Random.value;
+        Debug.Log("gass "+ gasLeak);
         houseStable= Random.value;
         status = ManagerStatus.Started;
 

@@ -17444,6 +17444,36 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.0116
       objectReference: {fileID: 0}
+    - target: {fileID: 1085526480849182058, guid: 071bfaee53a594678a0da358a833a7e8,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1085526480849182058, guid: 071bfaee53a594678a0da358a833a7e8,
+        type: 3}
+      propertyPath: m_Radius
+      value: 8.123458
+      objectReference: {fileID: 0}
+    - target: {fileID: 1085526480849182058, guid: 071bfaee53a594678a0da358a833a7e8,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.0000000020957776
+      objectReference: {fileID: 0}
+    - target: {fileID: 1085526480849182058, guid: 071bfaee53a594678a0da358a833a7e8,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.0000000030033376
+      objectReference: {fileID: 0}
+    - target: {fileID: 1085526480849182058, guid: 071bfaee53a594678a0da358a833a7e8,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.027919548
+      objectReference: {fileID: 0}
+    - target: {fileID: 1085526480849182058, guid: 071bfaee53a594678a0da358a833a7e8,
+        type: 3}
+      propertyPath: m_Height
+      value: 9.49791
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 071bfaee53a594678a0da358a833a7e8, type: 3}
 --- !u!1 &1074348509 stripped

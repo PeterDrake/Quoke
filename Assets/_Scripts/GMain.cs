@@ -16,14 +16,16 @@ public class GMain : MonoBehaviour
     /// </summary>
     /// <param name="other"></param>
     private void OnTriggerStay(Collider other)
-    {
+    {                Debug.Log("check o up");
+
         if (Managers.Inventory.GetItemList().Contains("wrench"))
-        {
+        {                Debug.Log("checkk i up");
+
             Behaviour halo = (Behaviour)this.gameObject.GetComponent("Halo");
             halo.enabled = true;
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Debug.Log("picked up");
+                Debug.Log("shut up");
                 Messenger.Broadcast(GameEvent.G_MAIN_SHUT);
             }
         }

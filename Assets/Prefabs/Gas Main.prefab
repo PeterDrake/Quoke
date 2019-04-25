@@ -482,6 +482,8 @@ GameObject:
   - component: {fileID: 2065028121478571426}
   - component: {fileID: 3014833311235638964}
   - component: {fileID: 584940346359456615}
+  - component: {fileID: 1722460804547564078}
+  - component: {fileID: 3634289821341601735}
   m_Layer: 0
   m_Name: Gas Main
   m_TagString: Untagged
@@ -532,3 +534,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6368c70eb43664443bd580a5f04a90a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &1722460804547564078
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3866152370578058093}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.1646957, z: 1.2064586}
+  m_Center: {x: 0, y: 0.08234787, z: 0.103229284}
+--- !u!114 &3634289821341601735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3866152370578058093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79344f78f71bb6848a3e6b33a1a1719b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 3}
