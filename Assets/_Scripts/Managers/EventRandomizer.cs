@@ -35,8 +35,8 @@ public class EventRandomizer : MonoBehaviour, IGameManager
 /// </summary>
     private void rollHouse()
     {
-        Debug.Log(SceneManager.GetActiveScene());
-        if ((!Managers.quake || !(houseStable < .5))&& SceneManager.GetActiveScene().Equals("QuakeHouseInterior")){ 
+        Debug.Log(SceneManager.GetActiveScene().name);
+        if ((!Managers.quake || !(houseStable < .5))&& SceneManager.GetActiveScene().name.Equals("QuakeHouseInterior")){ 
             
             Messenger.Broadcast(GameEvent.SHELTER);
             return;

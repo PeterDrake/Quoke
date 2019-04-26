@@ -9,7 +9,7 @@ public class GameEvent
     public const string G_MAIN_SHUT ="G_MAIN_SHUT";
     public const string G_MAIN_EXPO ="EXPO";
       public const string SMELL ="SMELL";
-
+      public const string SEC = "SEC";
     public const string ACTION_TAKEN = "ACTION";
     public const string QUAKE = "QUAKE";
     public const string SHELTER = "SHLETER";

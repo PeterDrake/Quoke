@@ -86,7 +86,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
     /// </summary>
     public void ChangeWater()
     {
-        water = !water;
+        water = true;
         //  SetText();
         Debug.Log("You have aquired water!!");
 
@@ -95,6 +95,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
 
     private void Update()
     {
+        WinCheck();
         timeLeft -= Time.deltaTime;
         //Debug.Log(timeLeft);
         if (timeLeft < 0)
@@ -110,7 +111,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
     /// </summary>
     public void ChangeShelter()
     {
-        shelter = !shelter;
+        shelter = true;
         Debug.Log("You have aquired shelter!!");
     }
 

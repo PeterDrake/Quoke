@@ -14,10 +14,16 @@ public class PushObject : MonoBehaviour
     
     void Awake()
     {
+        Messenger.AddListener(GameEvent.SEC,enforce);
+
         gameObject.GetComponent<PushObject>().enabled = false;
         rigidbody = gameObject.GetComponent<Rigidbody>();
     }
-    
+
+    void enforce()
+    {
+        isReinforced = true;
+    }
     // Start is called before the first frame update
     void Start()
     {
