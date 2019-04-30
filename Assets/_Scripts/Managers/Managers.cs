@@ -111,7 +111,9 @@ public class Managers : MonoBehaviour
 
         }
        // Inventory.AddItem(("tent"));
-        //Level.GoToScene(4);
+       //Inventory.AddItem("tools");
+
+       //Level.GoToScene(4);
         if (!testing)
         {
             Level.GoToNext();

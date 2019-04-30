@@ -67,6 +67,8 @@ public class PlayerManager : MonoBehaviour, IGameManager
     {
         health = 0;
         Debug.Log("YOU DIED");
+        Messenger.Broadcast(GameEvent.DED);
+        
         //end game 
         //destory scene and draw black screen
     }

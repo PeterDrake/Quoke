@@ -14,7 +14,7 @@ public class ChangeScene : MonoBehaviour
     {
         message.gameObject.SetActive(false);
         isTriggered = false;
-        Debug.Log(scene);
+        Debug.Log(SceneManager.GetActiveScene().name);
     }
 
     void Update()
@@ -35,7 +35,7 @@ public class ChangeScene : MonoBehaviour
     }
 
     // void OnMouseOver()
-    void OnTriggerStay()
+    void OnTriggerEnter()
     {
         message.gameObject.SetActive(true);
         isTriggered = true;

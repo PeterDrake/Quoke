@@ -7,7 +7,7 @@ public class GMain : MonoBehaviour
     private bool trig;
     // Start is called before the first frame update
     void Start()
-    {
+    {    
         Behaviour halo = (Behaviour)this.gameObject.GetComponent("Halo");
         halo.enabled = false;
     }
