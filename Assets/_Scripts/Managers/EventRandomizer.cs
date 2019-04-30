@@ -35,10 +35,19 @@ public class EventRandomizer : MonoBehaviour, IGameManager
 /// </summary>
     private void rollHouse()
     {
-        if ((!Managers.quake || !(houseStable < .5))&& !SceneManager.GetActiveScene().name.Equals("Quakehouse"))return;
+        Debug.Log(SceneManager.GetActiveScene().name);
+        if ((!Managers.quake || !(houseStable < .5))&& SceneManager.GetActiveScene().name.Equals("QuakeHouseInterior")){ 
+            
+            Messenger.Broadcast(GameEvent.SHELTER);
+            return;
+        }
+        
         fall = Random.value;
-        if (fall < .1)
-        {
+        Debug.Log(fall);
+        if (fall < .5)
+        {            Debug.Log("bloe:");
+            
+
             Messenger.Broadcast(GameEvent.COLLAPSE);
         }
     }
@@ -50,7 +59,6 @@ public class EventRandomizer : MonoBehaviour, IGameManager
         gasExplosion = Random.value;
         if (gasExplosion < .1)
         {
-            Debug.Log("bloe:");
             Messenger.Broadcast(GameEvent.G_MAIN_EXPO);
         }
     }
@@ -80,8 +88,9 @@ public class EventRandomizer : MonoBehaviour, IGameManager
     public void Startup()
     {
         gasLeak = Random.value;
-        Debug.Log("gass "+ gasLeak);
         houseStable= Random.value;
+        Debug.Log("gass "+ houseStable);
+
         status = ManagerStatus.Started;
 
        // throw new System.NotImplementedException();

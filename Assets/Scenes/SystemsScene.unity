@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311947, g: 0.38074005, b: 0.35872722, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -207,6 +207,56 @@ PrefabInstance:
       propertyPath: dsite
       value: 
       objectReference: {fileID: 977817031}
+    - target: {fileID: 8777236975320935048, guid: b422cb8565e8f4b9cba88e5f941ad8b6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.138
+      objectReference: {fileID: 0}
+    - target: {fileID: 8777236975320935055, guid: b422cb8565e8f4b9cba88e5f941ad8b6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8777236975320935050, guid: b422cb8565e8f4b9cba88e5f941ad8b6,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8777236975320935050, guid: b422cb8565e8f4b9cba88e5f941ad8b6,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8777236975320935051, guid: b422cb8565e8f4b9cba88e5f941ad8b6,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8777236975320935051, guid: b422cb8565e8f4b9cba88e5f941ad8b6,
+        type: 3}
+      propertyPath: m_Height
+      value: 2.0457335
+      objectReference: {fileID: 0}
+    - target: {fileID: 8777236975320935051, guid: b422cb8565e8f4b9cba88e5f941ad8b6,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 1.0228667
+      objectReference: {fileID: 0}
+    - target: {fileID: 8777236975320935051, guid: b422cb8565e8f4b9cba88e5f941ad8b6,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.43497944
+      objectReference: {fileID: 0}
+    - target: {fileID: 8777236975320935051, guid: b422cb8565e8f4b9cba88e5f941ad8b6,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.011366844
+      objectReference: {fileID: 0}
+    - target: {fileID: 8777236974524665796, guid: b422cb8565e8f4b9cba88e5f941ad8b6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 232465781945740798, guid: b422cb8565e8f4b9cba88e5f941ad8b6,
         type: 3}
       propertyPath: m_SortingOrder

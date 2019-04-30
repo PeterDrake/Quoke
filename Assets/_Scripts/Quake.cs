@@ -27,6 +27,8 @@ public class Quake : MonoBehaviour
             if (SceneManager.GetActiveScene().name == "HouseInterior")
             {
                 GameObject.Find("Bookshelf").GetComponent<PushObject>().enabled = true;
+                GameObject.Find("Bookshelf").GetComponent<Damager>().enabled = true;
+
             }
             gameObject.GetComponent<Quake>().enabled = false;
         }

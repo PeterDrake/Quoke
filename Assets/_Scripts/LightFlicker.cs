@@ -29,7 +29,7 @@ public class LightFlicker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(light.enabled);
+      //  Debug.Log(light.enabled);
         if (!active)
         {
             StartCoroutine(YieldFlicker());
