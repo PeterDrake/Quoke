@@ -20,6 +20,7 @@ using UnityEngine.UI;
 public class Managers : MonoBehaviour
 {
     public bool testing;
+    public bool gasOff;
     public static PlayerManager Player { get; private set; } //player systems manager
     public static InventoryManager Inventory { get; private set; } //player inventory manager
 
@@ -68,6 +69,11 @@ public class Managers : MonoBehaviour
    public static int[] getRecp()
     {
         return recsp;
+    }
+
+    public bool isGasMainOff()
+    {
+        return gasOff;
     }
 
    public  static void Quake()
