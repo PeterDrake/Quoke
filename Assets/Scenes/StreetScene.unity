@@ -945,7 +945,7 @@ GameObject:
   - component: {fileID: 41527492}
   - component: {fileID: 41527491}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: GasMainCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7481,6 +7481,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3014833311235638964, guid: 071bfaee53a594678a0da358a833a7e8,
+        type: 3}
+      propertyPath: m_Color.rgba
+      value: 4294508441
       objectReference: {fileID: 0}
     - target: {fileID: 1085526480849182058, guid: 071bfaee53a594678a0da358a833a7e8,
         type: 3}
@@ -19579,7 +19584,7 @@ GameObject:
   - component: {fileID: 1223143422}
   - component: {fileID: 1223143421}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: WaterMainCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

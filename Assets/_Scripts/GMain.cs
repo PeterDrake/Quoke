@@ -43,6 +43,9 @@ public class GMain : MonoBehaviour
             {
                 // Debug.Log("shut up");
                 Messenger.Broadcast(GameEvent.G_MAIN_SHUT);
+                gameObject.transform.Find("WaterMainCanvas").gameObject.SetActive(false);
+                halo.enabled = false;
+                Destroy(gameObject.GetComponent<GMain>()); // does not remain after scene change
             }
             //else if (off)
             //{

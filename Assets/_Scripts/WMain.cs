@@ -34,7 +34,7 @@ public class WMain : MonoBehaviour
         prompt.gameObject.SetActive(false);
     }
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (Managers.Inventory.GetItemList().Contains("wrench") && trig)
         {               // Debug.Log("checkk i up");
@@ -43,6 +43,10 @@ public class WMain : MonoBehaviour
             {
                 // Debug.Log("shut up");
                 Messenger.Broadcast(GameEvent.W_MAIN_SHUT);
+                gameObject.transform.Find("WaterMainCanvas").gameObject.SetActive(false);
+                halo.enabled = false;
+                Destroy(gameObject.GetComponent<WMain>()); // does not remain after scene change
+                //Destroy(gameObject);
             }
         }
         else
