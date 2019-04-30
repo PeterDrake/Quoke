@@ -11,7 +11,7 @@ public class LevelManager : MonoBehaviour, IGameManager
     public void Startup()
     {
         Debug.Log("Loading Levels");
-        curlevel = 0;
+        curlevel = 1;
         status = ManagerStatus.Started;
     }
     /// <summary>

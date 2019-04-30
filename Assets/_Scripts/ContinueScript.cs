@@ -5,9 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class ContinueScript : MonoBehaviour
 {
-    public void Continue()
+    public void Continue() //actually, this is the quit function
     {
         Debug.Log("QUIT");
         Application.Quit();
+    }
+
+    public void PlayGame()
+    {
+        SceneManager.LoadScene("SystemsScene");
     }
 }
