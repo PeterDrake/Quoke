@@ -13,6 +13,7 @@ public class secure : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Messenger.AddListener(GameEvent.QUAKE,des);
         promt.gameObject.SetActive(false);
         promt.text = "press [E] to secure shelf";
         Behaviour halo = (Behaviour)this.gameObject.GetComponent("Halo");
@@ -20,16 +21,27 @@ public class secure : MonoBehaviour
         tool = Managers.Inventory.GetItemList().Contains("tools");
     }
 
+    void des()
+    {
+        Destroy(gameObject);
+
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (tool&&Managers.Player.homeOwner)
+        if (other.gameObject.tag.Equals("Player"))
         {
-            Behaviour halo = (Behaviour) this.gameObject.GetComponent("Halo");
-            halo.enabled = true;
             trigg = true;
+        }
 
-            promt.gameObject.SetActive(true);
-        }    
+        if (trigg&&Managers.Player.homeOwner && Managers.Inventory.GetItemList().Contains("tools"))
+            {
+                Debug.Log("ONNNN");
+                Behaviour halo = (Behaviour) this.gameObject.GetComponent("Halo");
+                halo.enabled = true;
+                promt.gameObject.SetActive(true);
+            }
+
     }
     private void OnTriggerExit()
     {
@@ -43,6 +55,8 @@ public class secure : MonoBehaviour
     {
         if (Managers.Player.homeOwner&&trigg)
         {
+           
+
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log("SECURED SHELF");
@@ -52,9 +66,19 @@ public class secure : MonoBehaviour
                 Messenger.Broadcast(GameEvent.SEC);
 
                 Debug.Log("seced");
-                OnTriggerExit();
-                Destroy(gameObject.GetComponent<secure>());
+                //OnTriggerExit();
+                promt.gameObject.SetActive(false);
+                trigg = false;
+                Behaviour halo = (Behaviour)this.gameObject.GetComponent("Halo");
+                halo.enabled = false;
+                Destroy(gameObject);
             }
+        }
+
+        if (Managers.quake)
+        {
+            Destroy(gameObject);
+
         }
         
     }

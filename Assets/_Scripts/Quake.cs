@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -26,9 +27,13 @@ public class Quake : MonoBehaviour
             environment.GetComponent<CameraShake>().enabled = true;
             if (SceneManager.GetActiveScene().name == "HouseInterior")
             {
+               Messenger.Broadcast(GameEvent.QUAKE);
+                
                 GameObject.Find("Bookshelf").GetComponent<PushObject>().enabled = true;
+                if (GameObject.Find("Bookshelf").GetComponent<Damager>() != null)
+                {
                 GameObject.Find("Bookshelf").GetComponent<Damager>().enabled = true;
-
+                }
             }
             gameObject.GetComponent<Quake>().enabled = false;
         }
