@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class CollectBucketWater : MonoBehaviour
 {
     private Behaviour halo;
+    private bool trig;
     //GameObject prompt = new GameObject();
     [SerializeField] public Text prompt;
     private List<string> items;
@@ -17,6 +18,8 @@ public class CollectBucketWater : MonoBehaviour
     {
         items = Managers.Inventory.GetItemList();
         halo = (Behaviour)this.gameObject.GetComponent("Halo");
+        prompt.gameObject.SetActive(false);
+        trig = false;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,20 +28,23 @@ public class CollectBucketWater : MonoBehaviour
         waterCollectionMethod = items.Contains("jug");
         prompt.gameObject.SetActive(true);
         halo.enabled = true;
+        trig = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
+        trig = false;
         prompt.gameObject.SetActive(false);
         halo.enabled = false;
     }
     /// <summary>
     /// when the mouse is over the object it is glowed and if the user presses action button 'E' the item is picked up
     /// </summary>
-    void OnTriggerStay(Collider other)
+
+    private void Update()
     {
         //if player presses E
-        if (Managers.Player.bucketFill)
+        if (Managers.Player.bucketFill && trig)
         {
             if (waterCollectionMethod)
             {
