@@ -14,7 +14,9 @@ public class EventInventory : MonoBehaviour
     [SerializeField] private Text curILabel;
 
     private string cur_item;
-
+/// <summary>
+/// redraws the inventory
+/// </summary>
     public void Refresh()
     {
         List<string> itemList = Managers.Inventory.GetItemList();
@@ -84,11 +86,19 @@ public class EventInventory : MonoBehaviour
 
 
     }
+/// <summary>
+///
+/// set item label
+/// </summary>
+/// <param name="item"></param>
     public void onItem(string item)
     {
         cur_item = item;
         Refresh();
     }
+/// <summary>
+/// drops item from inventory and spwans in world 
+/// </summary>
     public void onDrop()
     {
         Debug.Log(cur_item);
@@ -96,6 +106,9 @@ public class EventInventory : MonoBehaviour
         Refresh();
     }
 
+/// <summary>
+/// puifies water in inventory
+/// </summary>
     public void onUse()
     {
         Managers.Inventory.removeItem("jug(DIRTY)");
@@ -112,6 +125,7 @@ public class EventInventory : MonoBehaviour
             Debug.Log("AHHHHH");
         }
         Managers.Inventory.AddItem("jug(CLEAN)");
+        Messenger.Broadcast(GameEvent.WATER);
         Refresh();
     }
     // Start is called before the first frame update

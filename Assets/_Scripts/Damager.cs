@@ -18,14 +18,16 @@ using System;
 
         void des()
         {
+            Debug.Log("kills");
             Destroy(gameObject.GetComponent<Damager>());
         }
         private void OnTriggerEnter(Collider other)
         {
             //o = other;
-            Debug. Log(trigg);
             if (other.gameObject.tag.Equals("Player")&&trigg)
             {
+                Debug. Log("health");
+
                 Messenger.Broadcast(GameEvent.HEALTH_CHANGED);
             }
            // trigg=true;

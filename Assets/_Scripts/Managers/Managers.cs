@@ -13,6 +13,8 @@ using UnityEngine.UI;
 [RequireComponent(typeof(LevelManager))]
 
 [RequireComponent(typeof(EventRandomizer))]
+[RequireComponent(typeof(Perminace))]
+
 /*
  * Main manger for both payer and inventory systmes
  * all code taken from thw Unity In Action book 2nd Ed J.Hocking
@@ -25,7 +27,7 @@ public class Managers : MonoBehaviour
     public static InventoryManager Inventory { get; private set; } //player inventory manager
 
     private EventRandomizer RandomEvents;//{ get; private set; } //player inventory manager
-
+    public  static Perminace perm;
     public static LevelManager Level { get; private set; }
 
     //  public string scene;
@@ -36,7 +38,10 @@ public class Managers : MonoBehaviour
     public static int[] recsp { get; private set; }
     //public static Dictionary<string><int> rec;// { get; private set;}
 
-
+/// <summary>
+/// init aadn varible set up
+/// statics are set for access through out program
+/// </summary>
 
     private void Awake()//earlist call function
     {
@@ -53,19 +58,29 @@ public class Managers : MonoBehaviour
         RandomEvents = GetComponent<EventRandomizer>();
         startSeq = new List<IGameManager>();
         quake = false;
+        perm = GetComponent<Perminace>();
         startSeq.Add(Inventory);
         startSeq.Add(Player);
         startSeq.Add(Level);
         startSeq.Add(RandomEvents);
+        startSeq.Add(perm);
         StartCoroutine(StartUpManagers());//inits all manager states
     }
 
+/// <summary>
+/// returns all items
+/// </summary>
+/// <returns></returns>
    public static string[] getRec()
     {
         //rec.getKeys.toArray
         
         return recs;
     }
+   /// <summary>
+   /// returns the prices of all objs
+   /// </summary>
+   /// <returns></returns>
    public static int[] getRecp()
     {
         return recsp;
@@ -76,6 +91,9 @@ public class Managers : MonoBehaviour
         return gasOff;
     }
 
+    /// <summary>
+    /// used to check if quake has occured 
+    /// </summary>
    public  static void Quake()
    {
        quake = true;
@@ -116,8 +134,11 @@ public class Managers : MonoBehaviour
             Debug.Log("all managers loaded");
 
         }
-       // Inventory.AddItem(("tent"));
-        //Level.GoToScene(4);
+        //Inventory.GetItemList().Clear();
+       //I////nventory.AddItem("tools");
+      
+
+       //Level.GoToScene(4);
         if (!testing)
         {
             Level.GoToNext();

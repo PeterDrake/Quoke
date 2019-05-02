@@ -9,14 +9,20 @@ public class SinkWater : MonoBehaviour
     [SerializeField] private Text promt;
     // trig - checks if player is inside a trigger
     private bool triggered;
+    private bool wOn=true;
     void Start()
     {   
+        Messenger.AddListener(GameEvent.W_MAIN_SHUT, flip);
         promt.gameObject.SetActive(false);
         promt.text = "press [E] to get water";
         Behaviour halo = (Behaviour)this.gameObject.GetComponent("Halo");
         halo.enabled = false;
     }
 
+    void flip()
+    {
+        wOn = false;
+    }
     private void OnTriggerEnter(Collider other)
     {
         Behaviour halo = (Behaviour)this.gameObject.GetComponent("Halo");
@@ -30,6 +36,7 @@ public class SinkWater : MonoBehaviour
         promt.gameObject.SetActive(false);
         Behaviour halo = (Behaviour)this.gameObject.GetComponent("Halo");
         halo.enabled = false;
+        
     }
     // Update is called once per frame
     /// <summary>
@@ -37,7 +44,9 @@ public class SinkWater : MonoBehaviour
     /// </summary>
     void Update()
     {
+//<<<<<<< HEAD
         if (Managers.Inventory.GetItemList().Contains("jug") && triggered)
+
         {
             if (Input.GetKeyDown(KeyCode.E))
             {

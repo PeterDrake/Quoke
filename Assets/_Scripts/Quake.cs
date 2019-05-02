@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,13 +10,14 @@ public class Quake : MonoBehaviour
     private GameObject environment;
     private float countdown;
 
+    // Sets countdown, turns script off
     void Awake()
     {
         gameObject.GetComponent<Quake>().enabled = false;
         countdown = 3;
     }
 
-    
+    // Every frame, checks for countdown until 0
     void Update()
     {   
         // Disables ChangeScene scripts
@@ -33,15 +35,22 @@ public class Quake : MonoBehaviour
         {
             countdown -= Time.deltaTime;
             GameObject.Find("ToPostQuake").GetComponent<BlackoutToPost>().enabled = true;
-        } else if (countdown <= 0)
+        }
+        // Enables CameraShake, PushObject, and Damager.
+        // Turns Quake off
+        else if (countdown <= 0)
         {
             environment = GameObject.Find("Environment");
             environment.GetComponent<CameraShake>().enabled = true;
             if (SceneManager.GetActiveScene().name == "HouseInterior")
             {
+               Messenger.Broadcast(GameEvent.QUAKE);
+                
                 GameObject.Find("Bookshelf").GetComponent<PushObject>().enabled = true;
+                if (GameObject.Find("Bookshelf").GetComponent<Damager>() != null)
+                {
                 GameObject.Find("Bookshelf").GetComponent<Damager>().enabled = true;
-
+                }
             }
             gameObject.GetComponent<Quake>().enabled = false;
         }

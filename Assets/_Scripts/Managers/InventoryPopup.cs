@@ -5,10 +5,14 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
-
+/// <summary>
+/// this script is depreicated do not use
+/// </summary>
 public class InventoryPopup : MonoBehaviour
 {
-   
+   /// <summary>
+  
+   /// </summary>
     public Image prefab;
     public Image Inven;
     //private Image[] slots;
@@ -27,11 +31,18 @@ public class InventoryPopup : MonoBehaviour
         Debug.Log(Managers.Inventory.GetItemList().Count);
         this.GetList();
 
+        
     }
+    /// <summary>
+    /// 
+    /// </summary>
     private void Update()
     {
         RefresH();
     }
+    /// <summary>
+    /// clearse and redrwas
+    /// </summary>
     public void RefresH()
     {
         clear();
@@ -39,7 +50,11 @@ public class InventoryPopup : MonoBehaviour
     }
 
 
+    /// <summary>
+    /// removes all items from the canavas used so that things are redrawn each time its opened
+    /// </summary>
     void clear()
+    
     {
         int c = Inven.transform.childCount;
         for (int i = c - 1; i >= 0; i--)
@@ -47,7 +62,11 @@ public class InventoryPopup : MonoBehaviour
             Destroy(Inven.transform.GetChild(i).gameObject);
         }
     }
+    /// <summary>
+    /// clears screen when its closed
+    /// </summary>
     private void OnDisable()
+    
     {
 
         Debug.Log("ondiable");
@@ -56,6 +75,9 @@ public class InventoryPopup : MonoBehaviour
         clear();
     }
 
+    /// <summary>
+    /// get list of all items on player
+    /// </summary>
     private void GetList()
     {
         //  int len = Managers.Inventory.GetItemList().Count;

@@ -12,29 +12,49 @@ public class GMain : MonoBehaviour
     [SerializeField] public Text prompt;
     // Start is called before the first frame update
     void Start()
+
     {
         halo = (Behaviour)this.gameObject.GetComponent("Halo");
         prompt.gameObject.SetActive(false);
+//>>>>>>> master
     }
     
     private void OnTriggerEnter(Collider other)
-    {              
-        trig = true;
-        prompt.gameObject.SetActive(true);
-        halo.enabled = true;
+
+    {
+       
+            //Debug.Log("check o up");
+            trig = true;
+            prompt.gameObject.SetActive(true);
+            halo.enabled = true;
+       
+//>>>>>>> master
     }
 
+    void des()
+    {
+        
+            OnTriggerExit();
+            Destroy(gameObject);
+            Destroy(this);
+        
+    }
+    /// <summary>
+    /// turns off the prompt screens
+    /// </summary>
     private void OnTriggerExit()
     {
         trig = false;
         halo.enabled = false;
         prompt.gameObject.SetActive(false);
     }
+//<<<<<<< HEAD
     // Update is called once per frame
     /// <summary>
     /// if there is a wrench and player is in trigger, player can shut gas off disalowing the explosion
     /// alt message appears if no wrench in inventory
     /// </summary>
+
     void Update()
     {
         if (Managers.Inventory.GetItemList().Contains("wrench") && trig)
@@ -49,6 +69,12 @@ public class GMain : MonoBehaviour
         else
         {
             prompt.text = "You need a wrench to shut off the gas.";
+        }
+
+        if (Managers.perm.fg)
+        {            OnTriggerExit();
+
+            this.enabled = false;
         }
     }
 }

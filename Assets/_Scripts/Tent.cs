@@ -17,6 +17,7 @@ public class Tent : MonoBehaviour
     {
         promt.gameObject.SetActive(false);
         promt.text = " press [E] to pitch tent ";
+        DontDestroyOnLoad(gameObject);
     }
 
     private void OnTriggerStay(Collider other)
