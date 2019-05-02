@@ -24,15 +24,22 @@ public class GMain : MonoBehaviour
     /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
-        if (Managers.p)
-        {
+       
             //Debug.Log("check o up");
             trig = true;
             prompt.gameObject.SetActive(true);
             halo.enabled = true;
-        }
+       
     }
 
+    void des()
+    {
+        if (Managers.perm.fg)
+        {
+            OnTriggerExit();
+            Destroy(this);
+        }
+    }
     private void OnTriggerExit()
     {
         trig = false;
@@ -59,5 +66,8 @@ public class GMain : MonoBehaviour
         {
             prompt.text = "You need a wrench to shut off the gas.";
         }
+
+        des();
+       
     }
 }

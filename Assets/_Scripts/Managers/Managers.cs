@@ -27,7 +27,7 @@ public class Managers : MonoBehaviour
     public static InventoryManager Inventory { get; private set; } //player inventory manager
 
     private EventRandomizer RandomEvents;//{ get; private set; } //player inventory manager
-    private Perminace p;
+    public  static Perminace perm;
     public static LevelManager Level { get; private set; }
 
     //  public string scene;
@@ -55,12 +55,12 @@ public class Managers : MonoBehaviour
         RandomEvents = GetComponent<EventRandomizer>();
         startSeq = new List<IGameManager>();
         quake = false;
-        p = GetComponent<Perminace>();
+        perm = GetComponent<Perminace>();
         startSeq.Add(Inventory);
         startSeq.Add(Player);
         startSeq.Add(Level);
         startSeq.Add(RandomEvents);
-        startSeq.Add(p);
+        startSeq.Add(perm);
         StartCoroutine(StartUpManagers());//inits all manager states
     }
 
@@ -120,8 +120,8 @@ public class Managers : MonoBehaviour
             Debug.Log("all managers loaded");
 
         }
-       // Inventory.AddItem(("tent"));
        Inventory.AddItem("tools");
+       Inventory.AddItem("wrench");
 
        //Level.GoToScene(4);
         if (!testing)

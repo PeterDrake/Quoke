@@ -75,8 +75,9 @@ public class secure : MonoBehaviour
             }
         }
 
-        if (Managers.quake)
+        if (Managers.quake || Managers.perm.fb)
         {
+           OnTriggerExit();
             Destroy(gameObject);
 
         }
