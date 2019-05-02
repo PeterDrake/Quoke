@@ -40,6 +40,7 @@ public class BlackoutToPost : MonoBehaviour
 
     void ToPost()
     {
+        Managers.Quake();
         gameObject.transform.Find("BlackScreen").gameObject.SetActive(false);
         gameObject.GetComponent<BlackoutToPost>().enabled = false;
     }
