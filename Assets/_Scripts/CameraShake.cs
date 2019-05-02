@@ -18,6 +18,7 @@ public class CameraShake : MonoBehaviour
 	
 	Vector3 originalPos;
 	
+	// On awake, turns off script and sets Transform
 	void Awake()
 	{
 		gameObject.GetComponent<CameraShake>().enabled = false;
@@ -27,20 +28,24 @@ public class CameraShake : MonoBehaviour
 		}
 	}
 	
+	// On start, gets Transform position and enables the shake
 	void Start()
 	{
 		originalPos = camTransform.localPosition;
 	}
 
+	// Every frame, causes "camera shake" by quickly moving GameObject
 	void Update()
 	{
+		// Camera shake
 		if (shakeDuration > 0)
 		{
 			camTransform.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
 			
 			shakeDuration -= Time.deltaTime * decreaseFactor;
-			shakeAmount += 0.005f;
+			shakeAmount += 0.002f;
 		}
+		// No camera shake
 		else
 		{
 			shakeDuration = 0f;

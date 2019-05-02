@@ -1,15 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/**
+ * Teleports Player to random location after Quake is initiated
+ */
 public class Teleport : MonoBehaviour
 {
-
+    // Character x, y, z positions
     private Transform player;
+    // Teleport string for GameObjects
     private string location;
-    public int n;
+    // int value to attach to Teleport string
+    private int n;
+    // Random teleport GameObject
     private GameObject tel;
+    // GameObject that contains all Teleport GameObjects
     public GameObject teleport;
+    // QuakeStart GameObject in Mangers prefab
     public GameObject quake;
 
     /**

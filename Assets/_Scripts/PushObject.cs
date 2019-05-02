@@ -11,7 +11,7 @@ public class PushObject : MonoBehaviour
     public Boolean isReinforced = false;
     private Rigidbody rigidbody;
     
-    
+    // On awake, sets script to false and gets RigidBody of GameObject
     void Awake()
     {
         Messenger.AddListener(GameEvent.SEC,enforce);
@@ -20,11 +20,13 @@ public class PushObject : MonoBehaviour
         rigidbody = gameObject.GetComponent<Rigidbody>();
     }
 
+    // Sets isReinforced boolean to true
     void enforce()
     {
         isReinforced = true;
     }
-    // Start is called before the first frame update
+    
+    // On start, pushes object over
     void Start()
     {
         if (!isReinforced)
