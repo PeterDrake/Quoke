@@ -5,10 +5,14 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
-
+/// <summary>
+/// this script is depreicated do not use
+/// </summary>
 public class InventoryPopup : MonoBehaviour
 {
-   
+   /// <summary>
+  
+   /// </summary>
     public Image prefab;
     public Image Inven;
     //private Image[] slots;
@@ -27,11 +31,18 @@ public class InventoryPopup : MonoBehaviour
         Debug.Log(Managers.Inventory.GetItemList().Count);
         this.GetList();
 
+        
     }
+    /// <summary>
+    /// 
+    /// </summary>
     private void Update()
     {
         RefresH();
     }
+    /// <summary>
+    /// clearse and redrwas
+    /// </summary>
     public void RefresH()
     {
         clear();
@@ -52,7 +63,7 @@ public class InventoryPopup : MonoBehaviour
         }
     }
     /// <summary>
-    /// 
+    /// clears screen when its closed
     /// </summary>
     private void OnDisable()
     

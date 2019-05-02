@@ -40,13 +40,16 @@ public class GMain : MonoBehaviour
             Destroy(this);
         
     }
+    /// <summary>
+    /// turns off the prompt screens
+    /// </summary>
     private void OnTriggerExit()
     {
         trig = false;
         halo.enabled = false;
         prompt.gameObject.SetActive(false);
     }
-    // Update is called once per frame
+    ///Update is called once per frame
     void Update()
     {
         if (Managers.Inventory.GetItemList().Contains("wrench") && trig)

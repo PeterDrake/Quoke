@@ -47,6 +47,9 @@ public class secure : MonoBehaviour
         halo.enabled = false;
     }
     // Update is called once per frame
+    /// <summary>
+    /// checks condetions for securing shelf
+    /// </summary>
     void Update()
     {
         if (Managers.Player.homeOwner&&trigg)

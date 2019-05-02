@@ -32,6 +32,9 @@ public class WaterHeater : MonoBehaviour
         prompt.gameObject.SetActive(true);
         halo.enabled = true;
     }
+    /// <summary>
+    /// destroys scripts onces executed
+    /// </summary>
     void des()
     {
         if (Managers.perm.wh)
