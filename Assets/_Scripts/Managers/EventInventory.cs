@@ -112,6 +112,7 @@ public class EventInventory : MonoBehaviour
             Debug.Log("AHHHHH");
         }
         Managers.Inventory.AddItem("jug(CLEAN)");
+        Messenger.Broadcast(GameEvent.WATER);
         Refresh();
     }
     // Start is called before the first frame update

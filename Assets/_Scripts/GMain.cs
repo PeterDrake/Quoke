@@ -11,9 +11,11 @@ public class GMain : MonoBehaviour
     [SerializeField] public Text prompt;
     // Start is called before the first frame update
     void Start()
+
     {
         halo = (Behaviour)this.gameObject.GetComponent("Halo");
         prompt.gameObject.SetActive(false);
+//>>>>>>> master
     }
     
     /// <summary>
@@ -21,12 +23,23 @@ public class GMain : MonoBehaviour
     /// </summary>
     /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
-    {                //Debug.Log("check o up");
-        trig = true;
-        prompt.gameObject.SetActive(true);
-        halo.enabled = true;
+    {
+       
+            //Debug.Log("check o up");
+            trig = true;
+            prompt.gameObject.SetActive(true);
+            halo.enabled = true;
+       
     }
 
+    void des()
+    {
+        
+            OnTriggerExit();
+            Destroy(gameObject);
+            Destroy(this);
+        
+    }
     private void OnTriggerExit()
     {
         trig = false;
@@ -52,6 +65,12 @@ public class GMain : MonoBehaviour
         else
         {
             prompt.text = "You need a wrench to shut off the gas.";
+        }
+
+        if (Managers.perm.fg)
+        {            OnTriggerExit();
+
+            this.enabled = false;
         }
     }
 }

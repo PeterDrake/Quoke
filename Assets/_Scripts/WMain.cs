@@ -15,6 +15,14 @@ public class WMain : MonoBehaviour
         prompt.gameObject.SetActive(false);
     }
 
+    void des()
+    {
+        if (Managers.perm.fw)
+        {
+            OnTriggerExit();
+            Destroy(this);
+        }
+    }
 
     /// <summary>
     /// if there is a wrench then the player can shut gas off disalowing the explosion
@@ -49,5 +57,6 @@ public class WMain : MonoBehaviour
         {
             prompt.text = "You need a wrench to shut off the water.";
         }
+        des();
     }
 }
