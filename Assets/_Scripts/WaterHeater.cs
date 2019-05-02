@@ -32,7 +32,15 @@ public class WaterHeater : MonoBehaviour
         prompt.gameObject.SetActive(true);
         halo.enabled = true;
     }
-
+    void des()
+    {
+        if (Managers.perm.wh)
+        {
+            OnTriggerExit();
+            this.enabled = false;
+            
+        }
+    }
     private void OnTriggerExit()
     {
         trig = false;
@@ -45,20 +53,24 @@ public class WaterHeater : MonoBehaviour
         if (Managers.Inventory.GetItemList().Contains("hose") && Managers.Inventory.GetItemList().Contains("jug") && trig)
         {               // Debug.Log("checkk i up");
             prompt.text = "Press [E] to get water.";
-            if (Input.GetKeyDown(KeyCode.E) && isWaterMainOff)
+            if (Input.GetKeyDown(KeyCode.E) && Managers.perm.fw)
             {
                 Managers.Inventory.removeItem("jug");
                 Managers.Inventory.AddItem("jug(CLEAN)");
+                Messenger.Broadcast(GameEvent.WH);
             }
-            else if (Input.GetKeyDown(KeyCode.E) && !isWaterMainOff)
+            else if (Input.GetKeyDown(KeyCode.E) && !Managers.perm.fw)
             {
                 Managers.Inventory.removeItem("jug");
-                Managers.Inventory.AddItem("jug(DIRTY)");     
+                Managers.Inventory.AddItem("jug(DIRTY)");
+                Messenger.Broadcast(GameEvent.WH);
             }
         }
         else
         {
             prompt.text = "You need a hose and jug to collect the water.";
         }
+
+        des();
     }
 }

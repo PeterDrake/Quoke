@@ -10,18 +10,22 @@ public class Perminace : MonoBehaviour, IGameManager
         Messenger.AddListener(GameEvent.W_MAIN_SHUT,fW);
         Messenger.AddListener(GameEvent.G_MAIN_SHUT,fG);
         Messenger.AddListener(GameEvent.SEC,fB);
-        //Messenger.AddListener(GameEvent.);
+        Messenger.AddListener(GameEvent.WH,wH);
     }
 
     public bool fw { get;private set;  }
     public bool fg{ get; private set; }
     public bool fb{ get; private set; }
+    public bool wh{ get; private set; }
     
     private void fB()
     {
         fb = true;
     }
-
+    private void wH()
+    {
+        wh = true;
+    }
     private void fG()
     {
         fg = true;

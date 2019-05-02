@@ -34,11 +34,11 @@ public class GMain : MonoBehaviour
 
     void des()
     {
-        if (Managers.perm.fg)
-        {
+        
             OnTriggerExit();
+            Destroy(gameObject);
             Destroy(this);
-        }
+        
     }
     private void OnTriggerExit()
     {
@@ -67,7 +67,10 @@ public class GMain : MonoBehaviour
             prompt.text = "You need a wrench to shut off the gas.";
         }
 
-        des();
-       
+        if (Managers.perm.fg)
+        {            OnTriggerExit();
+
+            this.enabled = false;
+        }
     }
 }

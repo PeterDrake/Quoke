@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.PlayerLoop;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -73,6 +74,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
     /// Sets health to 0 if Player takes a hit. Broadcasts DEAD GameEvent when health is at or below zero.
     /// </summary>
 
+    
     public void takeHit()
     {
         health = 0;

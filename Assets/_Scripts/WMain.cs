@@ -17,7 +17,7 @@ public class WMain : MonoBehaviour
 
     void des()
     {
-        if (Managers.perm.fg)
+        if (Managers.perm.fw)
         {
             OnTriggerExit();
             Destroy(this);

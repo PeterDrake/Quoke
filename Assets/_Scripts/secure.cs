@@ -13,7 +13,7 @@ public class secure : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Messenger.AddListener(GameEvent.QUAKE,des);
+       // Messenger.AddListener(GameEvent.QUAKE,des);
         promt.gameObject.SetActive(false);
         promt.text = "press [E] to secure shelf";
         Behaviour halo = (Behaviour)this.gameObject.GetComponent("Halo");
@@ -21,11 +21,7 @@ public class secure : MonoBehaviour
         tool = Managers.Inventory.GetItemList().Contains("tools");
     }
 
-    void des()
-    {
-        Destroy(gameObject);
-
-    }
+   
 
     private void OnTriggerEnter(Collider other)
     {
@@ -78,7 +74,8 @@ public class secure : MonoBehaviour
         if (Managers.quake || Managers.perm.fb)
         {
            OnTriggerExit();
-            Destroy(gameObject);
+           this.enabled = false;
+
 
         }
         

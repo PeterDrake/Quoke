@@ -38,7 +38,10 @@ public class Managers : MonoBehaviour
     public static int[] recsp { get; private set; }
     //public static Dictionary<string><int> rec;// { get; private set;}
 
-
+/// <summary>
+/// init aadn varible set up
+/// statics are set for access through out program
+/// </summary>
 
     private void Awake()//earlist call function
     {
@@ -64,12 +67,20 @@ public class Managers : MonoBehaviour
         StartCoroutine(StartUpManagers());//inits all manager states
     }
 
+/// <summary>
+/// returns all items
+/// </summary>
+/// <returns></returns>
    public static string[] getRec()
     {
         //rec.getKeys.toArray
         
         return recs;
     }
+   /// <summary>
+   /// returns the prices of all objs
+   /// </summary>
+   /// <returns></returns>
    public static int[] getRecp()
     {
         return recsp;
@@ -80,6 +91,9 @@ public class Managers : MonoBehaviour
         return gasOff;
     }
 
+    /// <summary>
+    /// used to check if quake has occured 
+    /// </summary>
    public  static void Quake()
    {
        quake = true;
@@ -120,8 +134,9 @@ public class Managers : MonoBehaviour
             Debug.Log("all managers loaded");
 
         }
-       Inventory.AddItem("tools");
-       Inventory.AddItem("wrench");
+        //Inventory.GetItemList().Clear();
+       //I////nventory.AddItem("tools");
+      
 
        //Level.GoToScene(4);
         if (!testing)

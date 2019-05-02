@@ -39,7 +39,11 @@ public class InventoryPopup : MonoBehaviour
     }
 
 
+    /// <summary>
+    /// removes all items from the canavas used so that things are redrawn each time its opened
+    /// </summary>
     void clear()
+    
     {
         int c = Inven.transform.childCount;
         for (int i = c - 1; i >= 0; i--)
@@ -47,7 +51,11 @@ public class InventoryPopup : MonoBehaviour
             Destroy(Inven.transform.GetChild(i).gameObject);
         }
     }
+    /// <summary>
+    /// 
+    /// </summary>
     private void OnDisable()
+    
     {
 
         Debug.Log("ondiable");
@@ -56,6 +64,9 @@ public class InventoryPopup : MonoBehaviour
         clear();
     }
 
+    /// <summary>
+    /// get list of all items on player
+    /// </summary>
     private void GetList()
     {
         //  int len = Managers.Inventory.GetItemList().Count;
