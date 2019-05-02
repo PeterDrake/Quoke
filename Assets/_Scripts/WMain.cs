@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class WMain : MonoBehaviour
 {
+    // trig - checks if player is inside a trigger
     private bool trig;
     private Behaviour halo;
     [SerializeField] public Text prompt;
@@ -15,13 +16,8 @@ public class WMain : MonoBehaviour
         prompt.gameObject.SetActive(false);
     }
 
-
-    /// <summary>
-    /// if there is a wrench then the player can shut gas off disalowing the explosion
-    /// </summary>
-    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
-    {                //Debug.Log("check o up");
+    {               
         trig = true;
         prompt.gameObject.SetActive(true);
         halo.enabled = true;
@@ -34,14 +30,18 @@ public class WMain : MonoBehaviour
         prompt.gameObject.SetActive(false);
     }
     // Update is called once per frame
+    /// <summary>
+    /// if there is a wrench and player is in trigger, player can shut water off, disalowing dirty water from water heater
+    /// alt message appears if no wrench in inventory
+    /// </summary>
     void Update()
     {
         if (Managers.Inventory.GetItemList().Contains("wrench") && trig)
-        {               // Debug.Log("checkk i up");
+        {               
             prompt.text = "Press [E] to shut off water main.";
             if (Input.GetKeyDown(KeyCode.E))
             {
-                // Debug.Log("shut up");
+                // broadcasts the game event that the water main has been shut off
                 Messenger.Broadcast(GameEvent.W_MAIN_SHUT);
             }
         }

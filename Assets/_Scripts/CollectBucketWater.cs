@@ -7,11 +7,14 @@ public class CollectBucketWater : MonoBehaviour
 {
     private Behaviour halo;
     private bool trig;
-    //GameObject prompt = new GameObject();
+    /// <summary>
+    /// creates a text box
+    /// trig - checks if player is inside a trigger
+    /// waterCollectionMethod - boolean check if jug in inventory
+    /// </summary>
     [SerializeField] public Text prompt;
     private List<string> items;
     private bool waterCollectionMethod;
-    private bool flag = true;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +27,6 @@ public class CollectBucketWater : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //purificationMethod = items.Contains("iodine tablets") || items.Contains("bleach");
         waterCollectionMethod = items.Contains("jug");
         prompt.gameObject.SetActive(true);
         halo.enabled = true;
@@ -43,12 +45,13 @@ public class CollectBucketWater : MonoBehaviour
 
     private void Update()
     {
-        //if player presses E
+        // if randomization put water in bucket and player is in the trigger
         if (Managers.Player.bucketFill && trig)
         {
             if (waterCollectionMethod)
             {
                 prompt.text = "The bucket is full! Press [E] to collect water."; //add else if statements to fix text
+                // replaces empty jug with jug filled with dirty water in inventory
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     Managers.Inventory.removeItem("jug");
