@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -11,7 +12,6 @@ public class PlayerManager : MonoBehaviour, IGameManager
     /// more can be added later 
     private float timeLeft;
     //health of the player 
-    
     public int health { get; private set; }
     //boolean of shelter status
     public bool shelter { get; private set; }
@@ -51,6 +51,7 @@ public class PlayerManager : MonoBehaviour, IGameManager
         Messenger.AddListener(GameEvent.SHELTER,ChangeShelter);
         Messenger.AddListener(GameEvent.HEALTH_CHANGED, takeHit);
         Messenger.AddListener(GameEvent.WATER,ChangeWater);
+        Messenger.AddListener(GameEvent.DEAD, SwitchToDeathScene);
        // Messenger.AddListener(GameEvent.WINNER,takeAction);
 
 
@@ -58,18 +59,26 @@ public class PlayerManager : MonoBehaviour, IGameManager
         
     }
 
+    /// <summary>
+    /// Switches to death scene.
+    /// </summary>
+
+    public void SwitchToDeathScene()
+    {
+        SceneManager.LoadScene("GameOverScene");
+        SceneManager.UnloadSceneAsync("SystemsScene");
+    }
 
     /// <summary>
-    /// Sets health to 0 if Player takes a hit.
+    /// Sets health to 0 if Player takes a hit. Broadcasts DEAD GameEvent when health is at or below zero.
     /// </summary>
 
     public void takeHit()
     {
         health = 0;
         Debug.Log("YOU DIED");
-        Managers.Level.GoToScene("gameOver");
-        //Messenger.Broadcast(GameEvent.DED);
-        
+        Messenger.Broadcast(GameEvent.DEAD);
+//>>>>>>> master
         //end game 
         //destory scene and draw black screen
     }

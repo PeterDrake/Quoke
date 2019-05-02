@@ -18,6 +18,8 @@ public class GameEvent
     public const string WATER = "WATER";
     public const string HEALTH_CHANGED = "HEALTH";
     public const string WINNER = "WINNER";
-    public const string DED = "git gud";
+
+    public const string DEAD = "DEAD";
+
 
 }
