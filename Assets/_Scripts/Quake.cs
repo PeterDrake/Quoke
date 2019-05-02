@@ -9,13 +9,14 @@ public class Quake : MonoBehaviour
     private GameObject environment;
     private float countdown;
 
+    // Sets countdown, turns script off
     void Awake()
     {
         gameObject.GetComponent<Quake>().enabled = false;
         countdown = 3;
     }
 
-    
+    // Every frame, checks for countdown until 0
     void Update()
     {   
         // Disables ChangeScene scripts
@@ -33,7 +34,10 @@ public class Quake : MonoBehaviour
         {
             countdown -= Time.deltaTime;
             GameObject.Find("ToPostQuake").GetComponent<BlackoutToPost>().enabled = true;
-        } else if (countdown <= 0)
+        }
+        // Enables CameraShake, PushObject, and Damager.
+        // Turns Quake off
+        else if (countdown <= 0)
         {
             environment = GameObject.Find("Environment");
             environment.GetComponent<CameraShake>().enabled = true;

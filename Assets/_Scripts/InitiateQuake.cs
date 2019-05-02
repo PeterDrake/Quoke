@@ -13,17 +13,20 @@ public class InitiateQuake : MonoBehaviour
     public GameObject player;
 
 
+    // On awake, determines random amount of actions and time countdown for panel
     private void Awake()
     {
         check = Random.Range(10, 16);
         time = 5;
     }
 
-    // Start is called before the first frame update
+    // On initial start, turns off panel
     void Start()
     {
         gameObject.transform.Find("Transition").gameObject.SetActive(false);
         count = Managers.Player.actionCount;
+        
+        // cautionary if statement to turns off panel after being activated
         if (count >= check)
         {
             gameObject.transform.Find("Transition").gameObject.SetActive(false);
@@ -31,7 +34,7 @@ public class InitiateQuake : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    // Every frame, checks to see if action count is compared to check
     void Update()
     {   
         count = Managers.Player.actionCount;
@@ -56,6 +59,7 @@ public class InitiateQuake : MonoBehaviour
 
         } else if (time <= 0)
         {
+            // Enables Teleport Script
             gameObject.transform.Find("Transition").gameObject.SetActive(false);
             player.GetComponent<Teleport>().enabled = true;
         }
