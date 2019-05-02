@@ -7,6 +7,7 @@ public class SinkWater : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private Text promt;
+    // trig - checks if player is inside a trigger
     private bool triggered;
     void Start()
     {   
@@ -27,14 +28,16 @@ public class SinkWater : MonoBehaviour
     {
         triggered = false;
         promt.gameObject.SetActive(false);
-
         Behaviour halo = (Behaviour)this.gameObject.GetComponent("Halo");
         halo.enabled = false;
     }
     // Update is called once per frame
+    /// <summary>
+    /// if there is a jug, and player in trigger, player can collect water from sink
+    /// </summary>
     void Update()
     {
-        if (Managers.Inventory.GetItemList().Contains("jug")&&triggered)
+        if (Managers.Inventory.GetItemList().Contains("jug") && triggered)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {

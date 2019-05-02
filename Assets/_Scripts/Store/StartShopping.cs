@@ -12,16 +12,13 @@ public class StartShopping : MonoBehaviour
     /// name of item this is set in the inspector when the scripts is added to an object
     /// </summary>
     [SerializeField] private ShoppingPopup popup;
-    [SerializeField] private Canvas prompt;
+    [SerializeField] private Text prompt;
     // private Sprite m_CharacterBusinessManSuit01;
-    // private bool isOpen;
 
     private Behaviour halo;
     private bool isTriggered = false;
 
-    //private Behaviour halo = gameObject.GetComponent<Halo>();
-
-    void Start()
+    void Awake()
     {
         halo = (Behaviour)this.gameObject.GetComponent("Halo");
         halo.enabled = false;
@@ -30,49 +27,28 @@ public class StartShopping : MonoBehaviour
         popup.gameObject.SetActive(false);
         UIController.pop.gameObject.SetActive(false);
     }
+
+    /// <summary>
+    /// opens and closes shopping menu when player collides with cashier trigger and presses 'E'
+    /// </summary>
     void Update()
     {
-        if (!isTriggered)
-        {
-            halo.enabled = false;
-            prompt.gameObject.SetActive(false);
-            popup.gameObject.SetActive(false);
-            UIController.pop.gameObject.SetActive(false);
-        }
         bool isOpen = popup.gameObject.activeSelf;
         if (Input.GetKeyDown(KeyCode.E) && isTriggered)
         {
-            Debug.Log("IT'S HAPPENNING");
             popup.gameObject.SetActive(!isOpen);
         }
-    }
-
-
-
-    /// <summary>
-    /// when the mouse is over the object it is glowed and if the user presses action button 'E' the item is picked up
-    /// </summary>
-    void OnTriggerStay(Collider other)
-    {
-        /*
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            //UIController.pop.gameObject.SetActive(true);
-            bool isOpen = true;
-            
-            isOpen = popup.gameObject.activeSelf;
-            popup.gameObject.SetActive(!isOpen);
-            //UIController.pop.gameObject.SetActive(true);
-
-        }*/
     }
 
     void OnTriggerEnter(Collider other)
     {
+        // ensures halo and text only appear when colliding with cashier trigger
+        if (other.gameObject.name != "ThirdPersonController") return;
         isTriggered = true;
         prompt.gameObject.SetActive(true);
         halo.enabled = true;
     }
+
     /// <summary>
     /// On the mouse exit shuts off the back glow
     /// </summary>
