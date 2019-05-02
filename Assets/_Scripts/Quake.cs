@@ -21,7 +21,7 @@ public class Quake : MonoBehaviour
         if (countdown > 0)
         {
             countdown -= Time.deltaTime;
-           // GameObject.Find("ToPostQuake").GetComponent<BlackoutToPost>().enabled = true;
+            GameObject.Find("ToPostQuake").GetComponent<BlackoutToPost>().enabled = true;
         } else if (countdown <= 0)
         {
             environment = GameObject.Find("Environment");

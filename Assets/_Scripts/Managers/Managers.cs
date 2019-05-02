@@ -13,6 +13,8 @@ using UnityEngine.UI;
 [RequireComponent(typeof(LevelManager))]
 
 [RequireComponent(typeof(EventRandomizer))]
+[RequireComponent(typeof(Perminace))]
+
 /*
  * Main manger for both payer and inventory systmes
  * all code taken from thw Unity In Action book 2nd Ed J.Hocking
@@ -25,7 +27,7 @@ public class Managers : MonoBehaviour
     public static InventoryManager Inventory { get; private set; } //player inventory manager
 
     private EventRandomizer RandomEvents;//{ get; private set; } //player inventory manager
-
+    private Perminace p;
     public static LevelManager Level { get; private set; }
 
     //  public string scene;
@@ -53,10 +55,12 @@ public class Managers : MonoBehaviour
         RandomEvents = GetComponent<EventRandomizer>();
         startSeq = new List<IGameManager>();
         quake = false;
+        p = GetComponent<Perminace>();
         startSeq.Add(Inventory);
         startSeq.Add(Player);
         startSeq.Add(Level);
         startSeq.Add(RandomEvents);
+        startSeq.Add(p);
         StartCoroutine(StartUpManagers());//inits all manager states
     }
 

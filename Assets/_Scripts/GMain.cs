@@ -23,10 +23,14 @@ public class GMain : MonoBehaviour
     /// </summary>
     /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
-    {                //Debug.Log("check o up");
-        trig = true;
-        prompt.gameObject.SetActive(true);
-        halo.enabled = true;
+    {
+        if (Managers.p)
+        {
+            //Debug.Log("check o up");
+            trig = true;
+            prompt.gameObject.SetActive(true);
+            halo.enabled = true;
+        }
     }
 
     private void OnTriggerExit()
