@@ -7,15 +7,17 @@ using UnityEngine.UI;
 public class BlackoutToPost : MonoBehaviour
 {
 
+    // name of current scene
     private string currentScene;
     
+    // On awake, sets script to false and disables BlackScreen panel
     private void Awake()
     {
         gameObject.GetComponent<BlackoutToPost>().enabled = false;
         gameObject.transform.Find("BlackScreen").gameObject.SetActive(false);
     }
 
-    // Start is called before the first frame update
+    // On start, gets scene name and invokes GoBlack method
     void Start()
     {
         //gameObject.transform.Find("BlackScreen").GetComponent<Image>().color = new Color(0,0,0,0);
@@ -23,6 +25,7 @@ public class BlackoutToPost : MonoBehaviour
         Invoke("GoBlack", 6);
     }
 
+    // Turns screen black and teleports player to post-quake scenes after
     void GoBlack()
     {
         gameObject.transform.Find("BlackScreen").gameObject.SetActive(true);
@@ -38,6 +41,8 @@ public class BlackoutToPost : MonoBehaviour
         
     }
 
+    
+    // Disables BlackScreen and sets Quake boolean to true
     void ToPost()
     {
         Managers.Quake();
