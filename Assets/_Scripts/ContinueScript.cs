@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class ContinueScript : MonoBehaviour
 {
+
+    public void Resume()
+    {
+        Canvas canvas = gameObject.GetComponentInParent<Canvas>();
+        canvas.enabled = false;
+    }
+
     /// <summary>
     /// Quits application. Called when "Quit" button is pressed in GameOverScene.
     /// </summary>
