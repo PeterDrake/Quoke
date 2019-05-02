@@ -9,6 +9,9 @@ public class LightFlicker : MonoBehaviour
     public Light light;
     bool active = false;
 
+    /// <summary>
+    /// Randomly waits to enable/disable light for a flicker effect.
+    /// </summary>
     IEnumerator YieldFlicker()
     {
         active = true;

@@ -606,7 +606,7 @@ PrefabInstance:
     - target: {fileID: 5533312115019174545, guid: 05e198b4f3d1d4a49a3c1b2bf3446e23,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Continue
+      value: Quit
       objectReference: {fileID: 0}
     - target: {fileID: 5533312115019174545, guid: 05e198b4f3d1d4a49a3c1b2bf3446e23,
         type: 3}
