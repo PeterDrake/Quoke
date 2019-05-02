@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class GMain : MonoBehaviour
 {
+    // trig - checks if player is inside a trigger
     private bool trig;
     private bool off = false;
     private Behaviour halo;
@@ -18,11 +19,8 @@ public class GMain : MonoBehaviour
 //>>>>>>> master
     }
     
-    /// <summary>
-    /// if there is a wrench then the player can shut gas off disalowing the explosion
-    /// </summary>
-    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
+
     {
        
             //Debug.Log("check o up");
@@ -30,6 +28,7 @@ public class GMain : MonoBehaviour
             prompt.gameObject.SetActive(true);
             halo.enabled = true;
        
+//>>>>>>> master
     }
 
     void des()
@@ -49,21 +48,23 @@ public class GMain : MonoBehaviour
         halo.enabled = false;
         prompt.gameObject.SetActive(false);
     }
-    ///Update is called once per frame
+//<<<<<<< HEAD
+    // Update is called once per frame
+    /// <summary>
+    /// if there is a wrench and player is in trigger, player can shut gas off disalowing the explosion
+    /// alt message appears if no wrench in inventory
+    /// </summary>
+
     void Update()
     {
         if (Managers.Inventory.GetItemList().Contains("wrench") && trig)
-        {               // Debug.Log("checkk i up");
+        {              
                 prompt.text = "Press [E] to shut off gas main.";
             if (Input.GetKeyDown(KeyCode.E))
             {
-                // Debug.Log("shut up");
+                // broadcasts the game event that the gas main has been shut off
                 Messenger.Broadcast(GameEvent.G_MAIN_SHUT);
             }
-            //else if (off)
-            //{
-            //   prompt.text = "Gas is off.";
-            //}
         }
         else
         {

@@ -20,13 +20,8 @@ public class WaterHeater : MonoBehaviour
         isWaterMainOff = true;
     }
 
-
-    /// <summary>
-    /// if there is a wrench then the player can shut gas off disalowing the explosion
-    /// </summary>
-    /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
-    {                //Debug.Log("check o up");
+    {               
         Messenger.AddListener(GameEvent.W_MAIN_SHUT, isWater);
         trig = true;
         prompt.gameObject.SetActive(true);
@@ -51,10 +46,15 @@ public class WaterHeater : MonoBehaviour
         prompt.gameObject.SetActive(false);
     }
     // Update is called once per frame
+    /// <summary>
+    /// if there is a hose and jug, and player in trigger, player can collect water from water heater
+    /// if the water main is off you get clean water, else you get dirty water
+    /// alt message appears if no hose or jug in inventory
+    /// </summary>
     void Update()
     {
         if (Managers.Inventory.GetItemList().Contains("hose") && Managers.Inventory.GetItemList().Contains("jug") && trig)
-        {               // Debug.Log("checkk i up");
+        {              
             prompt.text = "Press [E] to get water.";
             if (Input.GetKeyDown(KeyCode.E) && Managers.perm.fw)
             {
