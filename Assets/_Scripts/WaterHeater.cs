@@ -32,6 +32,9 @@ public class WaterHeater : MonoBehaviour
         prompt.gameObject.SetActive(true);
         halo.enabled = true;
     }
+    /// <summary>
+    /// destroys scripts onces executed
+    /// </summary>
     void des()
     {
         if (Managers.perm.wh)
@@ -57,6 +60,7 @@ public class WaterHeater : MonoBehaviour
             {
                 Managers.Inventory.removeItem("jug");
                 Managers.Inventory.AddItem("jug(CLEAN)");
+                Messenger.Broadcast(GameEvent.WATER);
                 Messenger.Broadcast(GameEvent.WH);
             }
             else if (Input.GetKeyDown(KeyCode.E) && !Managers.perm.fw)
